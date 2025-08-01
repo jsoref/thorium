@@ -222,7 +222,7 @@ impl PartialEq<ResourcesUpdate> for Resources {
     }
 }
 
-/// The requested resources to spawn spawn the container with
+/// The requested resources to spawn the container with
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ResourcesRequest {
@@ -420,7 +420,7 @@ impl From<Resources> for ResourcesRequest {
     }
 }
 
-/// The requested resources to spawn spawn the container with
+/// The requested resources to spawn the container with
 #[derive(Serialize, Deserialize, Debug, Clone, Default, PartialEq)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ResourcesUpdate {
