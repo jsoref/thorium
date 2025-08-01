@@ -27,7 +27,7 @@ because we haven't run many tools on these files. Running analysis tools on file
 
 ## Thorctl
 ---
- You can also view a list of files in Thorium using Thorctl. To do that that run the following command:
+ You can also view a list of files in Thorium using Thorctl. To do that run the following command:
 
 ```bash
 thorctl files get
