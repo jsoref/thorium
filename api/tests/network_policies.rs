@@ -775,7 +775,7 @@ async fn used_by() -> Result<(), thorium::Error> {
     is!(
         network_policy.used_by.get(&group),
         None::<&Vec<String>>,
-        "no admin group in used by"
+        "no admin group in `used by`"
     );
     // remove the network policy from the second image
     let image_update = ImageUpdate::default()
