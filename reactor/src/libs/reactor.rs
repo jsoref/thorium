@@ -195,7 +195,7 @@ impl Reactor {
         Ok(workers)
     }
 
-    /// Make sure that the the keys for our target workers are loaded
+    /// Make sure that the keys for our target workers are loaded
     ///
     /// # Arguments
     ///

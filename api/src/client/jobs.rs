@@ -101,7 +101,7 @@ impl Jobs {
     ///
     /// * `group` - The group this pipeline is from
     /// * `pipeline` - The pipeline to claim jobs for
-    /// * `stage` - The stage in the the pipeline to claim a job for
+    /// * `stage` - The stage in the pipeline to claim a job for
     /// * `worker` - The name of the worker that is claiming jobs
     /// * `count` - The number of jobs to claim
     ///

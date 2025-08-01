@@ -544,7 +544,7 @@ async fn delete_specific(
         .iter()
         .map(|sub| (sub.id, sub))
         .collect();
-    // select either all of the the file's submissions or only the given submissions
+    // select either all of the file's submissions or only the given submissions
     let submissions = if target.submissions.is_empty() {
         submission_map.keys().copied().collect()
     } else {

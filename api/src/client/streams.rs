@@ -88,7 +88,7 @@ cfg_if::cfg_if! {
 
 #[syncwrap::clone_impl]
 impl Streams {
-    /// Gets the the number of objects between two points in a stream
+    /// Gets the number of objects between two points in a stream
     ///
     /// # Arguments
     ///
@@ -143,7 +143,7 @@ impl Streams {
         send_build!(self.client, req, StreamDepth)
     }
 
-    /// Gets the the number of objects between in even chunks of time between two timestamps
+    /// Gets the number of objects between in even chunks of time between two timestamps
     ///
     /// # Arguments
     ///

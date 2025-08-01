@@ -947,7 +947,7 @@ impl AutoTag {
     ///
     /// # Arguments
     ///
-    /// * `key` - The key to use instead of the the one found in the result
+    /// * `key` - The key to use instead of the one found in the result
     #[must_use]
     pub fn key(mut self, key: String) -> Self {
         self.key = Some(key);
@@ -1253,7 +1253,7 @@ impl AutoTagUpdate {
     ///
     /// # Arguments
     ///
-    /// * `key` - The key to use instead of the the one found in the result
+    /// * `key` - The key to use instead of the one found in the result
     #[must_use]
     pub fn key(mut self, key: String) -> Self {
         self.key = Some(key);

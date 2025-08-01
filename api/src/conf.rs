@@ -83,7 +83,7 @@ impl Default for Retention {
     }
 }
 
-/// Tt dehe credentials to use when listing group membership info from ldap
+/// The credentials to use when listing group membership info from ldap
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, JsonSchema)]
 pub struct LdapCreds {
     /// The filters to append to uid=<username> when binding in ldap

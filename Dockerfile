@@ -14,7 +14,7 @@ ADD ./target/release/thorium-search-streamer thorium-search-streamer
 ADD ./target/release/thorium-event-handler thorium-event-handler
 # Add UI bundle to root path
 ADD ./ui/dist ui
-# copy ther user and developer docs in
+# copy the user and developer docs in
 ADD ./api/docs/book docs/user
 ADD ./target/doc docs/dev
 # copy our binaries in
