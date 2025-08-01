@@ -35,7 +35,7 @@ for elastic pods to successfully start. This configuration value may be added to
 echo "vm.max_map_count=262144" >> /etc/sysctl.d/99-sysctl.conf
 ```
 
-System configuration options for elastic nodes can be found [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/system-config.html). You can also set an `initContainer` to run before elastic starts that will set the `max_map_count`. That option is what the next step will show.
+See [system configuration options for elastic nodes](https://www.elastic.co/guide/en/elasticsearch/reference/current/system-config.html). You can also set an `initContainer` to run before elastic starts that will set the `max_map_count`. That option is what the next step will show.
 
 ### 3) Deploy Kibana and ElasticSearch
 
