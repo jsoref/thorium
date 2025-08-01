@@ -358,7 +358,7 @@ async fn delete_data(session: &Session, config: &Conf) -> PreparedStatement {
 /// * `sessions` - The scylla session to use
 /// * `conf` - The Thorium config
 async fn list_ties(session: &Session, config: &Conf) -> PreparedStatement {
-    // build repo repo list ties prepared statement
+    // build repo list ties prepared statement
     session
         .prepare(format!(
             "SELECT group, url, id, uploaded \
@@ -382,7 +382,7 @@ async fn list_ties(session: &Session, config: &Conf) -> PreparedStatement {
 /// * `sessions` - The scylla session to use
 /// * `conf` - The Thorium config
 async fn list_pull(session: &Session, config: &Conf) -> PreparedStatement {
-    // build repo repo list pull prepared statement
+    // build repo list pull prepared statement
     session
         .prepare(format!(
             "SELECT group, url, id, uploaded \
