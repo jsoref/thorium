@@ -268,7 +268,7 @@ timeout 0
 #    alive.
 #
 # On Linux, the specified value (in seconds) is the period used to send ACKs.
-# Note that to close the connection the double of the time is needed.
+# Note that to close the connection, double of the time is needed.
 # On other kernels the period depends on the kernel configuration.
 #
 # A reasonable value for this option is 300 seconds, which is the new
