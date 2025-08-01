@@ -906,7 +906,7 @@ where
                 // add the futures to our set
                 futures.push(future);
             }
-            // if we have have more then 30 futures to crawl then send them all at once
+            // if we have more then 30 futures to crawl then send them all at once
             if futures.len() >= 300 {
                 // wait for all of our futures to complete 50 at a time
                 let queries = stream::iter(futures.drain(..))
@@ -1470,7 +1470,7 @@ where
         match self.retain.tags.clone() {
             // we have tags to filter on
             Some((kind, tags)) => self.next_tags(kind, &tags, shared).await,
-            // we don't any any tags to filter on
+            // we don't have any tags to filter on
             None => self.next_general(shared).await,
         }
     }
@@ -2482,7 +2482,7 @@ impl ExistsCursor {
                 .execute_unpaged(prepared, (self.year, buckets, key));
             // add this future out our futures list
             futures.push(query);
-            // if we have have more then 100 futures to crawl then send them all at once
+            // if we have more then 100 futures to crawl then send them all at once
             if futures.len() >= 100 {
                 // build our stream of futures
                 let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
