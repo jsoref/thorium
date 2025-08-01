@@ -53,7 +53,7 @@ struct EditableImage {
     /// How long this image takes to execute on average in seconds (defaults to
     /// 10 minutes on image creation).
     pub runtime: f64,
-    /// Any volumes to bind in to this container
+    /// Any volumes to bind into this container
     pub volumes: Vec<Volume>,
     /// The arguments to add to this images jobs
     pub args: ImageArgs,
