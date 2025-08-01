@@ -147,7 +147,7 @@ impl<S: ScyllaCrawlSupport + Send> ScyllaCrawlController<S> {
         Ok(handle)
     }
 
-    /// Build and spawn all all of our workers
+    /// Build and spawn all of our workers
     async fn spawn_all(&mut self) -> Result<(), Error> {
         // get this progress bars style
         let bar_style = S::bar_style()?;
