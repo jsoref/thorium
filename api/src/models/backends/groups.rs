@@ -1097,7 +1097,7 @@ impl LdapUserMap {
             // set the start to just past the cn=
             let mut start = 3;
             loop {
-                // get the index the first ','
+                // get the index of the first ','
                 if let Some(end) = raw[start..].find(',') {
                     // check to see if this comma was escaped
                     if &raw[end - 1..end - 1] == "\\" {
