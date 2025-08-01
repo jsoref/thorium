@@ -1590,7 +1590,7 @@ where
                 self.retain.tags_retain = Some(tags_retain);
                 Ok(())
             }
-            // we don't any any tags to filter on
+            // we don't have any tags to filter on
             None => self.next_general(shared).await,
         }
     }
@@ -2607,7 +2607,7 @@ impl ExistsCursor {
                 .execute_unpaged(prepared, (self.year, buckets, key));
             // add this future out our futures list
             futures.push(query);
-            // if we have have more then 100 futures to crawl then send them all at once
+            // if we have more then 100 futures to crawl then send them all at once
             if futures.len() >= 100 {
                 // build our stream of futures
                 let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
