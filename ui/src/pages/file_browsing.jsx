@@ -164,7 +164,7 @@ const FileFilters = ({ setFilters, loading }) => {
     if (selectedGroups.length != 0) {
       filters['groups'] = selectedGroups;
     }
-    // must format dates for request if set, otherwise leave as null
+    // must format dates for request if set; otherwise, leave as null
     // toISOString converts the date to a UTC string (thorium uses UTC)
     if (startDate) {
       const safeStartDateString = safeDateToStringConversion(startDate);
@@ -284,7 +284,7 @@ const FileFilters = ({ setFilters, loading }) => {
   };
 
   const submitFilterForm = (event) => {
-    // apply filters when enter is clicked, otherwise ignore
+    // apply filters when enter is clicked; otherwise, ignore
     if (event.key === 'Enter') {
       updateBrowsingFilters(limit);
     }

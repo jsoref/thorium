@@ -158,7 +158,7 @@ const Search = () => {
       selectedGroups = null;
     }
 
-    // must format dates for request if set, otherwise leave as null
+    // must format dates for request if set; otherwise, leave as null
     let formattedStartDate = null;
     if (startDate) {
       formattedStartDate = safeDateToStringConversion(startDate);

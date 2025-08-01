@@ -719,7 +719,7 @@ async fn list_details_user() -> Result<(), thorium::Error> {
         "group is user's group"
     );
     // make sure none of the allowed groups have more than one group (the user's group)
-    // the user shouldn't be able to see the other groups are allowed, otherwise those groups'
+    // the user shouldn't be able to see the other groups are allowed; otherwise, those groups'
     // existence would be leaked to the user
     for policy in &policies {
         for rule in policy.ingress.iter().flatten() {

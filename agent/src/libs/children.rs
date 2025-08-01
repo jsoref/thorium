@@ -183,7 +183,7 @@ fn child_matches_any(
             }
         }
     };
-    // get file name and convert to UTF-8, otherwise we can't match
+    // get file name and convert to UTF-8; otherwise, we can't match
     if let Some(file_name) = child.file_name().and_then(|name| name.to_str()) {
         if matches_any_filter(file_name, &filters.file_name, filters_cache)? {
             log!(
@@ -196,7 +196,7 @@ fn child_matches_any(
             return Ok(true);
         }
     }
-    // get file extension and convert to UTF-8, otherwise we can't match
+    // get file extension and convert to UTF-8; otherwise, we can't match
     if let Some(file_extension) = child.extension().and_then(|ext| ext.to_str()) {
         if matches_any_filter(file_extension, &filters.file_extension, filters_cache)? {
             log!(

@@ -50,7 +50,7 @@ impl GetLine {
         let msg = err.msg().unwrap_or_else(|| "-".to_owned());
         // get the error status
         let status = err.status();
-        // get a default "-" if no status, otherwise map to a str
+        // get a default "-" if no status; otherwise, map to a str
         let status_str = status.as_ref().map_or("-", StatusCode::as_str);
         // log this line
         get_print!(status_str.bright_red(), target, msg);

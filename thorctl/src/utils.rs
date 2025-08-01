@@ -260,7 +260,7 @@ pub fn get_hostname(url: &str) -> Result<&str, Error> {
 }
 
 /// Return a descriptive error that the function requires admin access if we get
-/// a 401, otherwise just return the error
+/// a 401; otherwise, just return the error
 #[macro_export]
 macro_rules! err_not_admin {
     ($func:expr) => {

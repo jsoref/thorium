@@ -82,7 +82,7 @@ const ReposList = () => {
       filters['groups'] = selectedGroups;
     }
 
-    // must format dates for request if set, otherwise leave as null
+    // must format dates for request if set; otherwise, leave as null
     // toISOString converts the date to a UTC string (thorium uses UTC)
     if (startDate) {
       filters['start'] = safeDateToStringConversion(startDate);
@@ -267,7 +267,7 @@ const ReposList = () => {
   };
 
   const submitFilterForm = (event) => {
-    // apply filters when enter is clicked, otherwise ignore
+    // apply filters when enter is clicked; otherwise, ignore
     if (event.key === 'Enter') {
       setUpdateFilters(true);
     }

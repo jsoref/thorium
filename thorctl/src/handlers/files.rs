@@ -551,7 +551,7 @@ async fn delete_specific(
         target.submissions
     };
     let mut opts = FileDeleteOpts::default();
-    // if groups were specified, add them to the our delete opts, otherwise
+    // if groups were specified, add them to the our delete opts; otherwise,
     // delete submissions from all groups
     if !groups.is_empty() {
         opts = opts.groups(groups.clone());
@@ -620,7 +620,7 @@ async fn delete_from_details(
             .collect()
     };
     let mut opts = FileDeleteOpts::default();
-    // if groups were specified, add them to the our delete opts, otherwise
+    // if groups were specified, add them to the our delete opts; otherwise,
     // delete all submissions
     if !groups.is_empty() {
         opts = opts.groups(groups.clone());

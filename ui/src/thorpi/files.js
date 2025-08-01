@@ -194,7 +194,7 @@ const deleteTags = async (sha256, data, errorHandler) => {
  * @function
  * @param {string} sha256 - sha256 hash of sample to update
  * @param {string} id - submission id to delete
- * @param {object} groups - groups to delete from, otherwise ALL of them
+ * @param {object} groups - groups to delete from; otherwise, ALL of them
  * @param {object} errorHandler - error handler function
  * @returns {object} - promise object representing tags post response.
  */
