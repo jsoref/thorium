@@ -1209,7 +1209,7 @@ impl OriginRequest {
         }
     }
 
-    /// A a result id to this origin
+    /// A result id to this origin
     ///
     /// # Arguments
     ///

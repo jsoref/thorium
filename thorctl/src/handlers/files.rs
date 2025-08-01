@@ -22,7 +22,7 @@ use crate::args::files::{DeleteFiles, DescribeFiles, DownloadFiles, Files, GetFi
 use crate::args::{Args, DescribeCommand, SearchParameterized};
 use crate::utils;
 
-/// A single line for an file upload log
+/// A single line for a file upload log
 struct UploadLine;
 
 macro_rules! upload_print {
@@ -333,7 +333,7 @@ async fn download(
     Ok(())
 }
 
-/// A single line for an file upload log
+/// A single line for a file upload log
 struct GetLine;
 
 impl GetLine {
@@ -360,7 +360,7 @@ impl GetLine {
     pub fn list(line: &SampleListLine) {
         // if a submission was set the get it as a string or use "-"
         let submission = line.submission.map_or("-".to_string(), String::from);
-        // print an list file line
+        // print a list file line
         println!(
             "{:<64} | {:<36} | {:<28}",
             line.sha256, submission, line.uploaded
@@ -373,7 +373,7 @@ impl GetLine {
     ///
     ///* `line` - The sample list line to print
     pub fn list_tags(line: &SampleListLine) {
-        // print an list file line
+        // print a list file line
         println!("{:<64} | {:<28}", line.sha256, line.uploaded);
     }
 }
@@ -432,7 +432,7 @@ async fn describe(thorium: &Thorium, cmd: &DescribeFiles) -> Result<(), Error> {
     cmd.describe(thorium).await
 }
 
-/// A single line for an file upload log
+/// A single line for a file upload log
 struct DeleteLine;
 
 impl DeleteLine {

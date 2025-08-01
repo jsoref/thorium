@@ -197,7 +197,7 @@ impl Volumes {
         }
     }
 
-    /// Builds an host path [`Volume`] based on a [`thorium::models::Volume`]
+    /// Builds a host path [`Volume`] based on a [`thorium::models::Volume`]
     ///
     /// # Arguments
     ///

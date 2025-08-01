@@ -366,7 +366,7 @@ async fn list() -> Result<(), thorium::Error> {
     let opts = FileListOpts::default().groups(vec![&group]);
     // list the 20 files we just created
     let cursor = client.files.list(&opts).await?;
-    // build the a list of hashes for the files we created
+    // build a list of hashes for the files we created
     let (_, sha256s, _) = get_hashes(&reqs);
     // make sure we listed our sha256s
     for item in &cursor.data {
@@ -389,7 +389,7 @@ async fn list_details() -> Result<(), thorium::Error> {
     let opts = FileListOpts::default().groups(vec![&group]);
     // list the 20 files we just created
     let cursor = client.files.list_details(&opts).await?;
-    // build the a list of hashes for the files we created
+    // build a list of hashes for the files we created
     let (sha1s, sha256s, md5s) = get_hashes(&reqs);
     // make sure our hashes were correctly set
     for item in &cursor.data {
@@ -416,7 +416,7 @@ async fn list_tag() -> Result<(), thorium::Error> {
     let opts = FileListOpts::default().groups(vec![&group]).tag(key, value);
     // list the 20 files we just created
     let cursor = client.files.list(&opts).await?;
-    // build the a list of hashes for the files we created
+    // build a list of hashes for the files we created
     let (_, sha256s, _) = get_hashes(&reqs);
     // make sure we listed our sha256s
     for item in cursor.data {
@@ -437,7 +437,7 @@ async fn list_tag_details() -> Result<(), thorium::Error> {
     let opts = FileListOpts::default().groups(vec![&group]).tag(key, value);
     // list the 20 files we just created
     let cursor = client.files.list_details(&opts).await?;
-    // build the a list of hashes for the files we created
+    // build a list of hashes for the files we created
     let (sha1s, sha256s, md5s) = get_hashes(&reqs);
     // make sure our hashes were correctly set
     for item in &cursor.data {

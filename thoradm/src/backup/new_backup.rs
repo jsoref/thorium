@@ -204,7 +204,7 @@ impl ArchiveWriter {
                 )
             }
         };
-        // build an list of IO slices to write our pending data
+        // build a list of IO slices to write our pending data
         let mut archive_slices = self
             .pending
             .iter()
@@ -212,7 +212,7 @@ impl ArchiveWriter {
             .collect::<Vec<IoSlice>>();
         // write all of our data
         write_all_vectored(&mut data_file, &mut archive_slices[..], self.pending_bytes).await?;
-        // build an list of IO slices to write our pending maps
+        // build a list of IO slices to write our pending maps
         let mut map_slices = self
             .pending_maps
             .iter()

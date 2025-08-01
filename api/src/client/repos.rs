@@ -262,7 +262,7 @@ impl Repos {
         repo: &str,
         tags: &TagRequest<Repo>,
     ) -> Result<reqwest::Response, Error> {
-        // build url for updating an file
+        // build url for updating a file
         let url = format!("{}/api/repos/tags/{}", self.host, repo);
         // build request
         let req = self
@@ -312,7 +312,7 @@ impl Repos {
         url: &str,
         tags_del: &TagDeleteRequest<Repo>,
     ) -> Result<reqwest::Response, Error> {
-        // build url for updating an file
+        // build url for updating a file
         let url = format!("{}/api/repos/tags/{}", self.host, url);
         // build request
         let req = self
