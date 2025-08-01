@@ -47,7 +47,7 @@ pub async fn clear(kind: EventType, ids: &[Uuid], shared: &Shared) -> Result<(),
     for id in ids {
         // remove this id from our in flight queue
         pipe.cmd("zrem").arg(&queue_key).arg(id.to_string());
-        // remove it from our our in flight data map as well
+        // remove it from our in flight data map as well
         pipe.cmd("hdel").arg(&map_key).arg(id.to_string());
     }
     // execute this pipeline
