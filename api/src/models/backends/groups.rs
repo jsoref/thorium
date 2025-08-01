@@ -98,7 +98,7 @@ impl GroupUsersUpdate {
         // remove any users that got removed and added to the same role
         self.direct_add
             .retain(|name| !self.direct_remove.contains(name));
-        // add any new users to our our added set
+        // add any new users to our added set
         added.extend(self.direct_add.iter().cloned());
         // track the users we are removing
         removed.extend(self.direct_remove.iter().cloned());

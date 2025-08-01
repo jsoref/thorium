@@ -1340,7 +1340,7 @@ impl CursorCore for SampleListLine {
     }
 }
 
-// implement cursor for our our files list
+// implement cursor for our files list
 #[async_trait::async_trait]
 impl ScyllaCursorSupport for SampleListLine {
     /// The intermediate list row to use

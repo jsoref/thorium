@@ -424,7 +424,7 @@ impl Allocatable {
             // add this increase to our old rank
             rank + (incr * count as u64)
         } else {
-            // count is zero so just use our our old rank
+            // count is zero so just use our old rank
             rank
         }
     }

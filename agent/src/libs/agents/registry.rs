@@ -359,7 +359,7 @@ impl Cmd {
         if let Some(override_cmd) = self.opts.override_cmd {
             return Ok(override_cmd);
         }
-        // inject our our command if it exists
+        // inject our command if it exists
         self.built.append(&mut self.src);
         // throw an error if the src command is empty to avoid simply running the sample naively
         if self.built_empty_or_shell() {
