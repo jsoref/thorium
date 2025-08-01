@@ -435,7 +435,7 @@ pub struct ThoriumBlocking {
 impl Thorium {
     /// Create a new Thorium client builder
     ///
-    /// This can user either username/password or token. When using a token the client will not
+    /// This can user either username/password or token. When using a token, the client will not
     /// known when it expires.
     ///
     /// # Arguments
