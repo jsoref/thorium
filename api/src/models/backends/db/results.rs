@@ -510,7 +510,7 @@ pub async fn prune(
             pruned.push((&result.id, &result.files));
         }
     }
-    // crawl ove the result files that might need to be pruned
+    // crawl over the result files that might need to be pruned
     for (result_id, files) in pruned.iter() {
         // prune this result if its no longer needed
         prune_helper(kind, key, result_id, files, shared).await?;

@@ -574,7 +574,7 @@ impl Allocatable {
         for cluster_group in self.clusters.values_mut() {
             // crawl over all of our clusters in this cluster cpu group
             for clusters in cluster_group.values_mut() {
-                // crawl over over all node cpu groups
+                // crawl over all node cpu groups
                 for node_group in clusters.nodes.values_mut() {
                     // add this size of this group to our node cnt
                     node_cnt += node_group.len();
