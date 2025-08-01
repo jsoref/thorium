@@ -43,7 +43,7 @@ A checkpoint is a custom string that can be given to a generator to give it
 context from its previous run. Checkpoints are passed to the reaction with the
 `--checkpoint` kwarg.
 
-For example, a generator might spawn 50 reactions then send a sleep request
+For example, a generator might spawn 50 reactions and then send a sleep request
 with the checkpoint `"50"`. When the generator respawns, it will be run with the
 kwarg `--checkpoint 50`. This way, the generator can keep a running count for
 how many sub-reactions it has spawned. Checkpoints can also be used to simply

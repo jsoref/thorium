@@ -26,7 +26,7 @@ use crate::log;
 /// String representation
 // TODO: only one agent is running at a time, so we don't really need a Mutex here;
 // unfortunately, we can't make this thread-local because the Agent is run on a tokio
-// task an can be on any thread
+// task and can be on any thread
 static CHILD_FILTERS_CACHE: LazyLock<Mutex<HashMap<String, Regex>>> =
     LazyLock::new(|| Mutex::new(HashMap::new()));
 
