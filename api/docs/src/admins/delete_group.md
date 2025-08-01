@@ -15,7 +15,7 @@ Any group owner or Thorium admin can delete a group. It is important to remember
 
 ### Archiving Groups Instead
 ---
-Generally we recommend archiving rather than deleting groups. You can do this by adding the Thorium system user to the group as an owner (since groups must have atleast 1 owner) and then removing non-admin group members. This preserves data and analysis artifacts without orphaning data and and mitigates the risk of future data leakage if that group name was reused by another team. 
+Generally we recommend archiving rather than deleting groups. You can do this by adding the Thorium system user to the group as an owner (since groups must have atleast 1 owner) and then removing non-admin group members. This preserves data and analysis artifacts without orphaning data and mitigates the risk of future data leakage if that group name was reused by another team. 
 
 
 ### Preparing For Group Deletion

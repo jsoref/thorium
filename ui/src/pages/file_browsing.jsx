@@ -96,7 +96,7 @@ const decodeParamsToFilters = (searchParams) => {
   return params;
 };
 
-// get files using filters and and an optional cursor
+// get files using filters and an optional cursor
 const getFiles = async (filters, cursor, reset) => {
   // reset cursor when filters have changed, caller must know this
   let requestCursor = cursor;

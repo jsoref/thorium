@@ -124,7 +124,7 @@ impl CreateLine {
 
     /// Print a log line for a created reaction in dry-run mode
     pub fn created_dry_run(reqs: &[ReactionRequest]) {
-        // print out the pipelines an samples/repos:commitishes from each request
+        // print out the pipelines and samples/repos:commitishes from each request
         for req in reqs {
             // print samples if there are any
             create_print_samples!("-", req.pipeline, req.samples, "-", "-");
