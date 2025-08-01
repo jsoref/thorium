@@ -616,7 +616,7 @@ impl Allocatable {
             // check if we spawned this image in the past
             if let Some(count) = self.counts.get_mut(&req) {
                 // if we spawned this in the past then we should skip this spawn
-                // otherwise we will repeatedly spwn workers for the same deadlines
+                // otherwise we will repeatedly spawn workers for the same deadlines
                 match count.cmp(&&mut 0) {
                     // we spawened a worker for this deadline in the past
                     Ordering::Greater => {
