@@ -2,8 +2,7 @@
 
 > The Elasticsearch deployment process will be summarized in this guide. However, admins may want
 > to consult the official ECK documentation for a more complete explanation of different configuration
-> options and additional troubleshooting steps. The Elasticsearch deployment guide can be found
-> [here](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
+> options and additional troubleshooting steps. See the [Elasticsearch deployment guide](https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html).
 
 Thorium requires `Elasticsearch` to enable full-text search of analysis tool results and other
 submission data. `Kibana` may optionally be deployed as a web interface for managing the ECK
