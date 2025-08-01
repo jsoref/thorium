@@ -1235,7 +1235,7 @@ pub async fn delete(reaction: &Reaction, shared: &Shared) -> Result<(), ApiError
 ///
 /// # Arguments
 ///
-/// * `user` - Ther user that is deleting these reactions
+/// * `user` - The user that is deleting these reactions
 /// * `group` - The group to delete reactions from
 /// * `pipeline` - The pipeline to delete reactions from
 /// * `shared` - Shared Thorium objects

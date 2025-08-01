@@ -527,7 +527,7 @@ impl Scaler {
     async fn schedule(&mut self) -> Result<HashSet<String>, Error> {
         // clone our current resource counts so we can track changes
         let past = self.allocatable.counts.clone();
-        // track our succesful scale changes and the the correctly deleted ones
+        // track our succesful scale changes and the correctly deleted ones
         let mut changes: HashMap<DateTime<Utc>, Vec<Spawned>> =
             HashMap::with_capacity(self.allocatable.changes.spawns.len());
         let mut deleted = HashSet::with_capacity(self.allocatable.changes.scale_down.len());
