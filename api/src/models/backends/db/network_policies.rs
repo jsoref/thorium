@@ -164,7 +164,7 @@ pub async fn get(
     if groups.is_empty() {
         return bad!("Groups cannot be empty when getting a network policy".to_string());
     }
-    // save the groups the policy is in
+    // save the groups containing the policy
     let mut policy_groups: Vec<String> = Vec::new();
     // save at least one row to use its information later
     let mut policy_row: Option<NetworkPolicyRow> = None;
@@ -263,7 +263,7 @@ pub async fn get_all_default(
 
 /// Check if a network policy exists in multiple groups
 ///
-/// Returns the groups the network policy is in
+/// Returns the groups containing the network policy
 ///
 /// # Arguments
 ///
