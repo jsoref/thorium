@@ -775,7 +775,7 @@ impl Files {
 
     /// Deletes a comment for a sample
     ///
-    /// * `sha256` - The SHA256 of the file the comment will be deleted from
+    /// * `sha256` - The SHA256 of the file from which the comment will be deleted
     /// * `comment_id` - The UUID of the comment to delete
     /// * `params` - The parameters to use when deleting the comment
     ///
