@@ -293,7 +293,7 @@ impl ReactionRequest {
     ///
     /// # Arguments
     ///
-    /// * `sla` - The sla to set for an reaction
+    /// * `sla` - The sla to set for a reaction
     ///
     /// # Examples
     ///

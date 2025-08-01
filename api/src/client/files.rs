@@ -117,7 +117,7 @@ impl Files {
     ///
     /// # Arguments
     ///
-    /// * `file_req` - The file request to use to add an file to Thorium
+    /// * `file_req` - The file request to use to add a file to Thorium
     ///
     /// # Examples
     ///
@@ -607,7 +607,7 @@ impl Files {
         sha256: &str,
         update: &SubmissionUpdate,
     ) -> Result<reqwest::Response, Error> {
-        // build url for updating an file
+        // build url for updating a file
         let url = format!(
             "{base}/api/files/sample/{sha256}",
             base = self.host,
@@ -659,7 +659,7 @@ impl Files {
         sha256: &str,
         tags: &TagRequest<Sample>,
     ) -> Result<reqwest::Response, Error> {
-        // build url for updating an file
+        // build url for updating a file
         let url = format!("{}/api/files/tags/{}", self.host, sha256);
         // build request
         let req = self
@@ -709,7 +709,7 @@ impl Files {
         sha256: &str,
         tags_del: &TagDeleteRequest<Sample>,
     ) -> Result<reqwest::Response, Error> {
-        // build url for updating an file
+        // build url for updating a file
         let url = format!("{}/api/files/tags/{}", self.host, sha256);
         // build request
         let req = self

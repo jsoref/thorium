@@ -1502,7 +1502,7 @@ fn default_json_limit() -> u64 {
     1024
 }
 
-/// Helps serde default the max size an form (sans files) can be in mebibytes
+/// Helps serde default the max size a form (sans files) can be in mebibytes
 fn default_form_limit() -> u64 {
     1024
 }

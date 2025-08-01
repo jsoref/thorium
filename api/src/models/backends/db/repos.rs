@@ -887,7 +887,7 @@ pub async fn commitish_details(
 ) -> Result<Vec<CommitishDetails>, ApiError> {
     // log the number of commits we are getting details for
     event!(Level::INFO, commits = list.len());
-    // build an a details list for our samples
+    // build a details list for our samples
     let mut details: Vec<CommitishDetails> = Vec::with_capacity(list.len());
     // get the commitish details for each of our commitishes
     let mut details_stream = stream::iter(list)

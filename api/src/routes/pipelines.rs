@@ -330,7 +330,7 @@ async fn get_notifications(
     shared::notifications::get_notifications(pipeline, key, &state.shared).await
 }
 
-/// Delete a specific notification from an pipeline
+/// Delete a specific notification from a pipeline
 ///
 /// # Arguments
 ///
