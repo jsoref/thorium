@@ -279,7 +279,7 @@ impl Sample {
         check: &SampleCheck,
         shared: &Shared,
     ) -> Result<SampleCheckResponse, ApiError> {
-        // check if this submission exists in a group the user can access
+        // check if this submission exists in a group that the user can access
         db::files::exists(user, check, shared).await
     }
 
