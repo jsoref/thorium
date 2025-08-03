@@ -355,7 +355,7 @@ async fn commitish_details(
 //         ("params" = RepoDownloadOpts, description = "The query params to use with this request"),
 //     ),
 //     responses(
-//         (status = 200, description = "Bytestrean for repo download", body = Vec<u8>),
+//         (status = 200, description = "Bytestream for repo download", body = Vec<u8>),
 //         (status = 401, description = "This user is not authorized to access this route"),
 //     ),
 //     security(
