@@ -290,7 +290,7 @@ pub async fn exists(
                     .await?;
                 // try to enable rows on this query response
                 let query_rows = query.into_rows_result()?;
-                // check if didn'tretrieve any rows
+                // check if didn't retrieve any rows
                 if query_rows.rows_num() == 0 {
                     // no rows were returned, so the policy wasn't found
                     Ok(None)
