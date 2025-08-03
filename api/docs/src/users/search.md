@@ -136,7 +136,7 @@ If tags contain Lucene keywords (e.g. `AND`, `OR`, etc.), use quotes:
 ##### Why does it take some time for data to become searchable?
 
 It can take some time (usually < 10 seconds) for results to be searchable in
-Thorium because they are indexed asynchronusly by a separate component called
+Thorium because they are indexed asynchronously by a separate component called
 the Thorium `search-streamer`. The time it takes for the `search-streamer`
 to index data depends on how much data has been added/modified/deleted in
 Thorium recently.
