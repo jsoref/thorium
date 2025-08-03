@@ -200,7 +200,7 @@ impl Reactor {
     ///
     /// # Arguments
     ///
-    /// * `chages` - The changes to the current workers to apply this loop
+    /// * `changes` - The changes to the current workers to apply this loop
     /// * `span` - The span to log traces under
     async fn setup_keys(&mut self, changes: &mut HashMap<String, Worker>, span: &Span) {
         // start our reactor check loop
