@@ -459,7 +459,7 @@ pub struct GenericJobArgsUpdate {
     /// The switch arguments to remove from the original switches for this job
     #[serde(default)]
     pub remove_switches: Vec<String>,
-    /// The options to replace for this this generic job
+    /// The options to replace for this generic job
     pub opts: Option<GenericJobOpts>,
 }
 
