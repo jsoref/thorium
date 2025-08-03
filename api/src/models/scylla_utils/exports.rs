@@ -47,7 +47,7 @@ impl FromStr for ExportOps {
 /// An internal struct containing a single export row in Scylla
 #[derive(Debug)]
 pub struct ExportRow {
-    /// The Id for this export operation
+    /// The ID for this export operation
     pub id: Uuid,
     /// The name of this export operaton
     pub name: String,

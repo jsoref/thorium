@@ -228,7 +228,7 @@ pub struct Export {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ExportError {
-    /// The Id for this error
+    /// The ID for this error
     pub id: Uuid,
     /// The start of the chunk of data that we failed to export
     pub start: DateTime<Utc>,

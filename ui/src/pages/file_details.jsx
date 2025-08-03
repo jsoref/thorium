@@ -43,7 +43,7 @@ const FileDetailsContainer = () => {
   // jump to correct tab/subsection when page is loaded
   useEffect(() => {
     const triggerPageScroll = () => {
-      // check if result id was provided within the location hash
+      // check if result ID was provided within the location hash
       switch (section[0]) {
         case 'results':
           // length will be 2 when a tool is provided

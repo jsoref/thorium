@@ -568,7 +568,7 @@ where
     D: ScyllaCursorSupport,
     D: Debug,
 {
-    /// The Id for this cursor
+    /// The ID for this cursor
     pub id: Uuid,
     /// The cursor settings/data to retain across cursor iterations
     pub retain: ScyllaCursorRetain<D>,
@@ -1945,7 +1945,7 @@ where
     D: GroupedScyllaCursorSupport,
     D: Debug,
 {
-    /// The Id for this cursor
+    /// The ID for this cursor
     pub id: Uuid,
     /// The cursor settings/data to retain across cursor iterations
     pub retain: GroupedScyllaCursorRetain<D>,

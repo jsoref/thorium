@@ -133,7 +133,7 @@ pub async fn sha256_exists(
 ///
 /// * `sha256` - The sha256 that is being ingested as a child sample
 /// * `submission` - The submission id of the child sample being ingested
-/// * `results` - The result ids to add this child under
+/// * `results` - The result IDs to add this child under
 /// * `shared` - Shared Thorium objects
 /// * `req_id` - The uuid for this request
 #[instrument(name = "db::files::add_child", skip(shared), err(Debug))]

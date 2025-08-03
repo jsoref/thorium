@@ -568,7 +568,7 @@ async fn download_result_file(
     }
     // pop the required params
     if let Some(raw_uuid) = path_split.pop() {
-        let result_id = bounder::uuid(raw_uuid, "result id")?;
+        let result_id = bounder::uuid(raw_uuid, "result ID")?;
         if let Some(tool) = path_split.pop() {
             // build our repo path from what's left
             let repo_path = itertools::join(path_split.iter(), "/");

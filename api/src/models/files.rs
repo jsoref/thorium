@@ -58,7 +58,7 @@ cfg_if::cfg_if! {
         pub struct OriginForm {
             /// The type of origin this should be deserialized as
             pub origin_type: OriginTypes,
-            /// The result ids to add this child too
+            /// The result IDs to add this child too
             pub result_ids: Vec<Uuid>,
             /// The url this was downloaded from
             pub url: Option<String>,
@@ -138,7 +138,7 @@ cfg_if::cfg_if! {
         /// A request for a comment about a specific sample
         #[derive(Debug)]
         pub struct CommentForm {
-            /// The Id to assign for this form
+            /// The ID to assign for this form
             pub id: Uuid,
             /// The groups to share this comment with
             pub groups: Vec<String>,
@@ -666,7 +666,7 @@ impl Default for OriginTypes {
 pub struct OriginRequest {
     /// The type of origin this should be deserialized as
     pub origin_type: String,
-    /// The result ids to add this child too
+    /// The result IDs to add this child too
     pub result_ids: Vec<Uuid>,
     /// The url this was downloaded from
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -1206,11 +1206,11 @@ impl OriginRequest {
         }
     }
 
-    /// A result id to this origin
+    /// A result ID to this origin
     ///
     /// # Arguments
     ///
-    /// * `result_id` - The result id to add to this origin
+    /// * `result_id` - The result ID to add to this origin
     #[must_use]
     pub fn result_id(mut self, result_id: Uuid) -> Self {
         self.result_ids.push(result_id);
@@ -1221,7 +1221,7 @@ impl OriginRequest {
     ///
     /// # Arguments
     ///
-    /// * `result_id` - The result id to add to this origin
+    /// * `result_id` - The result ID to add to this origin
     #[must_use]
     pub fn result_ids(mut self, mut result_ids: Vec<Uuid>) -> Self {
         self.result_ids.append(&mut result_ids);

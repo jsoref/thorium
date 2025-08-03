@@ -105,7 +105,7 @@ pub async fn create<O: OutputSupport>(
 /// * `groups` - The groups a user is in
 /// * `sha256` - The sha256 this result is for
 /// * `tool` - The tool this result is from
-/// * `result_id` - The result id to authorize
+/// * `result_id` - The result ID to authorize
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::results::authorize", skip(kind, shared), err(Debug))]
 pub async fn authorize(
@@ -133,7 +133,7 @@ pub async fn authorize(
                 .await?;
             // cast this query to a rows query
             let query_rows = query.into_rows_result()?;
-            // crawl over our rows and return early if we find our result id
+            // crawl over our rows and return early if we find our result ID
             for row in query_rows.rows::<(Uuid,)>()? {
                 // try to cast our id into a uuid
                 if let Some(cast) = log_scylla_err!(row) {
@@ -158,7 +158,7 @@ pub async fn authorize(
             .await?;
         // cast this query to a rows query
         let query_rows = query.into_rows_result()?;
-        // crawl over our rows and return early if we find our result id
+        // crawl over our rows and return early if we find our result ID
         for row in query_rows.rows::<(Uuid,)>()? {
             // try to cast our id into a uuid
             if let Some(cast) = log_scylla_err!(row) {
@@ -170,19 +170,19 @@ pub async fn authorize(
             }
         }
     }
-    // no matching result ids were found so bounce this request
+    // no matching result IDs were found so bounce this request
     unauthorized!()
 }
 
-/// Gets result ids from scylla
+/// Gets result IDs from scylla
 ///
 /// If no tools are passed then all tool results will be returned.
 ///
 /// # Arguments
 ///
 /// * `kind` - The kind of results we are getting ids for
-/// * `groups` - The groups to get result ids for
-/// * `key` - The key to get result ids for
+/// * `groups` - The groups to get result IDs for
+/// * `key` - The key to get result IDs for
 /// * `tools` - The tools to optionally restrict results retrieved to
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::results::get_ids", skip_all, err(Debug))]
@@ -201,9 +201,9 @@ async fn get_ids(
     event!(Level::INFO, groups = groups.len(), tools = tools.len());
     // check if can do this all in one request or not
     if groups.len() * tools_len < 100 {
-        // get our result ids from scylla
+        // get our result IDs from scylla
         let query = if tools.is_empty() {
-            // get our get result ids query
+            // get our get result IDs query
             shared
                 .scylla
                 .session
@@ -213,7 +213,7 @@ async fn get_ids(
                 )
                 .await?
         } else {
-            // get our get result ids restricted by tools query
+            // get our get result IDs restricted by tools query
             shared
                 .scylla
                 .session
@@ -235,7 +235,7 @@ async fn get_ids(
             // turn our chunks into vecs
             let groups_vec = groups_chunk.to_vec();
             let tools_vec = tools_chunk.to_vec();
-            // send get our get result ids restricted by tools query
+            // send get our get result IDs restricted by tools query
             let query = shared
                 .scylla
                 .session
@@ -438,7 +438,7 @@ async fn prune_helper(
         // if any fail this will orphan things but orphaned result files are better
         // then dangling ones
         for name in files {
-            // build our result id path
+            // build our result ID path
             let s3_path = format!("{}/{}", &result_id, name);
             shared.s3.results.delete(&s3_path).await?;
         }
@@ -615,7 +615,7 @@ pub async fn latest_filter(
 /// A temporary nested map to determine the latest id for each sha256/group/tool with timestamps
 pub type TimedOutputMap = HashMap<String, HashMap<String, HashMap<String, (Uuid, DateTime<Utc>)>>>;
 
-/// Get the latest tool result ids for all sha256s by group
+/// Get the latest tool result IDs for all sha256s by group
 ///
 /// # Arguments
 ///
@@ -710,7 +710,7 @@ pub async fn get_output_chunks(
     let mut futures = Vec::with_capacity(ids.len());
     // build a map of outputs
     let mut outputs = HashMap::with_capacity(ids.len());
-    // crawl over these result ids 100 at a time
+    // crawl over these result IDs 100 at a time
     for chunk in ids.chunks(100) {
         // create the future for this query and add it to our future list
         futures.push(
@@ -739,7 +739,7 @@ pub async fn get_output_chunks(
     Ok(outputs)
 }
 
-/// Convert the latest result ids to [`OutputBundle`]s
+/// Convert the latest result IDs to [`OutputBundle`]s
 ///
 /// # Arguments
 ///
@@ -752,7 +752,7 @@ async fn bundle_cursor(
     cursor: ScyllaCursor<OutputListLine>,
     shared: &Shared,
 ) -> Result<Vec<OutputBundle>, ApiError> {
-    // get the latest result ids for our sha256s
+    // get the latest result IDs for our sha256s
     let mut latest = latest_ids(kind, &cursor.retain.group_by, &cursor.data, shared).await;
     // get our result chunks
     let mut chunks = get_output_chunks(&latest, shared).await?;

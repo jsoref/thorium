@@ -536,7 +536,7 @@ impl Children {
     ///
     /// * `thorium` - The Thorium client
     /// * `job` - The job we are collecting results from
-    /// * `results` - The result ids from the job that uploaded these children
+    /// * `results` - The result IDs from the job that uploaded these children
     /// * `depth` - The depth for this child source sample
     /// * `commits` - The commit that each repo is checked out too
     /// * `logs` - The logs to send to the API
@@ -617,7 +617,7 @@ impl Children {
     ///
     /// * `thorium` - The Thorium client
     /// * `job` - The job we are collecting results from
-    /// * `results` - The result ids from the job that uploaded these children
+    /// * `results` - The result IDs from the job that uploaded these children
     /// * `logs` - The logs to send to the API
     #[instrument(name = "Children::submit_unpacked", skip_all, err(Debug))]
     pub async fn submit_unpacked(
@@ -716,7 +716,7 @@ impl Children {
     ///
     /// * `thorium` - The Thorium client
     /// * `job` - The job we are collecting results from
-    /// * `results` - The result ids from the job that uploaded these children
+    /// * `results` - The result IDs from the job that uploaded these children
     /// * `groups` - The groups to submit to
     /// * `logs` - The logs to send to the API
     #[instrument(name = "Children::submit_carved", skip_all, err(Debug))]
@@ -807,7 +807,7 @@ impl Children {
     ///
     /// * `thorium` - The Thorium client
     /// * `job` - The job we are submitting children for
-    /// * `results` - The result ids to submit children for
+    /// * `results` - The result IDs to submit children for
     /// * `depth` - The current depth of triggers
     /// * `commits` - The commits for any repos passed in as inputs
     /// * `image` - The image for this job

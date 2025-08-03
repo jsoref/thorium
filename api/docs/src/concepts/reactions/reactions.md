@@ -104,7 +104,7 @@ is entirely dependent on the creator of the sub reactions. This was done to
 more easily support Generator logic when it comes to sub reactions.
 
 Creating a sub reaction is exactly the same as creating a regular reaction but
-you set a parent field to your current reactions Id.
+you set a parent field to your current reactions ID.
 
 ### Creating Reactions in bulk
 ---
