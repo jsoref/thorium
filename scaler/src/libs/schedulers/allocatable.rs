@@ -791,7 +791,7 @@ impl Allocatable {
     ) -> HashSet<Requisition> {
         // track our changes on a per req basis
         let mut reqs = HashSet::with_capacity(self.counts.len());
-        // build a map to store what changes happended on what cluster/node
+        // build a map to store what changes happened on what cluster/node
         let mut sorted: HashMap<String, HashMap<String, Vec<(DateTime<Utc>, Spawned)>>> =
             HashMap::with_capacity(self.clusters.len());
         // crawl our changes and start sorting
