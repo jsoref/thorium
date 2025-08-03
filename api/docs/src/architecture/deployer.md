@@ -7,7 +7,7 @@ following commands:
 | cmd | description |
 | --- | ----------- |
 | install | Performs a clean install of Thorium ontop of K8s |
-| update | Updates all Thorium system componenets |
+| update | Updates all Thorium system components |
 | agent | Redeploys the Thorium agent to all nodes |
 | add_admin | Creates an admin account within Thorium |
 
