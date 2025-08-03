@@ -55,7 +55,7 @@ Querying for results where a field named `PEType` is set to `"PE32+"`
 ##### Why does it take some time for tool results to become searchable?
 
 It can take some time (usually < 10 seconds) for results to be searchable in 
-Thorium because they are indexed asynchronusly. Thorium has a component called
+Thorium because they are indexed asynchronously. Thorium has a component called
 the search-streamer that is responsible for tailing recent results and
 streaming then into Elastic Search.
 
