@@ -18,7 +18,7 @@ const filterIncludedTags = (tags, includeList) => {
   return [];
 };
 
-// return tags without exluded values
+// return tags without excluded values
 const filterExcludedTags = (tags, excludeList) => {
   const upperExcludedList = excludeList.map((tag) => {
     return tag.toUpperCase();
