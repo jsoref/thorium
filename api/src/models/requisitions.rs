@@ -56,7 +56,7 @@ impl Requisition {
         }
     }
 
-    /// Create a requisiton from labels on a pod
+    /// Create a requisition from labels on a pod
     ///
     /// This is used to compare currently living pods with pods that we have scaled this round.
     ///

@@ -121,7 +121,7 @@ impl Containers {
     /// # Arguments
     ///
     /// * `cache` - The Thorium scalers cache
-    /// * `req` - A requistion for a specific image type
+    /// * `req` - A requisition for a specific image type
     /// * `user` - The user this containers are being spawned for
     pub fn generate(
         &self,
