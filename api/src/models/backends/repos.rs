@@ -333,7 +333,7 @@ impl Repo {
     ) -> Result<String, ApiError> {
         // build a repo upload form to populate
         let mut form = RepoDataForm::default();
-        // biuld an option to store our hashes
+        // build an option to store our hashes
         let mut sha256_opt = None;
         // begin crawling our multipart form
         while let Some(field) = upload.next_field().await? {

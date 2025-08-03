@@ -125,7 +125,7 @@ impl Images {
     /// # async fn exec() -> Result<(), Error> {
     /// // create Thorium client
     /// let thorium = Thorium::build("http://127.0.0.1").token("<token>").build().await?;
-    /// // buld the image request
+    /// // build the image request
     /// let image_req = ImageRequest::new("Corn", "harvester")
     ///     .image("Thorium:CornHarvester");
     /// // try to create image in Thorium
