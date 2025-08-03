@@ -173,7 +173,7 @@ impl Stream {
         end: i64,
         shared: &Shared,
     ) -> Result<StreamDepth, ApiError> {
-        // get depth of stream from Backendd
+        // get depth of stream from Backend
         db::streams::depth(&group.name, namespace, stream, start, end, shared).await
     }
 
