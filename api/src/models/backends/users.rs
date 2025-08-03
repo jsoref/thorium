@@ -178,7 +178,7 @@ async fn basic_auth_ldap(
 ) -> Result<ldap3::Ldap, ApiError> {
     if let Some(ldap_conf) = &shared.config.thorium.auth.ldap {
         //  build an ldap connection
-        //  we do this on demand instead of having it in shared because it nees to be mutable
+        //  we do this on demand instead of having it in shared because it needs to be mutable
         let (conn, mut ldap) = ldap!(ldap_conf).await?;
         ldap3::drive!(conn);
         // try to bind to ldap with this users creds
