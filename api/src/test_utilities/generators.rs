@@ -459,7 +459,7 @@ pub async fn gen_all(
         }
         // create pipelines using these random images
         for _ in 0..cnt {
-            // generate randome pipeline name
+            // generate random pipeline name
             let pipe_name = gen_string(25);
             // get some random images for this pipeline
             let reqs: Vec<&ImageRequest> = group_images.iter().choose_multiple(&mut rng, cnt);
