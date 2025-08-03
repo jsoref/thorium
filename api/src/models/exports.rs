@@ -7,7 +7,7 @@ use uuid::Uuid;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ExportRequest {
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The starting timestamp to stream from (earliest)
     pub start: Option<DateTime<Utc>>,
@@ -196,7 +196,7 @@ impl ExportUpdate {
     /// # Arguments
     ///
     /// * `id` - The export cursor to update
-    /// * `current` - The oldest timestamp of data this export opeartion has exported
+    /// * `current` - The oldest timestamp of data this export operation has exported
     pub fn new(current: DateTime<Utc>) -> Self {
         ExportUpdate { current }
     }
@@ -212,7 +212,7 @@ impl ExportUpdate {
 /// Add FromRow support for scylla loading if API mode is enabled
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct Export {
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The user that owns this export operation
     pub user: String,

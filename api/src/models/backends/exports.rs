@@ -63,7 +63,7 @@ impl Export {
         exports::get(name, op, shared).await
     }
 
-    /// Updates an export opartion by name
+    /// Updates an export operation by name
     ///
     /// # Arguments
     ///
