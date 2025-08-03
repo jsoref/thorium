@@ -568,7 +568,7 @@ impl RestoreController {
         println!("  Repos: {}", config.thorium.repos.bucket);
         println!("  Attachments: {}", config.thorium.attachments.bucket);
         println!("  Results: {}", config.thorium.results.bucket);
-        // ask the user for pemission
+        // ask the user for permission
         let response = dialoguer::Confirm::new()
             .with_prompt("Do you want to restore data to the above databases:")
             .interact()?;
