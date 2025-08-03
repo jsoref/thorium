@@ -26,7 +26,7 @@ pub struct PartitionArchive {
 impl PartitionArchive {
     /// Create a new partition archive
     ///
-    /// # Argumetns
+    /// # Arguments
     ///
     /// * `start` - What byte this partition archive starts at
     /// * `end` - What byte this partitions archive stops as
