@@ -409,7 +409,7 @@ pub async fn get(
             while let Some(row) = typed_stream.next() {
                 // raise any errors from casting
                 if let Some(tag) = log_scylla_err!(row) {
-                    // get our key map oroinsert a default one
+                    // get our key map or insert a default one
                     let key_map = map.entry(tag.key).or_default();
                     // get our value map or insert a default one
                     let group_list = key_map.entry(tag.value).or_default();
@@ -433,7 +433,7 @@ pub async fn get(
         while let Some(row) = typed_stream.next() {
             // raise any errors from casting
             if let Some(tag) = log_scylla_err!(row) {
-                // get our key map oroinsert a default one
+                // get our key map or insert a default one
                 let key_map = map.entry(tag.key).or_default();
                 // get our value map or insert a default one
                 let group_list = key_map.entry(tag.value).or_default();
