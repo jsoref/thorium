@@ -336,7 +336,7 @@ async fn update_bad() -> Result<(), thorium::Error> {
         .await;
     fail!(resp, 400, "already contains group");
     // try to remove groups from the network policy that it doesn't have
-    let update = NetworkPolicyUpdate::default().remove_group("non-existent-group");
+    let update = NetworkPolicyUpdate::default().remove_group("nonexistent-group");
     let resp = client
         .network_policies
         .update(&req.name, None, &update)
@@ -350,7 +350,7 @@ async fn update_bad() -> Result<(), thorium::Error> {
         .await;
     fail!(resp, 400, "delete all of a network policy's groups");
     // try to add a group to the network policy that doesn't exist
-    let update = NetworkPolicyUpdate::default().add_group("non-existent-group");
+    let update = NetworkPolicyUpdate::default().add_group("nonexistent-group");
     let resp = client
         .network_policies
         .update(&req.name, None, &update)

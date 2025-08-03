@@ -56,7 +56,7 @@ Whats changed in Thorium!
 - *(api)* Fixed issue where listing repo tags would sometimes panic - (0354675)
 - *(api)* Fixed issue where jobs could end up in a dangling state - (2c40cf0)
 - *(api)* Fixed issue where cursors ties would cause panics - (1b4e171)
-- *(api)* Fixed issue where non existent users could be added to groups - (22ece6b)
+- *(api)* Fixed issue where nonexistent users could be added to groups - (22ece6b)
 - *(api)* Fixed issue where deleting reactions didn't clean up the running queue - (7926f91)
 - *(api)* Fixed issue where the users wouldn't get redirected after email verification - (0db1a83)
 - *(api)* Optimized tag creation when duplicate values are created - (9073b5d)

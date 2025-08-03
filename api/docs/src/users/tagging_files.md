@@ -77,5 +77,5 @@ To delete a tag, you must specify the complete `name=value` tag to remove.
 $ thorctl tags delete --delete-tags "stripped=false"  --files 619dddbd681b593d8c6f66de50dd41e422bfac7a83feab6c3f0944de7c73a4d3
 ```
 
-Be aware that `thorctl` will report success for deleting a non-existent tag.
+Be aware that `thorctl` will report success for deleting a nonexistent tag.
 
