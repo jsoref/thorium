@@ -19,7 +19,7 @@ pub struct NodesPreparedStatements {
     pub update_heart_beat: PreparedStatement,
     /// Get the ties when listing nodes
     pub list_ties: PreparedStatement,
-    /// Get all the nodes for a specific clustser
+    /// Get all the nodes for a specific cluster
     pub list: PreparedStatement,
     /// Get the ties when listing node details for a specific cluster
     pub list_details_ties: PreparedStatement,
