@@ -66,7 +66,7 @@ thorium:
   scaler:
     # How long the cache should live for at most before being invalidated in seconds
     cache_lifetime: 600
-    # The nubmer of deadlines to pull for one scale loop
+    # The number of deadlines to pull for one scale loop
     deadline_window: 100000
     # The specific settings for kubernetes
     k8s:
