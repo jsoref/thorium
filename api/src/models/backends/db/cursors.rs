@@ -645,7 +645,7 @@ where
                 let chunk = shared.config.thorium.tags.partition_size;
                 // get our tag map
                 let (_, tag_map) = tags.as_ref().unwrap();
-                // calculate the total nubmer of tags required for this query
+                // calculate the total number of tags required for this query
                 let tags_required = tag_map.values().map(|vals| vals.len()).sum();
                 (chunk, tags_required)
             } else {
@@ -731,7 +731,7 @@ where
             let (chunk, tags_required) = if let Some((_, tag_map)) = &tags {
                 // this is a tag based cursor so use our tag partition size
                 let chunk = shared.config.thorium.tags.partition_size;
-                // calculate the total nubmer of tags required for this query
+                // calculate the total number of tags required for this query
                 let tags_required = tag_map.values().map(|vals| vals.len()).sum();
                 (chunk, tags_required)
             } else {

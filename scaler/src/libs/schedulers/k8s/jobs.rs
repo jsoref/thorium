@@ -348,7 +348,7 @@ impl Jobs {
             // scale up
             self.deploy(&spec, increase).await?;
         } else if spec.scale < 0 {
-            // get nubmer of pods to delete
+            // get number of pods to delete
             let decrease: u64 = spec.scale.abs().try_into()?;
             // scale down
             self.downscale(&spec, decrease).await?;
