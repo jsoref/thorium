@@ -52,5 +52,5 @@ async fn main() {
 
 #[cfg(target_os = "macos")]
 fn main() {
-    eprintln!("The Thorium Reactor is not supported on MacOS!");
+    eprintln!("The Thorium Reactor is not supported on macOS!");
 }

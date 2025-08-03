@@ -27,7 +27,7 @@ ADD ./target/x86_64-unknown-linux-musl/release/thorium-operator binaries/linux/x
 #ADD ./target/x86_64-pc-windows-gnu/release/thorctl.exe binaries/windows/x86-64/thorctl.exe
 #ADD ./target/x86_64-pc-windows-gnu/release/thorium-agent.exe binaries/windows/x86-64/thorium-agent.exe
 #ADD ./target/x86_64-pc-windows-gnu/release/thorium-reactor.exe binaries/windows/x86-64/thorium-reactor.exe
-# copy macos binaries to target paths
+# copy macOS binaries to target paths
 ADD ./target/x86_64-apple-darwin/release/thorctl binaries/darwin/x86-64/thorctl
 ADD ./target/aarch64-apple-darwin/release/thorctl binaries/darwin/arm64/thorctl
 # copy arm binaries to target paths
