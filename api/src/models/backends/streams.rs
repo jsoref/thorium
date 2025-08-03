@@ -347,7 +347,7 @@ impl Stream {
         let distant_future = chrono::DateTime::parse_from_rfc3339("9999-07-01T00:00:00-00:00")?
             .with_timezone(&Utc)
             .timestamp();
-        // see how many jobs actaully exist
+        // see how many jobs actually exist
         let total = Self::depth(&group, namespace, stream, past, distant_future, shared).await?;
         // short circuit if no jobs
         if total.depth == 0 {
