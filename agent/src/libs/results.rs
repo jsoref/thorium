@@ -196,7 +196,7 @@ fn collect_result_files(
         let metadata = path.metadata()?;
         // only try to ingest results files if this path is a directory
         if metadata.is_dir() {
-            // recrusively walk through this directory skipping any hidden files
+            // recursively walk through this directory skipping any hidden files
             let files = WalkDir::new(path)
                 .follow_links(true)
                 .into_iter()

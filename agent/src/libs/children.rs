@@ -450,7 +450,7 @@ impl Children {
     fn source(&mut self) {
         // build the path to our source children
         let root = self.root.join("source");
-        // recrusively walk through this directory skipping any hidden files
+        // recursively walk through this directory skipping any hidden files
         self.source = get_children(&root);
     }
 
@@ -462,7 +462,7 @@ impl Children {
     fn unpacked(&mut self) {
         // build the path to our source children
         let root = self.root.join("unpacked");
-        // recrusively walk through this directory skipping any hidden files
+        // recursively walk through this directory skipping any hidden files
         self.unpacked = get_children(&root);
     }
 
@@ -476,7 +476,7 @@ impl Children {
         let root = self.root.join("carved");
         let unknown_root = root.join("unknown");
         let pcap_root = root.join("pcap");
-        // recrusively walk through this directory skipping any hidden files
+        // recursively walk through this directory skipping any hidden files
         self.carved = CarvedChildren {
             unknown: get_children(&unknown_root),
             pcap: get_children(&pcap_root),
