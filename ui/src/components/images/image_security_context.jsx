@@ -124,7 +124,7 @@ const SecurityContextFields = ({ initialSecurityContext, setRequestFields, disab
     setRequestFields(securityContextCopy);
   };
 
-  // this is needed for onload when cloning from an exisitng image
+  // this is needed for onload when cloning from an existing image
   useEffect(() => {
     setRequestFields(initialSecurityContext);
     // eslint-disable-next-line react-hooks/exhaustive-deps

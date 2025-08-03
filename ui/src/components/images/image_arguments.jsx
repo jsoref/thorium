@@ -247,7 +247,7 @@ const ArgumentFields = ({ initialArgs, setRequestArguments, errors }) => {
     setRequestArguments(argsCopy);
   };
 
-  // this is needed for onload when cloning from an exisitng image
+  // this is needed for onload when cloning from an existing image
   useEffect(() => {
     setRequestArguments(initialArgs);
     // eslint-disable-next-line react-hooks/exhaustive-deps
