@@ -255,7 +255,7 @@ pub async fn axum(config: Conf) {
         // our scan failed, so don't start the API
         panic!("Error running initial consistency scan: {err}");
     }
-    // track how many bind attemps we have tried
+    // track how many bind attempts we have tried
     let mut attempts = 0;
     // bind and start handling requests
     loop {
