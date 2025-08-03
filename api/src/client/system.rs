@@ -49,7 +49,7 @@ impl System {
     }
 }
 
-// only inlcude blocking structs if the sync feature is enabled
+// only include blocking structs if the sync feature is enabled
 cfg_if::cfg_if! {
     if #[cfg(feature = "sync")] {
         /// system handler for the Thorium client
