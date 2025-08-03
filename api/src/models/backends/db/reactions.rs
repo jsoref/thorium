@@ -638,15 +638,15 @@ fn build_expire<'a>(
     let expiration =
         chrono::Utc::now() + chrono::Duration::seconds(shared.config.thorium.retention.data as i64);
     let expiration = expiration.timestamp();
-    // add comamnd to expire out of the destination set
+    // add command to expire out of the destination set
     add_expire!(pipe, expiration, "srem", dest, &reaction.id, shared);
     // build key to reaction set for this group/pipeline
     let set_key = ReactionKeys::set(&reaction.group, &reaction.pipeline, shared);
-    // add comamnd to expire out of the pipeline set
+    // add command to expire out of the pipeline set
     add_expire!(pipe, expiration, "srem", &set_key, &reaction.id, shared);
     // build key to reaction set for this group
     let group_key = ReactionKeys::group_set(&reaction.group, &reaction.status, shared);
-    // add comamnd to expire out of the group status set
+    // add command to expire out of the group status set
     add_expire!(pipe, expiration, "zrem", &group_key, &reaction.id, shared);
     // build key to sub reaction lists
     let sub_reacts = SubReactionLists::new(reaction, shared);

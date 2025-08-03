@@ -718,7 +718,7 @@ impl BackupController {
     }
 }
 
-/// Handle a backup take sub comamnd
+/// Handle a backup take sub command
 ///
 /// # Arguments
 ///
