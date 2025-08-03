@@ -610,7 +610,7 @@ impl OutputSupport for Repo {
 
 impl From<RepoSubmission> for Repo {
     fn from(sub: RepoSubmission) -> Self {
-        // build repo with just curent submission
+        // build repo with just current submission
         let mut repo = Repo {
             provider: sub.provider.clone(),
             user: sub.user.clone(),

@@ -107,7 +107,7 @@ cfg_if::cfg_if! {
             exhausted: bool,
             /// The url to get more data at
             url: String,
-            /// The amount of data curerntly returned by this cursor
+            /// The amount of data currently returned by this cursor
             gathered: usize,
             /// The total amount of data to return
             pub limit: Option<usize>,

@@ -167,7 +167,7 @@ async fn settings_reset(
 ) -> Result<StatusCode, ApiError> {
     // determine if a scan is needed before resetting
     let scan_needed = if params.scan {
-        // retrieve the curent system settings
+        // retrieve the current system settings
         let old_settings = SystemSettings::get(&user, &state.shared).await?;
         let default_settings = SystemSettings::default();
         // a scan is needed if either the whitelist or allow_unrestricted_host_paths was changed
