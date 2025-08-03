@@ -820,7 +820,7 @@ cfg_if::cfg_if! {
             ///
             /// # Arguments
             ///
-            /// * `preferred` - The branches we would prefer to checkout if they exist in priorized order
+            /// * `preferred` - The branches we would prefer to checkout if they exist in prioritized order
             ///
             /// # Panics
             ///
