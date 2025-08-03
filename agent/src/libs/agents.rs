@@ -13,12 +13,12 @@ use tokio::process::Child;
 use tokio::time::{Duration, Instant};
 use tracing::{event, instrument, Level};
 
-pub mod baremetal;
+pub mod bare-metal;
 pub mod k8s;
 mod registry;
 mod setup;
 
-pub use baremetal::BareMetal;
+pub use bare-metal::BareMetal;
 pub use k8s::K8s;
 
 use crate::args::Envs;
