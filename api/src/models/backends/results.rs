@@ -325,7 +325,7 @@ impl Output {
         user.authorize_groups(&mut params.groups, shared).await?;
         // get a chunk of the results stream
         let scylla_cursor = db::results::list(kind, params, shared).await?;
-        // convert our scylla cursor to a user facing crusor
+        // convert our scylla cursor to a user facing cursor
         Ok(ApiCursor::from(scylla_cursor))
     }
 
