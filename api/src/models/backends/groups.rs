@@ -400,7 +400,7 @@ impl Group {
         if user.is_admin() {
             return Ok(());
         }
-        // make sure this user has the devloper role
+        // make sure this user has the developer role
         if !user.is_developer(scaler) {
             // this user is not a developer
             event!(
@@ -439,7 +439,7 @@ impl Group {
         if user.is_admin() {
             return Ok(());
         }
-        // make sure this user has the devloper role
+        // make sure this user has the developer role
         if !user.is_developer_many(scalers) {
             // this user is not a developer
             event!(
