@@ -118,7 +118,7 @@ impl RawJob {
                 // log the data that was missing required values
                 event!(Level::ERROR, malformed = true, data = format!("{raw:?}"));
             }
-            // tell this user this job counldn't be found
+            // tell this user this job couldn't be found
             return not_found!("Job not found".to_owned());
         }
         // cast our raw data to a Job
