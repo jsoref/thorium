@@ -45,7 +45,7 @@ pub async fn handle(args: &Args, cmd: &Uncart) -> Result<(), Error> {
     for target in &cmd.targets {
         uncart_target(cmd, target, base_out_path, &filter, &skip, args.workers).await;
     }
-    // remove temporary drectory after in-place conversion
+    // remove temporary directory after in-place conversion
     if cmd.in_place {
         tokio::fs::remove_dir_all(base_out_path).await?;
     }
