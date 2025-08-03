@@ -454,7 +454,7 @@ async fn upload_helper(
     // build a path to our results file
     let mut path = entry.path();
     path.push(cmd.results.as_ref().unwrap_or(&"results".to_owned()));
-    // build a list of results_files and childrent
+    // build a list of results_files and children
     let mut results_files = Vec::default();
     // start recursively walking through this directory ignoring any hidden files
     for entry in WalkDir::new(entry.path())

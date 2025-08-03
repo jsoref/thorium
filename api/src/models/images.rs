@@ -1589,7 +1589,7 @@ fn default_children_strategy() -> DependencyPassStrategy {
     DependencyPassStrategy::default()
 }
 
-/// The settings the agent should use when passing childrens to tools
+/// The settings the agent should use when passing children to tools
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ChildrenDependencySettings {
@@ -1598,19 +1598,19 @@ pub struct ChildrenDependencySettings {
     /// The prior images to restrict children collection too
     #[serde(default)]
     pub images: Vec<String>,
-    /// Where the agent should store downloaded childrens
+    /// Where the agent should store downloaded children
     #[serde(default = "default_children_location")]
     pub location: String,
-    /// The kwarg to pass these childrens in with if one is set (otherwise use positional args)
+    /// The kwarg to pass these children in with if one is set (otherwise use positional args)
     pub kwarg: Option<String>,
     #[serde()]
-    /// The strategy the agent should use when passing childrens downloaded to jobs
+    /// The strategy the agent should use when passing children downloaded to jobs
     #[serde(default = "default_children_strategy")]
     pub strategy: DependencyPassStrategy,
 }
 
 impl Default for ChildrenDependencySettings {
-    /// Create a default childrens dependency settings
+    /// Create a default children dependency settings
     fn default() -> Self {
         ChildrenDependencySettings {
             enabled: false,
