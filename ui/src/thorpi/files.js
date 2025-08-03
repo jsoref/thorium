@@ -216,7 +216,7 @@ const deleteSubmission = async (sha256, id, groups, errorHandler) => {
       errorHandler(`Failed to delete submission: ${res.status}`);
       // no message or error returned
     } else {
-      errorHandler('Failed to delete sumbission: Unknown Error');
+      errorHandler('Failed to delete submission: Unknown Error');
     }
     return false;
   });

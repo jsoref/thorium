@@ -578,7 +578,7 @@ pub async fn delete_submission(
         shared,
     )
     .await?;
-    // if no other submisisons exist then just clean up all data otherwise we
+    // if no other submissions exist then just clean up all data otherwise we
     // need to prune data from groups that no longer have access to prevent
     // leaking other groups also can see this sample
     let prunes: Vec<String> = if group_submitter_map.is_empty() {

@@ -19,7 +19,7 @@ pub struct SamplesPreparedStatements {
     pub delete: PreparedStatement,
     /// Delete a submission id from many groups
     pub delete_multiple_groups: PreparedStatement,
-    /// Get the basic sumbmission info for a specific sha256
+    /// Get the basic submission info for a specific sha256
     pub get_basic_submission_info: PreparedStatement,
     /// List the ties for a sample cursor
     pub list_ties: PreparedStatement,

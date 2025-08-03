@@ -645,7 +645,7 @@ impl Sample {
             Some(raw) => Origin::deserialize(groups, raw, shared).await?,
             None => Origin::None,
         };
-        // downselect ot just the fields for a subission chunk
+        // downselect ot just the fields for a submission chunk
         let chunk = SubmissionChunk {
             id: sub.id,
             name: sub.name,
@@ -677,7 +677,7 @@ impl Sample {
                 Some(raw_origin) => deserialize!(raw_origin),
                 None => Origin::None,
             };
-            // downselect ot just the fields for a rowission chunk
+            // downselect ot just the fields for a submission chunk
             let chunk = SubmissionChunk {
                 id: row.id,
                 name: row.name,
@@ -900,7 +900,7 @@ impl TryFrom<SubmissionRow> for Sample {
             Some(raw_origin) => deserialize!(raw_origin),
             None => Origin::None,
         };
-        // downselect ot just the fields for a rowission chunk
+        // downselect ot just the fields for a submission chunk
         let sub = SubmissionChunk {
             id: row.id,
             name: row.name,
@@ -1135,7 +1135,7 @@ impl From<SubmissionListRow> for SampleListLine {
     ///
     /// # Arguments
     ///
-    /// * `row` - The submisison row to convert
+    /// * `row` - The submission row to convert
     fn from(row: SubmissionListRow) -> Self {
         // build our initial group set
         let mut groups = HashSet::with_capacity(1);

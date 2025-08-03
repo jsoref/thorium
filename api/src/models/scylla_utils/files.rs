@@ -34,7 +34,7 @@ pub struct SubmissionRow {
     pub name: Option<String>,
     /// A description for this sample
     pub description: Option<String>,
-    /// The group this submisison is for
+    /// The group this submission is for
     pub group: String,
     /// The user who submitted this sample
     pub submitter: String,

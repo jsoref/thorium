@@ -428,7 +428,7 @@ async fn get_base(
             let query_rows = query.into_rows_result()?;
             // set the type for the rows returned by this query
             let typed_iter = query_rows.rows::<RepoRow>()?;
-            // cast our rows into submisison objects and add them to our btree
+            // cast our rows into submission objects and add them to our btree
             typed_iter
                 .filter_map(|res| log_scylla_err!(res))
                 .for_each(|sub| {
@@ -457,7 +457,7 @@ async fn get_base(
         let query_rows = query.into_rows_result()?;
         // set the type for the rows returned by this query
         let typed_iter = query_rows.rows::<RepoRow>()?;
-        // cast our rows into submisison objects and add them to our btree
+        // cast our rows into submission objects and add them to our btree
         typed_iter
             .filter_map(|res| log_scylla_err!(res))
             .for_each(|sub| {
