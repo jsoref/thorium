@@ -2996,10 +2996,10 @@ impl PartialEq<ResultDependencySettingsUpdate> for ResultDependencySettings {
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Default)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct Dependencies {
-    /// The settings  the agent should use when passing donwloaded samples to tools
+    /// The settings  the agent should use when passing downloaded samples to tools
     #[serde(default)]
     pub samples: SampleDependencySettings,
-    /// The settings the agent should use when passing donwloaded ephemeral files to tools
+    /// The settings the agent should use when passing downloaded ephemeral files to tools
     #[serde(default)]
     pub ephemeral: EphemeralDependencySettings,
     /// The settings the agent should use when passing prior results to tools
@@ -3117,7 +3117,7 @@ impl PartialEq<DependenciesUpdate> for Dependencies {
 #[derive(Serialize, Deserialize, Debug, Clone, Default, PartialEq)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct DependenciesUpdate {
-    /// The strategy the agent should use when passing donwloaded samples to tools
+    /// The strategy the agent should use when passing downloaded samples to tools
     #[serde(default)]
     pub samples: DependencySettingsUpdate,
     /// The strategy the agent should use when passing downloaded ephemeral files to tools
@@ -3126,10 +3126,10 @@ pub struct DependenciesUpdate {
     /// The strategy the agent should use when passing in prior results
     #[serde(default)]
     pub results: ResultDependencySettingsUpdate,
-    /// The strategy the agent should use when passing donwloaded repos to tools
+    /// The strategy the agent should use when passing downloaded repos to tools
     #[serde(default)]
     pub repos: DependencySettingsUpdate,
-    /// The strategy the agent should use when passing donwloaded tags to tools
+    /// The strategy the agent should use when passing downloaded tags to tools
     #[serde(default)]
     pub tags: TagDependencySettingsUpdate,
     /// The settings the agent should use when passing children files from past tools
