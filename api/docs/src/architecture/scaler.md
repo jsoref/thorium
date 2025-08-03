@@ -4,7 +4,7 @@ Thorium scalers are responsible for determining when and where reactions/jobs
 are spawned. It accomplishes this by crawling the deadline stream and based
 on fair share scheduling logic. This means that some portion of your cluster
 will be dedicated to the most pressing jobs based on deadline while another
-portion will be trying to fairly executing everyones jobs evenly. This allows
+portion will be trying to fairly executing everyone's jobs evenly. This allows
 for users to spawn large groups of reactions/jobs without fear of abusing
 the cluster and preventing others from accomplishing tasks.
 
