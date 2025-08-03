@@ -59,7 +59,7 @@ yellow puppy. If we assume the original docker file had its cmd set to:
 
 Because we specified an arg to overlay ontop of "--color" that would be set to
 "yellow" when we call the entrypoint instead of "brown". This also means that 
-if you simply want to use the args specified in the docker file everytime you
+if you simply want to use the args specified in the docker file every time you
 can leave args set to an empty {}. You also do not need to specify args for
 every image in the pipeline.
 
