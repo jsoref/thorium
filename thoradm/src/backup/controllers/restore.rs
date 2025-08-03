@@ -362,7 +362,7 @@ impl<R: S3Restore> S3RestoreController<R> {
         let update_rx = self.updates_rx.clone();
         // build the style for our progress bar
         let bar_style = ProgressStyle::with_template(
-            "{spinner:.green} {elapsed_precise} Total Restored S3 Obejcts: {msg} {bytes} {binary_bytes_per_sec}",
+            "{spinner:.green} {elapsed_precise} Total Restored S3 Objects: {msg} {bytes} {binary_bytes_per_sec}",
         )
         .unwrap()
         .tick_strings(&[
