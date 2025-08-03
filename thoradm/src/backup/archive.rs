@@ -81,7 +81,7 @@ impl ArchiveReader {
         path.push(id);
         // open our archive file
         let data_reader = BufReader::new(File::open(&path).await?);
-        // create a bytesmut obejct for our map info
+        // create a bytesmut object for our map info
         let map_buffer = BytesMut::zeroed(96);
         // create a bytesmut object at least 1MiB big
         let data_buffer = BytesMut::zeroed(1_048_576);
