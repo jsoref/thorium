@@ -14,7 +14,7 @@ recalculate every jobs score in order to prevent starvation from occuring. This
 could get incredibly costly compute wise and also has the problem that we need to
 ensure one score does not outweigh the others in an unexpected way.
 
-Streams allow us to efficently sidestep this problem by making the issue of 
+Streams allow us to efficiently sidestep this problem by making the issue of 
 starvation no longer possible and by making the "score" a metric based in
 reality instead of being arbitrary. We can do this by creating a data structure
 where items are scored based on timestamps.
