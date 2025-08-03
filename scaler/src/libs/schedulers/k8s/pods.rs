@@ -282,7 +282,7 @@ impl Pods {
             if let Err(error) = delete {
                 // cast this k8s error to a Thorium error
                 let error = Error::from(error);
-                // if this is an error becauset the pod no longer exists then ignore it
+                // if this is an error because the pod no longer exists then ignore it
                 if error.status() != Some(StatusCode::NOT_FOUND) {
                     // this error will get logged by the scaler later
                     // build our error object
