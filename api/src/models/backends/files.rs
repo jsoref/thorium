@@ -1137,7 +1137,7 @@ impl From<SubmissionListRow> for SampleListLine {
     ///
     /// * `row` - The submisison row to convert
     fn from(row: SubmissionListRow) -> Self {
-        // build our intitial group set
+        // build our initial group set
         let mut groups = HashSet::with_capacity(1);
         // ad this group
         groups.insert(row.group);
@@ -1158,7 +1158,7 @@ impl From<TagListRow> for SampleListLine {
     ///
     /// * `row` - The tag row to convert
     fn from(row: TagListRow) -> Self {
-        // build our intitial group set
+        // build our initial group set
         let mut groups = HashSet::with_capacity(1);
         // ad this group
         groups.insert(row.group);
