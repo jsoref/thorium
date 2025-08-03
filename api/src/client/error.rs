@@ -13,7 +13,7 @@ pub enum Error {
     },
     /// A generic error with a message
     Generic(String),
-    /// An error from sending or recieving a request
+    /// An error from sending or receiving a request
     Reqwest(reqwest::Error),
     /// An IO Error
     IO(std::io::Error),
