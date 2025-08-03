@@ -634,7 +634,7 @@ async fn latest_ids(
     let mut futures = Vec::with_capacity((data.len() / 100) * groups.len());
     // break our keys into chunks of 100
     for chunk in data.chunks(100) {
-        // build a list of keys for our outpus
+        // build a list of keys for our outputs
         let keys = chunk
             .iter()
             .map(|output| &output.key)
