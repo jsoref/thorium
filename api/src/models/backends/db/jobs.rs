@@ -500,7 +500,7 @@ pub async fn sleep(
 ) -> Result<JobHandleStatus, ApiError> {
     // error on already completed jobs
     if job.status != JobStatus::Running {
-        return conflict!(format!("job {} must be runnig to sleep", &job.id));
+        return conflict!(format!("job {} must be running to sleep", &job.id));
     }
     // build key to this jobs data
     let key = JobKeys::data(&job.id, shared);
