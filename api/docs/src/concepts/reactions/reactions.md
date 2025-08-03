@@ -100,7 +100,7 @@ allows users to dynamically spawn tasks instead of having to encode all
 dependencies into their pipeline statically. Sub reactions however do not fail
 out their parent reaction if they fail. This means that if a parent reaction
 cannot complete without a sub reaction completing the onus of ensuring that
-is entirely depdendent on the creator of the sub reactions. This was done to
+is entirely dependent on the creator of the sub reactions. This was done to
 more easily support Generator logic when it comes to sub reactions.
 
 Creating a sub reaction is exactly the same as creating a regular reaction but
