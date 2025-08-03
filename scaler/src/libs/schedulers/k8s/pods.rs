@@ -426,7 +426,7 @@ impl Pods {
     /// * `user` - The user this pod will be executing jobs as
     /// * `image` - The image this pod is using
     fn build_security_ctx(cache: &Cache, user: &String, image: &Image) -> PodSecurityContext {
-        // if this user has any unix info then infject that
+        // if this user has any unix info then inject that
         if let Some(unix) = &cache.users[user].unix {
             // if we have a user set in the security context override then use that
             let user = image.security_context.user.unwrap_or(unix.user as i64);
