@@ -39,7 +39,7 @@ const FileInfoTagKeys = [
   'CompilerFlags',
   'FileSize',
   'Arch',
-  'Endianess',
+  'Endianness',
   'PEType',
   'MachineType',
   'MIMEType',
