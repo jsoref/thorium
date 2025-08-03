@@ -2903,7 +2903,7 @@ impl CommentRequest {
     /// Create a multipart form from this comment request
     #[cfg(feature = "client")]
     pub async fn to_form(mut self) -> Result<reqwest::multipart::Form, Error> {
-        // build the forrm we are going to send
+        // build the form we are going to send
         let form = reqwest::multipart::Form::new()
             // the tool that created this result
             .text("comment", self.comment);
