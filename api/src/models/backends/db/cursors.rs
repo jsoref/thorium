@@ -2781,7 +2781,7 @@ impl ElasticCursor {
             .await?;
         // deserialize the response if no error occurred
         if resp.status_code().is_success() {
-            // get the respose
+            // get the response
             let cast = resp.json::<ElasticResponse>().await?;
             // pull out just the hits
             self.data = cast.hits.hits;
