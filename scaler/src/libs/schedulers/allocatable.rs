@@ -236,7 +236,7 @@ impl Allocatable {
         self.low_resources = false;
         // step over all clusters in all cpu groups
         for (cluster, cluster_info) in self.clusters.values_mut().flatten() {
-            // check if this cluster has less then 5% of its resoruces remaining {
+            // check if this cluster has less then 5% of its resources remaining {
             if !cluster_info.has_remaining(0.05) {
                 // log this cluster is low on cpu/memory
                 event!(Level::INFO, cluster, low_resources = true);
@@ -1345,7 +1345,7 @@ impl ClusterResources {
     }
 }
 
-/// Resoruces for one node or k8s cluster
+/// Resources for one node or k8s cluster
 #[derive(Debug, Clone)]
 pub struct NodeResources {
     /// The name of this node
