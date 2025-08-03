@@ -7,7 +7,7 @@ import { LoadingSpinner, OverlayTipLeft, Title } from '@components';
 import { getThoriumRole, useAuth } from '@utilities';
 import { deleteUser, listUsers, updateSingleUser } from '@thorpi';
 
-// component to retriefe each user
+// component to retrieve each user
 const Users = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
