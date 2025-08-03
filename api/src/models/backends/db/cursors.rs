@@ -1854,7 +1854,7 @@ where
                 let _: () = query!(cmd("del").arg(key), shared).await?;
             }
         } else {
-            // serialize our paritions
+            // serialize our partitions
             let data = serialize!(&self.retain);
             // build the key to save this cursor data too
             let key = cursors::data(CursorKind::SimpleScylla, &self.id, shared);
@@ -2478,7 +2478,7 @@ where
                 let _: () = query!(cmd("del").arg(key), shared).await?;
             }
         } else {
-            // serialize our paritions
+            // serialize our partitions
             let data = serialize!(&self.retain);
             // build the key to save this cursor data too
             let key = cursors::data(CursorKind::GroupedScylla, &self.id, shared);
@@ -2611,7 +2611,7 @@ impl ExistsCursor {
             if futures.len() >= 100 {
                 // build our stream of futures
                 let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
-                // check all partitons for data
+                // check all partitions for data
                 while let Some(query) = stream.next().await {
                     // unwrap our query
                     let query = query?;
@@ -2663,7 +2663,7 @@ impl ExistsCursor {
         if !futures.is_empty() {
             // build our stream of futures
             let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
-            // check all partitons for data
+            // check all partitions for data
             while let Some(query) = stream.next().await {
                 // unwrap our query
                 let query = query?;
