@@ -9,7 +9,7 @@ by the agent when a tool is run on that file, or added later by a Thorium user m
 Tag values may contain any UTF-8 characters including symbols (e.g. Language=C++), characters from other languages
 (e.g. CountryOfOrigin=Україна), or even emojis (e.g. Status=✅).
 
-Tags are currently case sensitive, but tag normalization (standardizing capitalization of existing tags in a Thorium
+Tags are currently case-sensitive, but tag normalization (standardizing capitalization of existing tags in a Thorium
 instance) is a planned to be added in future versions of Thorium.
 
 ## Tagging on Upload (Web UI)
