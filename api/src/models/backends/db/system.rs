@@ -768,7 +768,7 @@ pub async fn can_delete_workers(
             }
             // get all of these workers users
             let users_set: HashSet<String> = pipe.query_async(conn!(shared)).await?;
-            // if we have multilple users or one user that isn't us then reject this request
+            // if we have multiple users or one user that isn't us then reject this request
             if users_set.len() != 1 || !users_set.contains(&user.username) {
                 return unauthorized!();
             }
