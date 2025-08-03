@@ -133,7 +133,7 @@ impl Reactor {
             // spawn or execute this task
             match task {
                 Tasks::Resources => {
-                    // update this nodes resourcse in Thorium
+                    // update this nodes resource in Thorium
                     tasks::update_resources(
                         &self.cluster,
                         &self.name,
