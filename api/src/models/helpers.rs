@@ -82,7 +82,7 @@ macro_rules! matches_update {
         }
     };
     ($left:expr, $right:expr, $translator:expr) => {
-        // only check if the righ side was set
+        // only check if the right side was set
         if let Some(right) = $right.as_ref() {
             // try to convert this value first
             if let Ok(converted) = $translator(right) {
