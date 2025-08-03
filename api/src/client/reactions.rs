@@ -942,7 +942,7 @@ impl Reactions {
     /// # Arguments
     ///
     /// * `group` - The group this reaction is from
-    /// * `id` - The reaction to downlad an ephemeral file for
+    /// * `id` - The reaction to download an ephemeral file for
     /// * `name` - The name of the ephemeral file to download
     ///
     /// # Examples
