@@ -37,7 +37,7 @@ use tags::TagsPreparedStatements;
 
 use crate::{setup, Conf};
 
-/// The diffferent groups of prepared statements for scylla
+/// The different groups of prepared statements for scylla
 pub struct ScyllaPreparedStatements {
     /// The comments related prepared statements
     pub comments: CommentsPreparedStatements,
