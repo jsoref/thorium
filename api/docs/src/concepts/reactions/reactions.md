@@ -109,7 +109,7 @@ you set a parent field to your current reactions Id.
 ### Creating Reactions in bulk
 ---
 You can also create reactions in bulk in a single request in order to efficiently
-create large amounts of reactions. This request looks amost exactly the same as
+create large amounts of reactions. This request looks almost exactly the same as
 when creating a single reaction but the instead the reaction requests are in a list.
 
 Reactions can be created in bulk by POSTing to the following endpoint:
