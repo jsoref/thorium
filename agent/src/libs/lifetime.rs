@@ -21,7 +21,7 @@ macro_rules! from_now {
 pub enum Lifetime {
     /// Constrain worker lifetime on number of jobs executed
     JobCount { current: usize, limit: usize },
-    /// Constain worker on runtime
+    /// Constrain worker on runtime
     RunTime(DateTime<Utc>),
     /// Worker will live as long as jobs exist to run
     Infinite(),
