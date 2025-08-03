@@ -1,7 +1,7 @@
 # Deployer
 
 The deployer is responsible for deploying Thorium ontop of your Kubernetes
-cluster and making ongoing maintainence with Thorium easy. It supports the
+cluster and making ongoing maintenance with Thorium easy. It supports the
 following commands:
 
 | cmd | description |
