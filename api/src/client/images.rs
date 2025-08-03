@@ -62,7 +62,7 @@ cfg_if::cfg_if! {
         /// A blocking handler for the image routes in Thorium
         ///
         /// Images are used to define what each stage of a pipeline look like. Each stage
-        /// can have multiple images or a single image. Seperating the image declarations
+        /// can have multiple images or a single image. Separating the image declarations
         /// from pipeline declaration allows you to reuse images across pipelines
         /// without having to redefine an image every time. This also makes updating
         /// images easier as their is less duplicate information to update.
