@@ -52,7 +52,7 @@ pub async fn iff(shared: &Shared) -> Result<String, ApiError> {
     Ok(iff)
 }
 
-/// Initalize [`SystemInfo`], [`SystemSettings`], and the IFF string in Redis with default values
+/// Initialize [`SystemInfo`], [`SystemSettings`], and the IFF string in Redis with default values
 ///
 /// # Arguments
 ///
@@ -134,7 +134,7 @@ pub async fn get_info(reset: Option<ImageScaler>, shared: &Shared) -> Result<Sys
     }
 }
 
-/// Initalize the [`SystemInfo`] in redis with default values and sets the IFF string
+/// Initialize the [`SystemInfo`] in redis with default values and sets the IFF string
 ///
 /// # Arguments
 ///

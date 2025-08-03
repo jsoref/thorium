@@ -530,7 +530,7 @@ impl Backup {
         is_admin!(user);
         // wipe backends now
         db::system::wipe(shared).await?;
-        // initialie the system and restore settings
+        // initialize the system and restore settings
         db::system::init(shared).await?;
         db::system::restore_settings(&self.settings, shared).await?;
         // restore user/group/pipeline data
