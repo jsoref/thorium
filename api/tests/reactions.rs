@@ -1444,7 +1444,7 @@ async fn ephemeral() -> Result<(), Error> {
     let created = client.reactions.get(&group, &resp.id).await?;
     // make sure our reaction request matches what was created
     is!(created, react_req);
-    // complete this reaction to make sure purging epehemeral files works
+    // complete this reaction to make sure purging ephemeral files works
     for stage in pipe.order.iter().flatten() {
         // register our test worker
         generators::worker(

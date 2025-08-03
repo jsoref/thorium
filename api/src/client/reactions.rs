@@ -868,7 +868,7 @@ impl Reactions {
     /// # async fn exec() -> Result<(), Error> {
     /// // create Thorium client
     /// let thorium = Thorium::build("http://127.0.0.1").token("<token>").build().await?;
-    /// // download an ephermal file from this reaction
+    /// // download an ephemeral file from this reaction
     /// let reaction = Uuid::parse_str("e0ca2720-50e0-4103-a412-344bbb714240")?;
     /// let file = thorium.reactions.download_ephemeral("Corn", &reaction, "file.txt").await?;
     /// # // allow test code to be compiled but don't unwrap as no API instance would be up
