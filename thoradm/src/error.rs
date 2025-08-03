@@ -48,7 +48,7 @@ pub enum Error {
     /// Failed to recieve data from a kanal channel
     KanalRecv(kanal::ReceiveError),
     /// An error with deserializing rkyv data
-    RkyvDesererialize(String),
+    RkyvDeserialize(String),
     /// An error from stripping a prefix from a path
     StripPrefix(std::path::StripPrefixError),
 }
@@ -92,7 +92,7 @@ impl std::fmt::Display for Error {
             }
             Error::S3ByteStream(err) => write!(f, "S3ByteStream Error: {err}"),
             Error::KanalRecv(err) => write!(f, "KanalRecv Error: {err}"),
-            Error::RkyvDesererialize(err) => write!(f, "RkyvDeserialize Error: {err}"),
+            Error::RkyvDeserialize(err) => write!(f, "RkyvDeserialize Error: {err}"),
             Error::StripPrefix(err) => write!(f, "StripPrefix Error: {err}"),
         }
     }
@@ -311,13 +311,13 @@ impl
             DefaultValidatorError,
         >,
     ) -> Self {
-        Error::RkyvDesererialize(error.to_string())
+        Error::RkyvDeserialize(error.to_string())
     }
 }
 
 impl From<CheckArchiveError<StructCheckError, DefaultValidatorError>> for Error {
     fn from(error: CheckArchiveError<StructCheckError, DefaultValidatorError>) -> Self {
-        Error::RkyvDesererialize(error.to_string())
+        Error::RkyvDeserialize(error.to_string())
     }
 }
 

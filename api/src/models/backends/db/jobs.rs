@@ -171,7 +171,7 @@ pub async fn get_scalers(
                         // log that we failed to deserialize scaler
                         event!(
                             Level::ERROR,
-                            msg = "Failed to desrialize scaler",
+                            msg = "Failed to deserialize scaler",
                             job = job.to_string(),
                             scaler,
                             error = error.to_string()
