@@ -409,7 +409,7 @@ pub async fn get(
 /// * `kind` - The kind of results we are pruning
 /// * `key` - The key to prune results from
 /// * `result_id` - The id of the result to possibly prune
-/// * `files` - The files in s3 to prune if neccesary
+/// * `files` - The files in s3 to prune if necessary
 /// * `shared` - Shared Thorium objects
 async fn prune_helper(
     kind: OutputKind,

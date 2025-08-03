@@ -9,7 +9,7 @@ To deploy Minithor, you will need a container runtime such as that provided by t
 
 ### Deploy Minikube
 
-Install and start minikube and any nessesary plugins.
+Install and start minikube and any necessary plugins.
 
 ```bash
 ./install-linux

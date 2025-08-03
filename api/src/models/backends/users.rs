@@ -599,7 +599,7 @@ impl User {
 
     /// Get a [`User`] by username
     ///
-    /// This should only be used when absolutely neccasary as it bypasses all authentication checks
+    /// This should only be used when absolutely necessary as it bypasses all authentication checks
     ///
     /// # Arguments
     ///
