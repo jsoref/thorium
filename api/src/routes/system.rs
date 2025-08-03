@@ -466,7 +466,7 @@ async fn register_node(
 /// * `cluster` - The cluster this node is in
 /// * `node` - The node this heart beat is from
 /// * `state` - Shared Thorium objects
-/// * `heatbeat` - The heart beat info for this node
+/// * `heartbeat` - The heart beat info for this node
 #[utoipa::path(
     get,
     path = "/api/system/nodes/:cluster/:node",
@@ -543,7 +543,7 @@ async fn update_node(
 /// * `user` - The user that is getting this nodes info
 /// * `params` - The params to use when listing node names
 /// * `state` - Shared Thorium objects
-/// * `heatbeat` - The heart beat info for this node
+/// * `heartbeat` - The heart beat info for this node
 #[utoipa::path(
     get,
     path = "/api/system/nodes/",
@@ -576,7 +576,7 @@ async fn list_nodes(
 /// * `user` - The user that is getting this nodes info
 /// * `params` - The params to use when listing node details
 /// * `state` - Shared Thorium objects
-/// * `heatbeat` - The heart beat info for this node
+/// * `heartbeat` - The heart beat info for this node
 #[utoipa::path(
     get,
     path = "/api/system/nodes/details/",
