@@ -52,7 +52,7 @@ pub enum SubCommands {
     /// Provision Thorium resources including nodes
     #[clap(subcommand)]
     Provision(ProvisionSubCommands),
-    /// Censuse commands in Thorium
+    /// Census commands in Thorium
     #[clap(subcommand)]
     Census(CensusSubCommands),
 }
