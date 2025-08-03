@@ -609,7 +609,7 @@ fn default_bare_metal_agent() -> String {
 /// The settings for a specific bare metal cluster
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, JsonSchema)]
 pub struct BareMetalCluster {
-    /// The user to login to these nodes as
+    /// The user to log in to these nodes as
     #[serde(default = "default_bare_metal_user")]
     pub username: String,
     /// The nodes in the cluster to run Thorium jobs on by hostname/ip and any restrictions
