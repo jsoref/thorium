@@ -500,7 +500,7 @@ pub struct RestoreController {
     ctl_conf: CtlConf,
     /// The samples list table
     samples_list: TableRestore<SamplesList>,
-    /// The s3 ids table
+    /// The s3 IDs table
     s3_ids: TableRestore<S3Id>,
     /// The comments table
     comments: TableRestore<Comment>,

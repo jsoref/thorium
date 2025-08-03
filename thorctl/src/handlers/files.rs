@@ -395,7 +395,7 @@ async fn get(thorium: &Thorium, cmd: &GetFiles) -> Result<(), Error> {
     let opts = cmd.build_file_opts()?;
     // build a cursor object
     let mut cursor = thorium.files.list(&opts).await?;
-    // track the submission ids that we find
+    // track the submission IDs that we find
     let mut ids = HashSet::with_capacity(10000);
     // track the number of pages we have crawled
     let mut pages = 0;

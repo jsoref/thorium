@@ -259,9 +259,9 @@ fn crawl_all(
     let mut commits: HashSet<_> = HashSet::with_capacity(1000);
     // get an iter over the references in this repo
     let refs = repo.references()?;
-    // track the reference ids
+    // track the reference IDs
     let mut ref_ids = Vec::with_capacity(1);
-    // crawl over these repos and get the non commit commitishes and reference ids
+    // crawl over these repos and get the non commit commitishes and reference IDs
     for refer in refs.all().unwrap() {
         if let Ok(refer_ok) = refer {
             // detect if this is a branch that peels to a commit
@@ -320,7 +320,7 @@ fn crawl_specific(
     let repo = gix::open(untarred.path).unwrap();
     // track what commits we have already seen
     let mut commits: HashSet<_> = HashSet::with_capacity(1000);
-    // build a list of reference ids
+    // build a list of reference IDs
     let ids = references
         .iter()
         .map(|refer| repo.find_reference(refer).map(|refer| refer.id()))

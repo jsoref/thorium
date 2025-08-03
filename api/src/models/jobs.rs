@@ -9,13 +9,13 @@ use uuid::Uuid;
 use super::{ImageScaler, Reaction, RepoDependency, SystemComponents};
 use crate::{matches_adds, matches_opt, matches_removes, matches_removes_map, same};
 
-/// A list of job ids with a cursor
+/// A list of job IDs with a cursor
 #[derive(Serialize, Debug)]
 pub struct JobList {
-    /// The cursor used to page through job ids
+    /// The cursor used to page through job IDs
     #[serde(skip_serializing_if = "Option::is_none")]
     pub cursor: Option<usize>,
-    /// A list of job ids
+    /// A list of job IDs
     pub names: Vec<Uuid>,
 }
 
@@ -662,7 +662,7 @@ impl PartialEq<Reaction> for GenericJob {
         same!(self.group, react.group);
         same!(self.pipeline, react.pipeline);
         same!(self.reaction, react.id);
-        // make sure our job id is in this reactions job ids
+        // make sure our job id is in this reactions job IDs
         same!(react.jobs.contains(&self.id), true);
         // if there are no args specified then make sure our args are empty/defaults
         let mut args = react

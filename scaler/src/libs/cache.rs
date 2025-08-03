@@ -77,11 +77,11 @@ async fn refresh_client(
 pub struct NetworkPolicyInfoCache {
     // Hash map of network policy info by id
     pub policies_by_id: HashMap<Uuid, NetworkPolicy>,
-    /// Hash map of network policies' ids by their group and name
+    /// Hash map of network policies' IDs by their group and name
     ids_by_group_name: HashMap<String, HashMap<String, Uuid>>,
-    /// Hash map of network policies' ids by their group and K8's name
+    /// Hash map of network policies' IDs by their group and K8's name
     pub ids_by_group_k8s_name: HashMap<String, HashMap<String, Uuid>>,
-    /// Hash map of network policy's ids that should always be applied by group
+    /// Hash map of network policy's IDs that should always be applied by group
     forced_ids_by_group: HashMap<String, Vec<Uuid>>,
     /// ID's of policies that were added this cache reload
     pub policies_added: Vec<Uuid>,
@@ -295,7 +295,7 @@ impl Cache {
             .await?;
         loop {
             for policy in cursor.data.drain(..) {
-                // add all of the policy's groups to the ids by group/name map
+                // add all of the policy's groups to the IDs by group/name map
                 for group in &policy.groups {
                     raw_entry_map_insert!(ids_by_group_name, group, policy.name.clone(), policy.id);
                     raw_entry_map_insert!(

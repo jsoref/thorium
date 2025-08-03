@@ -45,7 +45,7 @@ pub async fn clear(kind: EventType, ids: &[Uuid], shared: &Shared) -> Result<(),
     let queue_key = EventKeys::in_flight_queue(kind, shared);
     // build a redis pipeline
     let mut pipe = redis::pipe();
-    // clear each of these ids
+    // clear each of these IDs
     for id in ids {
         // remove this id from our in flight queue
         pipe.cmd("zrem").arg(&queue_key).arg(id.to_string());

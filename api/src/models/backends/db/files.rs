@@ -137,7 +137,7 @@ pub async fn sha256_exists(
 ///
 /// * `sha256` - The sha256 that is being ingested as a child sample
 /// * `submission` - The submission id of the child sample being ingested
-/// * `results` - The result ids to add this child under
+/// * `results` - The result IDs to add this child under
 /// * `shared` - Shared Thorium objects
 /// * `req_id` - The uuid for this request
 #[instrument(name = "db::files::add_child", skip(shared), err(Debug))]
@@ -1004,13 +1004,13 @@ pub async fn prune_comment_attachments(
 ///
 /// # Arguments
 ///
-/// * `ids` - The comment ids to check for
+/// * `ids` - The comment IDs to check for
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::files::comment_exists", skip(shared), err(Debug))]
 async fn comments_exist(ids: &[&Uuid], shared: &Shared) -> Result<HashSet<Uuid>, ApiError> {
     // build our hashset of comments
     let mut found = HashSet::with_capacity(ids.len());
-    // break these ids into chunks of 100
+    // break these IDs into chunks of 100
     for ids_chunk in ids.chunks(100) {
         // execute this query
         let query = shared
@@ -1025,7 +1025,7 @@ async fn comments_exist(ids: &[&Uuid], shared: &Shared) -> Result<HashSet<Uuid>,
             // raise instead of just logging errors as ignoring them can cause
             // dangling references in the Db
             let (id_opt,) = cast?;
-            // skip any rows without ids
+            // skip any rows without IDs
             if let Some(id) = id_opt {
                 // track that this comment id was still found
                 found.insert(id);

@@ -105,9 +105,9 @@ impl<D: DataSource> Monitor<D> {
                             )));
                         }
                     }
-                    // events were completed so add their ids to our success list
+                    // events were completed so add their IDs to our success list
                     JobStatus::EventComplete { mut ids } => status.successes.append(&mut ids),
-                    // events errored, so log the error and add their ids to our failure list
+                    // events errored, so log the error and add their IDs to our failure list
                     JobStatus::EventError { error, mut ids } => {
                         // log our error
                         // TODO: we are logging the elastic error in its entirety here;

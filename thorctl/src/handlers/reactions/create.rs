@@ -101,7 +101,7 @@ impl CreateLine {
 
     /// Print a log line for a created reaction
     pub fn created(reqs: &[ReactionRequest], creates: &BulkReactionResponse) {
-        // track what index we are at for created reaction ids
+        // track what index we are at for created reaction IDs
         let mut ok_index = 0;
         // crawl over the reaction requests we tried to create
         for (index, req) in reqs.iter().enumerate() {

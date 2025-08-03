@@ -139,7 +139,7 @@ pub async fn get(id: &Uuid, shared: &Shared) -> Result<RawJob, ApiError> {
 ///
 /// # Arguments
 ///
-/// * `ids` - The ids of the job to get the scalers for
+/// * `ids` - The IDs of the job to get the scalers for
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::jobs::get_scalers", skip_all, fields(ids_len = ids.len()), err(Debug))]
 pub async fn get_scalers(
@@ -852,7 +852,7 @@ pub async fn bulk_reset(
     Ok(())
 }
 
-/// Gets details on a list of job ids
+/// Gets details on a list of job IDs
 ///
 /// # Arguments
 ///

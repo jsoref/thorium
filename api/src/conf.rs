@@ -94,7 +94,7 @@ pub struct LdapCreds {
     pub password: String,
 }
 
-/// How to deserialize ids from ldap
+/// How to deserialize IDs from ldap
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, JsonSchema)]
 pub enum LdapIdCast {
     /// Read it as an int
@@ -283,7 +283,7 @@ fn default_token_expire() -> u32 {
     90
 }
 
-/// Helps serde default the local user/group ids to a sane default
+/// Helps serde default the local user/group IDs to a sane default
 fn default_local_user_ids() -> UnixInfo {
     UnixInfo {
         user: 1_879_048_192,
@@ -316,7 +316,7 @@ pub struct Auth {
     #[serde(default)]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub ldap: Option<Ldap>,
-    /// The user/group unix ids to use for local users
+    /// The user/group unix IDs to use for local users
     #[serde(default = "default_local_user_ids")]
     pub local_user_ids: UnixInfo,
     /// The email settings to use

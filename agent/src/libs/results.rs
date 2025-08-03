@@ -316,7 +316,7 @@ pub async fn submit(
         let req = raw.to_sample_req(sha256, image, logs)?;
         // send this request to the API
         let id = thorium.files.create_result(req).await?;
-        // add this new result id to our list
+        // add this new result ID to our list
         ids.push(id.id);
     }
     // send our results for repos
@@ -325,7 +325,7 @@ pub async fn submit(
         let req = raw.to_repo_req(&repo.url, image, logs)?;
         // send this request to the API
         let id = thorium.repos.create_result(req).await?;
-        // add this new result id to our list
+        // add this new result ID to our list
         ids.push(id.id);
     }
     Ok(ids)

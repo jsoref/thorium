@@ -111,7 +111,7 @@ pub async fn create<O: OutputSupport>(
 /// * `groups` - The groups a user is in
 /// * `sha256` - The sha256 this result is for
 /// * `tool` - The tool this result is from
-/// * `result_id` - The result id to authorize
+/// * `result_id` - The result ID to authorize
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::results::authorize", skip(kind, shared), err(Debug))]
 pub async fn authorize(
@@ -139,7 +139,7 @@ pub async fn authorize(
                 .await?;
             // cast this query to a rows query
             let query_rows = query.into_rows_result()?;
-            // crawl over our rows and return early if we find our result id
+            // crawl over our rows and return early if we find our result ID
             for row in query_rows.rows::<(Uuid,)>()? {
                 // try to cast our id into a uuid
                 if let Some(cast) = log_scylla_err!(row) {
@@ -164,7 +164,7 @@ pub async fn authorize(
             .await?;
         // cast this query to a rows query
         let query_rows = query.into_rows_result()?;
-        // crawl over our rows and return early if we find our result id
+        // crawl over our rows and return early if we find our result ID
         for row in query_rows.rows::<(Uuid,)>()? {
             // try to cast our id into a uuid
             if let Some(cast) = log_scylla_err!(row) {
@@ -176,19 +176,19 @@ pub async fn authorize(
             }
         }
     }
-    // no matching result ids were found so bounce this request
+    // no matching result IDs were found so bounce this request
     unauthorized!()
 }
 
-/// Gets result ids from scylla
+/// Gets result IDs from scylla
 ///
 /// If no tools are passed then all tool results will be returned.
 ///
 /// # Arguments
 ///
-/// * `kind` - The kind of results we are getting ids for
-/// * `groups` - The groups to get result ids for
-/// * `key` - The key to get result ids for
+/// * `kind` - The kind of results we are getting IDs for
+/// * `groups` - The groups to get result IDs for
+/// * `key` - The key to get result IDs for
 /// * `tools` - The tools to optionally restrict results retrieved to
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::results::get_ids", skip_all, err(Debug))]
@@ -207,9 +207,9 @@ async fn get_ids(
     event!(Level::INFO, groups = groups.len(), tools = tools.len());
     // check if can do this all in one request or not
     if groups.len() * tools_len < 100 {
-        // get our result ids from scylla
+        // get our result IDs from scylla
         let query = if tools.is_empty() {
-            // get our get result ids query
+            // get our get result IDs query
             shared
                 .scylla
                 .session
@@ -219,7 +219,7 @@ async fn get_ids(
                 )
                 .await?
         } else {
-            // get our get result ids restricted by tools query
+            // get our get result IDs restricted by tools query
             shared
                 .scylla
                 .session
@@ -241,7 +241,7 @@ async fn get_ids(
             // turn our chunks into vecs
             let groups_vec = groups_chunk.to_vec();
             let tools_vec = tools_chunk.to_vec();
-            // send get our get result ids restricted by tools query
+            // send get our get result IDs restricted by tools query
             let query = shared
                 .scylla
                 .session
@@ -309,7 +309,7 @@ async fn get_ids(
                 order.insert(row.uploaded, row.id);
             }
         }
-        // build the deduplicated iter of ids
+        // build the deduplicated iter of IDs
         let ids_iter = order.iter().rev().filter_map(|(_, id)| map.remove(id));
         // extend our deduped vec
         deduped.extend(ids_iter);
@@ -339,19 +339,19 @@ pub async fn get(
     hidden: bool,
     shared: &Shared,
 ) -> Result<OutputMap, ApiError> {
-    // get the ids we want to pull for our results
+    // get the IDs we want to pull for our results
     let ids = get_ids(kind, groups, key, tools, hidden, shared).await?;
-    // if we found no ids then short circuit with empty results
+    // if we found no IDs then short circuit with empty results
     if ids.is_empty() {
         return Ok(OutputMap::default());
     }
-    // build a list of just ids
+    // build a list of just IDs
     let id_list = ids.iter().map(|row| &row.id).collect::<Vec<&Uuid>>();
     // instance an empty result map to insert any retrieved rows into
     let mut temp = HashMap::with_capacity(id_list.len());
-    // if we have more then 100 ids then chunk it into bathes of 100  otherwise just get our info
+    // if we have more then 100 IDs then chunk it into bathes of 100  otherwise just get our info
     if id_list.len() > 100 {
-        // break our ids into chunks of 100
+        // break our IDs into chunks of 100
         for chunk in id_list.chunks(100) {
             // turn our id chunk into a vec
             let chunk_vec = chunk.to_vec();
@@ -444,7 +444,7 @@ async fn prune_helper(
         // if any fail this will orphan things but orphaned result files are better
         // then dangling ones
         for name in files {
-            // build our result id path
+            // build our result ID path
             let s3_path = format!("{}/{}", &result_id, name);
             shared.s3.results.delete(&s3_path).await?;
         }
@@ -511,7 +511,7 @@ pub async fn prune(
                 *entry += 1;
             }
         }
-        // if a result was pruned then add this to our list of pruned ids
+        // if a result was pruned then add this to our list of pruned IDs
         if prune_flag {
             pruned.push((&result.id, &result.files));
         }

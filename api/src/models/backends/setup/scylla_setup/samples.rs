@@ -245,7 +245,7 @@ async fn delete_multiple_groups(session: &Session, config: &Conf) -> PreparedSta
         .expect("Failed to prepare scylla sample delete groups statement")
 }
 
-/// Get the submissions with the given sha256, including ids, groups, and submitters
+/// Get the submissions with the given sha256, including IDs, groups, and submitters
 ///
 /// This is primarily used to prune unnecessary metadata after a submission is deleted
 ///

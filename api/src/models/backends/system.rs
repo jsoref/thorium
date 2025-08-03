@@ -375,7 +375,7 @@ impl SystemSettings {
     ) -> Result<(), ApiError> {
         // get a list of the pipeline's images
         let images = pipeline.order.iter().flatten().unique();
-        // get a map of images that already have a ban in the pipeline and their ban ids
+        // get a map of images that already have a ban in the pipeline and their ban IDs
         let current_bans_images = pipeline
             .bans
             .values()

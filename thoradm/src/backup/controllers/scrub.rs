@@ -235,7 +235,7 @@ impl<S: Scrub> TableScrub<S> {
 pub struct ScrubController {
     /// The samples list table
     samples_list: TableScrub<SamplesList>,
-    /// The s3 ids table
+    /// The s3 IDs table
     s3_ids: TableScrub<S3Id>,
     /// The comments table
     comments: TableScrub<Comment>,

@@ -805,7 +805,7 @@ impl TryFrom<(HashMap<String, String>, Vec<String>, Vec<String>)> for Reaction {
     fn try_from(
         raw: (HashMap<String, String>, Vec<String>, Vec<String>),
     ) -> Result<Self, Self::Error> {
-        // unwrap into hashmap and vector of job ids
+        // unwrap into hashmap and vector of job IDs
         let (mut map, raw_jobs, raw_generators) = raw;
         // return 404 if hashmap is empty
         if map.is_empty() {

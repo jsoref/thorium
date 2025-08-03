@@ -555,7 +555,7 @@ impl Jobs {
     ///
     /// # Arguments
     ///
-    /// * `ids` - The job IDs to reset
+    /// * `IDs` - The job IDs to reset
     ///
     /// # Examples
     ///

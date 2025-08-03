@@ -496,7 +496,7 @@ pub struct Backup {
 pub struct StreamerInfoUpdate {
     /// The new most recent timestamp a streamer has tried to stream
     pub latest: Option<DateTime<Utc>>,
-    /// A list of new cursor ids this streamer is crawling
+    /// A list of new cursor IDs this streamer is crawling
     pub add_cursors: Vec<Uuid>,
     /// a list of exhausted cursors this streamer is no longer using
     pub remove_cursors: Vec<Uuid>,

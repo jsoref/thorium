@@ -289,7 +289,7 @@ pub async fn get(
     Ok(reaction)
 }
 
-/// Lists reaction ids in redis for a group
+/// Lists reaction IDs in redis for a group
 ///
 /// # Arguments
 ///
@@ -323,7 +323,7 @@ pub async fn list(
     }
 }
 
-/// Lists reaction ids with a status in redis for a group
+/// Lists reaction IDs with a status in redis for a group
 ///
 /// # Arguments
 ///
@@ -359,7 +359,7 @@ pub async fn list_status(
     }
 }
 
-/// Lists reaction ids by a tag
+/// Lists reaction IDs by a tag
 ///
 /// # Arguments
 ///
@@ -393,7 +393,7 @@ pub async fn list_tag(
     }
 }
 
-/// Lists reaction ids in the group wide status sorted set
+/// Lists reaction IDs in the group wide status sorted set
 ///
 /// # Arguments
 ///
@@ -428,13 +428,13 @@ pub async fn list_group_set(
     } else {
         // more groups exist use new_cursor
         let cursor = data.last().unwrap().clone().1 as usize;
-        // collapse to just the ids
+        // collapse to just the IDs
         let ids = data.into_iter().map(|pair| pair.0).collect();
         Ok(ReactionList::new(Some(cursor), ids))
     }
 }
 
-/// Lists sub reaction ids in redis for a reaction
+/// Lists sub reaction IDs in redis for a reaction
 ///
 /// # Arguments
 ///
@@ -468,7 +468,7 @@ pub async fn list_sub(
     }
 }
 
-/// Lists sub reaction ids in redis for a reaction
+/// Lists sub reaction IDs in redis for a reaction
 ///
 /// # Arguments
 ///
@@ -512,7 +512,7 @@ type ReactionData = (HashMap<String, String>, Vec<String>, Vec<String>);
 /// # Arguments
 ///
 /// * `group` - The group to retrieve reactions for
-/// * `ids` - The reaction ids to get details on
+/// * `ids` - The reaction IDs to get details on
 /// * `shared` - Shared Thorium objects
 #[rustfmt::skip]
 #[instrument(name = "db::reactions::list_details", skip(ids, shared), err(Debug))]

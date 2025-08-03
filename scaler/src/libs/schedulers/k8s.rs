@@ -742,7 +742,7 @@ impl K8s {
         &mut self,
         policies_to_add: HashMap<String, Vec<(Uuid, NetworkPolicy)>>,
     ) {
-        // create a list of policy ids, names, and their errors
+        // create a list of policy IDs, names, and their errors
         // to keep track of which policies failed to be created
         let mut errors: Vec<(Uuid, String, kube::Error)> = Vec::new();
         // deploy the network policies and save any errors

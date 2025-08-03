@@ -732,7 +732,7 @@ impl Reactions {
         Cursor::new(url, &self.token, &self.client)
     }
 
-    /// Lists sub[`Reaction`] ids for a parent reaction
+    /// Lists sub[`Reaction`] IDs for a parent reaction
     ///
     /// # Arguments
     ///
@@ -751,7 +751,7 @@ impl Reactions {
     /// let thorium = Thorium::build("http://127.0.0.1").token("<token>").build().await?;
     /// // in a real use case this would be an actual reaction uuid
     /// let reaction = Uuid::new_v4();
-    /// // list up to 50 sub reaction ids from Thorium (limit is weakly enforced)
+    /// // list up to 50 sub reaction IDs from Thorium (limit is weakly enforced)
     /// let reactions = thorium.reactions.list_sub("Corn", &reaction).limit(50).next().await?;
     /// # // allow test code to be compiled but don't unwrap as no API instance would be up
     /// # Ok(())
@@ -776,7 +776,7 @@ impl Reactions {
         Cursor::new(url, &self.token, &self.client)
     }
 
-    /// Lists sub[`Reaction`] ids for a parent reaction
+    /// Lists sub[`Reaction`] IDs for a parent reaction
     ///
     /// # Arguments
     ///
@@ -795,7 +795,7 @@ impl Reactions {
     /// let thorium = Thorium::build("http://127.0.0.1").token("<token>").build().await?;
     /// // in a real use case this would be an actual reaction uuid
     /// let reaction = Uuid::new_v4();
-    /// // list up to 50 sub reaction ids from Thorium (limit is weakly enforced)
+    /// // list up to 50 sub reaction IDs from Thorium (limit is weakly enforced)
     /// let reactions = thorium.reactions.list_sub_status("Corn", &reaction, &ReactionStatus::Created)
     ///     .limit(50)
     ///     .next()

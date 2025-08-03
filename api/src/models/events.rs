@@ -220,11 +220,11 @@ impl Event {
     }
 }
 
-/// A list of event ids
+/// A list of event IDs
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct EventIds {
-    /// A list of event ids
+    /// A list of event IDs
     pub ids: Vec<Uuid>,
 }
 

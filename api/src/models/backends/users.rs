@@ -317,7 +317,7 @@ async fn get_unix_info(
         let group = conf.group_unix_id.attr.get(&mut entry);
         // build UnixInfo object if they exist or error out
         if let (Some(user), Some(group)) = (user, group) {
-            // cast our user and group ids
+            // cast our user and group IDs
             let user = conf.user_unix_id.cast.cast(user)?;
             let group = conf.group_unix_id.cast.cast(group)?;
             return Ok(UnixInfo { user, group });
@@ -987,7 +987,7 @@ impl User {
             for user in self.list_details(shared).await? {
                 // if we don't have a password set then assume ldap and update our unix info
                 let unix = if user.local {
-                    // this is a local user so just use our default unix ids
+                    // this is a local user so just use our default unix IDs
                     shared.config.thorium.auth.local_user_ids.clone()
                 } else {
                     // this is an ldap based user so get updated info instead

@@ -135,7 +135,7 @@ impl EventWorker {
             if !found.is_empty() {
                 filtered.confirmed.push((event_id, found));
             }
-            // add this to our cleared ids list
+            // add this to our cleared IDs list
             filtered.clears.push(event_id);
         }
     }
@@ -218,7 +218,7 @@ impl EventWorker {
     /// * `filtered` - The events that were filtered in this loop
     #[instrument(name = "EventWorker::clear", skip_all, fields(clears = filtered.clears.len()), err(Debug))]
     async fn clear<'a>(&self, filtered: FilteredEvents<'a>) -> Result<(), Error> {
-        // build the list of event ids to clear
+        // build the list of event IDs to clear
         let mut event_ids = EventIds::from(filtered.clears);
         // add anything still in the potential list
         event_ids

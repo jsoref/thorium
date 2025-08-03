@@ -2,7 +2,7 @@
 
 Reactions are the execution of a single pipeline and are what allow you to
 follow the jobs that make up your pipeline. Reactions are used over tracking the 
-individual job ids as those constantly change as stages are completed. This 
+individual job IDs as those constantly change as stages are completed. This 
 allows you to track the execution of a pipeline without needing to keep track
 of all the jobs within that pipeline.
 
@@ -104,7 +104,7 @@ is entirely dependent on the creator of the sub reactions. This was done to
 more easily support Generator logic when it comes to sub reactions.
 
 Creating a sub reaction is exactly the same as creating a regular reaction but
-you set a parent field to your current reactions Id.
+you set a parent field to your current reactions ID.
 
 ### Creating Reactions in bulk
 ---

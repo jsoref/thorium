@@ -167,7 +167,7 @@ impl AgentExecutor for BareMetal {
         purge!(self.result_files_path);
         purge!(self.tags_path);
         purge!(self.children_path);
-        // setup dependency base paths that are isolated by job ids
+        // setup dependency base paths that are isolated by job IDs
         std::fs::create_dir_all(&self.samples_path)?;
         std::fs::create_dir_all(&self.ephemerals_path)?;
         std::fs::create_dir_all(&self.repos_path)?;

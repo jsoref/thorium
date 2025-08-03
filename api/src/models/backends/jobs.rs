@@ -23,7 +23,7 @@ impl JobList {
     /// # Arguments
     ///
     /// * `cursor` - A cursor used to page to the next list of jobs
-    /// * `names` - A list of job ids
+    /// * `names` - A list of job IDs
     pub(super) fn new(cursor: Option<usize>, names: Vec<Uuid>) -> Self {
         JobList { cursor, names }
     }
@@ -166,7 +166,7 @@ impl RawJob {
     ///
     /// # Arguments
     ///
-    /// * `jobs` - The job ids to get the details for
+    /// * `jobs` - The job IDs to get the details for
     /// * `shared` - Shared objects in Thorium
     #[instrument(name = "RawJob::list_details", skip_all, err(Debug))]
     pub async fn list_details(jobs: JobList, shared: &Shared) -> Result<JobDetailsList, ApiError> {

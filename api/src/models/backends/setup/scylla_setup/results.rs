@@ -21,7 +21,7 @@ pub struct ResultsPreparedStatements {
     pub get_with_key_and_tool: PreparedStatement,
     /// Get the uploaded timestamps for results
     pub get_uploaded: PreparedStatement,
-    /// Get the ids for results by kind, key, and id (used for counting)
+    /// Get the IDs for results by kind, key, and id (used for counting)
     pub count: PreparedStatement,
     /// Delete a result
     pub delete: PreparedStatement,
@@ -270,14 +270,14 @@ async fn get_id(session: &Session, config: &Conf) -> PreparedStatement {
         .expect("Failed to prepare scylla results auth statement")
 }
 
-/// build the results auth ids prepared statement
+/// build the results auth IDs prepared statement
 ///
 /// # Arguments
 ///
 /// * `session` - The scylla session to use
 /// * `config` - The Thorium config
 async fn get_with_key(session: &Session, config: &Conf) -> PreparedStatement {
-    // build results auth ids prepared statement
+    // build results auth IDs prepared statement
     session
         .prepare(format!(
             "SELECT id, tool, display_type, cmd, group, uploaded \
@@ -289,14 +289,14 @@ async fn get_with_key(session: &Session, config: &Conf) -> PreparedStatement {
         .expect("Failed to prepare scylla results auth ids statement")
 }
 
-/// build the results auth ids restricted by tools prepared statement
+/// build the results auth IDs restricted by tools prepared statement
 ///
 /// # Arguments
 ///
 /// * `session` - The scylla session to use
 /// * `config` - The Thorium config
 async fn get_with_key_and_tool(session: &Session, config: &Conf) -> PreparedStatement {
-    // build results auth ids restricted by tool prepared statement
+    // build results auth IDs restricted by tool prepared statement
     session
         .prepare(format!(
             "SELECT id, tool, display_type, cmd, group, uploaded \

@@ -725,11 +725,11 @@ impl ImageArgsUpdate {
         self
     }
 
-    /// Set a new kwarg to pass reaction ids in with
+    /// Set a new kwarg to pass reaction IDs in with
     ///
     /// # Arguments
     ///
-    /// * `reaction` - The kwarg to pass reaction ids in with
+    /// * `reaction` - The kwarg to pass reaction IDs in with
     #[must_use]
     pub fn reaction<T: Into<String>>(mut self, reaction: T) -> Self {
         self.reaction = Some(reaction.into());

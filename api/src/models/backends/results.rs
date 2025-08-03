@@ -290,7 +290,7 @@ impl Output {
     ) -> Result<ByteStream, ApiError> {
         // make sure that this user has access to this repo or sample
         kind.authorize(user, key, shared).await?;
-        // authorize this user has access to this result id if we are not an admin
+        // authorize this user has access to this result ID if we are not an admin
         if !user.is_admin() {
             // we are not an admin so make sure we can see this result
             db::results::authorize(kind, &user.groups, key, tool, result_id, shared).await?;
