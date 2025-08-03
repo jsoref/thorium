@@ -155,7 +155,7 @@ volume bound in when being spawned. Currently Thorium supports three volume type
 
 For more information, see [Volumes in Images](./volumes.md).
 
-#### Volumes 
+#### Modifiers 
 ---
 The modifiers path is where the Thorium agent should look for files dropped while
 this stage was executing that tell Thorium how it should modify the remaining stages
