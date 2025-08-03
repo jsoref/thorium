@@ -14,7 +14,7 @@ full text search which will be discussed more later. To view a files details sim
 </video>
 
 If you want to filter the files that are listed you can do that by changing the filter settings. Currently Thorium
-supports groups, submission date ranges, and a single key/value tag as filters. Tag key/values are case sensitive.
+supports groups, submission date ranges, and a single key/value tag as filters. Tag key/values are case-sensitive.
 Multi-tag filtering of files and tag normalization are both planned features that will improve file browsing.
 
 <p align="center">
