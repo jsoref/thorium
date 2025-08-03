@@ -51,7 +51,7 @@ impl Groups {
     }
 }
 
-// only inlcude blocking structs if the sync feature is enabled
+// only include blocking structs if the sync feature is enabled
 cfg_if::cfg_if! {
     if #[cfg(feature = "sync")] {
         /// group handler for the Thorium client
