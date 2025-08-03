@@ -289,7 +289,7 @@ impl GenericJobOpts {
     ///
     /// # Arguments
     ///
-    /// * `positionals` - Whether to override the possitional args or not
+    /// * `positionals` - Whether to override the positional args or not
     /// * `kwargs` - Whether to override the kwargs or not
     /// * `cmd` - The command to override the source docker command with
     ///
@@ -468,7 +468,7 @@ impl GenericJobArgsUpdate {
     ///
     /// # Arguments
     ///
-    /// * `positonals` - The positional args for this job
+    /// * `positionals` - The positional args for this job
     ///
     /// # Examples
     ///
