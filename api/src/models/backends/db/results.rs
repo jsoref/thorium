@@ -808,7 +808,7 @@ pub async fn bundle(
 ) -> Result<ApiCursor<OutputBundle>, ApiError> {
     // get our cursor
     let mut cursor = ScyllaCursor::from_params_extra(params, kind, false, shared).await?;
-    // loop over this cursor and get more pages until our data vector is full or we have exchausted it
+    // loop over this cursor and get more pages until our data vector is full or we have exhausted it
     while cursor.data.len() < cursor.limit {
         // get the next page of data for this cursor
         cursor.next(shared).await?;
