@@ -456,7 +456,7 @@ pub struct RepoBuild {
     pub commitish: Option<String>,
     /// The kind of commitish to use
     pub kind: Option<CommitishKinds>,
-    /// Any dependencies that need to be installed beforing building this repo
+    /// Any dependencies that need to be installed before building this repo
     #[serde(default)]
     pub dependencies: Vec<String>,
     /// Any flags to set when building this repo
