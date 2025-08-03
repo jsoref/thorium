@@ -668,7 +668,7 @@ impl Scaler {
         Ok(deleted)
     }
 
-    /// Error out any workers jobs that have permenantly failed
+    /// Error out any workers jobs that have permanently failed
     #[instrument(name = "Scaler::error_out", skip_all)]
     async fn error_out(&mut self, error_out: HashSet<ErrorOutKinds>, failed: &mut HashSet<String>) {
         // build a stream of our failed workers info
