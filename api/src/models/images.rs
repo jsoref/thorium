@@ -4310,7 +4310,7 @@ impl ImageRequest {
     ///
     /// # Arguments
     ///
-    /// * `dependencies` - The depedency settings to set
+    /// * `dependencies` - The dependency settings to set
     #[must_use]
     pub fn dependencies(mut self, dependencies: Dependencies) -> Self {
         self.dependencies = dependencies;

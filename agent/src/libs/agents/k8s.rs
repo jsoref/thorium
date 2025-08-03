@@ -173,7 +173,7 @@ impl AgentExecutor for K8s {
         job: &GenericJob,
         commits: &mut HashMap<String, String>,
     ) -> Result<(), Error> {
-        // setup dependendency base paths
+        // setup dependency base paths
         std::fs::create_dir_all(&image.dependencies.samples.location)?;
         std::fs::create_dir_all(&image.dependencies.ephemeral.location)?;
         std::fs::create_dir_all(&image.dependencies.repos.location)?;

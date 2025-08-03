@@ -111,7 +111,7 @@ impl ReactionRequest {
         let sla_seconds = self.sla.unwrap_or(pipeline.sla);
         // bounds check sla
         bounder::number(sla_seconds as i64, "sla", 1, 3.154e+9 as i64)?;
-        // build the repo dedendency objects
+        // build the repo dependency objects
         let mut repos = Vec::with_capacity(self.repos.len());
         for req in self.repos {
             // try to get this repo to make sure this user actually has access
@@ -125,7 +125,7 @@ impl ReactionRequest {
                     .default_checkout
                     .map(|commitish| commitish.value().to_owned()),
             };
-            // build a repo depdendency object and insert it
+            // build a repo dependency object and insert it
             repos.push(RepoDependency {
                 url: req.url,
                 commitish,
