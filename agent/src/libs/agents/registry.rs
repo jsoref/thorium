@@ -974,7 +974,7 @@ mod tests {
 
     /// Test a barebones job with samples but no overlays
     #[tokio::test]
-    async fn empty_ephemnerals_kwargs() {
+    async fn empty_ephemerals_kwargs() {
         // create a temporary log channel
         let (mut logs_tx, _logs_rx) = crossbeam::channel::unbounded::<String>();
         // generate an image and set the kwarg to pass in samples with
