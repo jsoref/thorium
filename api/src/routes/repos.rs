@@ -22,7 +22,7 @@ use utoipa::OpenApi;
    All functions affected by this are marked with 'TODO_UTOIPA: WIDLCARD'
    and have their utoipa annotations commented out. The annotations
    should be at least somewhat functional if they were able to be used
-   but have not been tested due to the afforementioned compilation
+   but have not been tested due to the aforementioned compilation
    issue.
 */
 
