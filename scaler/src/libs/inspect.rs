@@ -83,7 +83,7 @@ impl DockerInfo {
         // cast both stdout and stderr to strings
         let raw = String::from_utf8_lossy(&output.stdout);
         let err = String::from_utf8_lossy(&output.stderr);
-        // Throw an erorr if stdout has text
+        // Throw an error if stdout has text
         if !err.is_empty() {
             return Err(Error::new(format!("Error while inspecting image {}", err)));
         }

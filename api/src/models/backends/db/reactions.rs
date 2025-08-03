@@ -233,7 +233,7 @@ pub async fn create_bulk(
                 Err(error) => {
                     // log this error
                     event!(Level::ERROR, error = error.to_string());
-                    // add this erro to our response
+                    // add this error to our response
                     response.errors.insert(index, error.to_string());
                 }
             }
