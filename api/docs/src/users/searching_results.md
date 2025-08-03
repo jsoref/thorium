@@ -63,7 +63,7 @@ streaming then into Elastic Search.
 
 Due to Thorium's permissioning requirements and how elastic operates each group
 has its own document with results for a specific sample or repo. This means
-that each group must meet all requirements for to be returned.
+that each group must meet all requirements to be returned.
 
 An example of this would be the following query returning only sample 1's results:
 
