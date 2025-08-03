@@ -37,7 +37,7 @@ impl NodeAllocatableUpdate {
     ///
     /// # Arguments
     ///
-    /// * `available` - The availabe resources to schedule on this node
+    /// * `available` - The available resources to schedule on this node
     /// * `total` - The total resources on this node
     pub fn new(available: Resources, total: Resources) -> Self {
         NodeAllocatableUpdate {
