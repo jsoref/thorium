@@ -309,7 +309,7 @@ impl Repo {
         Ok(())
     }
 
-    /// Helps the public upload mehtod save new data for this repository
+    /// Helps the public upload method save new data for this repository
     ///
     ///  If a user does not tie any commits to this data it will be pruned the next time commits are added.
     ///
