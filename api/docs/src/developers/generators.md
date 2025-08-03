@@ -1,7 +1,7 @@
 # Generators
 ---
 
-Generators allow developers to programatically spawn pipelines in Thorium. This
+Generators allow developers to programmatically spawn pipelines in Thorium. This
 means a pipeline can behave like an event loop spawning reactions and then
 acting on their results or some other events. An example of this would be a
 pipeline that lists data in Thorium and spawns reactions for each item.
