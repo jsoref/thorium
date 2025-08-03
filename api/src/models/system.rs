@@ -1136,7 +1136,7 @@ impl WorkerRegistrationList {
         self
     }
 
-    /// Adds a new worker to this registraiton list
+    /// Adds a new worker to this registration list
     ///
     /// # Arguments
     ///
