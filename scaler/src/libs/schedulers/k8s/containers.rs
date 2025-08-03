@@ -142,7 +142,7 @@ impl Containers {
             Some(cmd) => serialize!(cmd),
             None => serialize!(&docker.config.cmd),
         };
-        // build our environemnt vars
+        // build our environment vars
         let mut env: Vec<EnvVar> = image
             .env
             .iter()
