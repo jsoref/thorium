@@ -288,7 +288,7 @@ pub async fn bind_to_ldap_system_user(
 
 /// Pull the unix info about a user from ldap
 ///
-/// # Argumens
+/// # Arguments
 ///
 /// * `username` - The username to get info
 /// * `conf` - The Thorium Ldap config
