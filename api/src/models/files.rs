@@ -224,7 +224,7 @@ impl SampleCheck {
         self
     }
 
-    /// Adds multiple groupss for this existence check
+    /// Adds multiple groups for this existence check
     ///
     /// # Arguments
     ///

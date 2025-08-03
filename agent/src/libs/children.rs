@@ -239,14 +239,14 @@ async fn get_parent_groups(thorium: &Thorium, job: &GenericJob) -> Result<Vec<St
     for sha256 in &job.samples {
         // get info on this sample
         let sample = thorium.files.get(&sha256).await?;
-        // add this samples goups to our hashset
+        // add this samples groups to our hashset
         groups.extend(sample.groups().into_iter().map(|name| name.to_owned()));
     }
     // get the info on all the repos we depend on
     for repo_target in &job.repos {
         // get info on this repo
         let repo = thorium.repos.get(&repo_target.url).await?;
-        // add this repos goups to our hashset
+        // add this repos groups to our hashset
         groups.extend(repo.groups().into_iter().map(|name| name.to_owned()));
     }
     // convert our hash set to a vec
