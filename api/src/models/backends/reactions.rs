@@ -132,7 +132,7 @@ impl ReactionRequest {
                 kind: req.kind,
             });
         }
-        // gererate a uuuid for this reaction
+        // generate a uuuid for this reaction
         let id = Uuid::new_v4();
         // upload our extra files
         let ephemeral = Self::upload_files(&id, self.buffers, shared).await?;
