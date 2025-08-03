@@ -392,7 +392,7 @@ async fn backup(user: User, State(state): State<AppState>) -> Result<Json<Backup
 
 /// Restores a backup
 ///
-/// This will erase redis destorying any left over data to prevent orphaned data from a past
+/// This will erase redis destroying any left over data to prevent orphaned data from a past
 /// instance.
 ///
 /// # Arguments
