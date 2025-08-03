@@ -346,7 +346,7 @@ pub async fn authorize(
     repos: &Vec<String>,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we specified no groups then we do not have acess to this repo
+    // if we specified no groups then we do not have access to this repo
     if groups.is_empty() {
         return unauthorized!();
     }
