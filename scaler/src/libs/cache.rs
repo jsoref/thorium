@@ -254,7 +254,7 @@ impl Cache {
                     }
                     image_map.insert(image.name.clone(), image);
                 }
-                // if this cursor is exhaused that break
+                // if this cursor is exhausted that break
                 if cursor.exhausted {
                     break;
                 }
