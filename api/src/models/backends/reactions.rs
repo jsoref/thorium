@@ -653,7 +653,7 @@ impl Reaction {
         span!(Level::INFO, "Deleting Reaction");
         // make sure we can modify reactions in this group
         can_delete!(self, group, user);
-        // use correct backend for deleteing this reaction
+        // use correct backend for deleting this reaction
         db::reactions::delete(self, shared).await
     }
 

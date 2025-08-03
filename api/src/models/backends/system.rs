@@ -1001,7 +1001,7 @@ impl WorkerDeleteMap {
     ///
     /// # Arguments
     ///
-    /// * `user` - The user that is deleteing workers
+    /// * `user` - The user that is deleting workers
     /// * `scaler` - The scaler that we are deleting workers from
     /// * `shared` - Shared Thorium objects
     #[instrument(name = "WorkerDeleteMap::delete", skip(self, user, shared), fields(user = user.username, count = self.workers.len()), err(Debug))]
