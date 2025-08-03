@@ -469,7 +469,7 @@ macro_rules! ldap {
 
 /// Validate that all vectors are disjoint
 ///
-/// passing in two seperate vectors of items will not just uniqueness within a vector while passing
+/// passing in two separate vectors of items will not just uniqueness within a vector while passing
 /// in a vector of vectors will.
 #[doc(hidden)]
 #[macro_export]
