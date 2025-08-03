@@ -345,14 +345,14 @@ pub trait ScyllaCursorSupport: CursorCore {
         Ok(())
     }
 
-    /// Sort any possibly ambigous rows by their cluster key
-    fn sort_by_cluster_key(ambigous: &mut VecDeque<Self>) {
+    /// Sort any possibly ambiguous rows by their cluster key
+    fn sort_by_cluster_key(ambiguous: &mut VecDeque<Self>) {
         // create a btreemap to sort this data
         let mut sorted = BTreeMap::default();
-        // keep a list of our ambigous rows
-        let mut to_sort = HashMap::with_capacity(ambigous.len());
+        // keep a list of our ambiguous rows
+        let mut to_sort = HashMap::with_capacity(ambiguous.len());
         // go through and get our clustering keys and insert them into our map
-        for (index, row) in ambigous.drain(..).enumerate() {
+        for (index, row) in ambiguous.drain(..).enumerate() {
             // get this rows clustering key
             let ckey = row.get_tag_clustering_key().clone();
             // insert this into our map
@@ -365,7 +365,7 @@ pub trait ScyllaCursorSupport: CursorCore {
             // get this row and insert it
             if let Some(row) = to_sort.remove(&index) {
                 // add this row in the correct order
-                ambigous.push_back(row);
+                ambiguous.push_back(row);
             }
         }
     }
@@ -1172,7 +1172,7 @@ where
                         // if we have multiple rows with the same timestamp then disambiguate them
                         // only tags have to do this
                         if self.retain.tags.is_some() && item.len() > 1 {
-                            // sort our ambigous rows by their cluster key
+                            // sort our ambiguous rows by their cluster key
                             D::sort_by_cluster_key(&mut item);
                         }
                         // consume only enough data to fill our data

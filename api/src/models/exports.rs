@@ -159,7 +159,7 @@ cfg_if::cfg_if! {
                     None => match Utc.timestamp_opt(shared.config.thorium.results.earliest, 0) {
                         chrono::LocalResult::Single(default_end) => Ok(default_end),
                         _ => crate::internal_err!(format!(
-                            "default earliest results timestamp is invalid or ambigous - {}",
+                            "default earliest results timestamp is invalid or ambiguous - {}",
                             shared.config.thorium.results.earliest
                         )),
                     },
