@@ -745,7 +745,7 @@ pub async fn find_in_running(stream: &str, uuids: &HashSet<&Uuid>, shared: &Shar
                 }
             }
         }
-        // if less then 10k items are returned then this stream has been exhausted
+        // if less than 10k items are returned then this stream has been exhausted
         if chunk_len < 10_000 {
             break 'outer;
         }

@@ -42,7 +42,7 @@ impl Lifetime {
             // fair share spawned workers with no lifetime can only execute 1 minute worth of jobs before dying
             (Pools::FairShare, None) => Lifetime::RunTime(from_now!(60)),
             (Pools::FairShare, Some(lifetime)) => {
-                // if our lifetime is one job or less then 1 minute of time then use the images lifetime
+                // if our lifetime is one job or less than 1 minute of time then use the images lifetime
                 match lifetime.counter.as_ref() {
                     "jobs" => Lifetime::JobCount {
                         current: 0,

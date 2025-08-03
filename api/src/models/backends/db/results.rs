@@ -90,9 +90,9 @@ pub async fn create<O: OutputSupport>(
             )
             .await?;
     }
-    // if we have more then our max results stored then delete any past that
+    // if we have more than our max results stored then delete any past that
     if past.len() >= shared.config.thorium.retention.results {
-        // prune any results in groups with more then 3 values
+        // prune any results in groups with more than 3 values
         prune(kind, &form.groups, key, &past, shared, &span).await?;
     }
     Ok(())
@@ -116,9 +116,9 @@ pub async fn authorize(
     result_id: &Uuid,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we have more then 100 groups then break this into chunks of 100
+    // if we have more than 100 groups then break this into chunks of 100
     if groups.len() > 100 {
-        // we have more then 100 groups so break this into chunks of 100
+        // we have more than 100 groups so break this into chunks of 100
         for chunk in groups.chunks(100) {
             // cast our chunk array into a vec
             let chunk_vec = chunk.to_vec();
@@ -146,7 +146,7 @@ pub async fn authorize(
             }
         }
     } else {
-        // we have less then 100 groups so just query them all at once
+        // we have less than 100 groups so just query them all at once
         // check if any of our groups have access to this sample
         let query = shared
             .scylla
@@ -343,7 +343,7 @@ pub async fn get(
     let id_list = ids.iter().map(|row| &row.id).collect::<Vec<&Uuid>>();
     // instance an empty result map to insert any retrieved rows into
     let mut temp = HashMap::with_capacity(id_list.len());
-    // if we have more then 100 ids then chunk it into bathes of 100  otherwise just get our info
+    // if we have more than 100 ids then chunk it into bathes of 100  otherwise just get our info
     if id_list.len() > 100 {
         // break our ids into chunks of 100
         for chunk in id_list.chunks(100) {

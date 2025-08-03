@@ -562,7 +562,7 @@ async fn download_result_file(
 ) -> Result<impl IntoResponse, ApiError> {
     // split the path on '/'
     let mut path_split: Vec<&str> = path_params.split('/').collect();
-    // if we have less then 3 path params then return a 404
+    // if we have less than 3 path params then return a 404
     if path_split.len() < 3 {
         return Err(ApiError::new(StatusCode::NOT_FOUND, None));
     }

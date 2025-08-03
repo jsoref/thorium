@@ -21,7 +21,7 @@ use crate::{conflict, for_groups, log_scylla_err, not_found, same_vec, serialize
 /// Deletes a submission from multiple groups, breaking into chunks of 100 if > 100
 macro_rules! delete_from_groups {
     ($shared:expr, $groups:expr, $year:expr, $bucket:expr, $uploaded:expr, $id:expr) => {
-        // if we have less then 100 groups then just delete them in one go
+        // if we have less than 100 groups then just delete them in one go
         if $groups.len() <= 100 {
             // remove any requested submissions
             $shared
@@ -33,7 +33,7 @@ macro_rules! delete_from_groups {
                 )
                 .await?;
         } else {
-            // we have more then 100 groups so break them into chunks of 100
+            // we have more than 100 groups so break them into chunks of 100
             for chunk in $groups.chunks(100) {
                 // copy this chunk into a vec
                 let chunk_vec = chunk.to_vec();
@@ -370,7 +370,7 @@ async fn get_comments(
     list: &mut Vec<Comment>,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we have more then 100 groups then chunk it into bathes of 100  otherwise just get our info
+    // if we have more than 100 groups then chunk it into bathes of 100  otherwise just get our info
     if groups.len() > 100 {
         // break our groups into chunks of 100
         for chunk in groups.chunks(100) {
@@ -412,7 +412,7 @@ async fn get_comments(
             list.extend(map.into_iter().flat_map(|(_, map)| map.into_values()));
         }
     } else {
-        // we have less then 100 groups so just get their data
+        // we have less than 100 groups so just get their data
         let query = shared
             .scylla
             .session
@@ -466,7 +466,7 @@ pub async fn get(
 ) -> Result<Option<Sample>, ApiError> {
     // build a btree to sort our submissions
     let mut sorted: BTreeMap<DateTime<Utc>, Vec<Submission>> = BTreeMap::default();
-    // if we have more then 100 groups then chunk it into bathes of 100  otherwise just get our info
+    // if we have more than 100 groups then chunk it into bathes of 100  otherwise just get our info
     if groups.len() > 100 {
         // break our groups into chunks of 100
         for chunk in groups.chunks(100) {

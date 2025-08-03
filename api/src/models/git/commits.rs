@@ -42,7 +42,7 @@ impl CommitRequest {
                 let (topic, description) = message.split_at(index);
                 (Some(topic.to_owned()), Some(description[2..].to_owned()))
             } else {
-                // if the message is less then 80 chars then assume we just have a topic
+                // if the message is less than 80 chars then assume we just have a topic
                 if message.len() <= 80 {
                     (Some(message.to_owned()), None)
                 } else {

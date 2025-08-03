@@ -180,7 +180,7 @@ update over time and get more accurate as you run more jobs.
 ### Generator
 ---
 A Generator is an image that crawls over some input or external data source creating
-sub reactions. It will create a batch of jobs (typically no more then 1-5,000) and
+sub reactions. It will create a batch of jobs (typically no more than 1-5,000) and
 then tell Thorium it should be slept before exiting with a return code of 0. If a
 generator stage completes without telling Thorium it should be slept the generator
 stage will be completed and no longer will be recreated. When telling a generator to

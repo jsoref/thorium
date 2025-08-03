@@ -31,7 +31,7 @@ macro_rules! retry {
             match tokio::time::timeout(std::time::Duration::from_secs($timeout), $future).await {
                 //    // the future completed so return the result
                 Ok(res) => break res,
-                // the future failed so try again if we have failed less then 10 times or panic
+                // the future failed so try again if we have failed less than 10 times or panic
                 Err(err) => {
                     // log this error
                     error!(

@@ -431,7 +431,7 @@ pub async fn status(
         for user in users.iter() {
             // get the total count
             let total = raw[i].0 + raw[i].1 + raw[i].2 + raw[i].3 + raw[i].4;
-            // if total is greater then 0 then insert this stage/user stats
+            // if total is greater than 0 then insert this stage/user stats
             if total > 0 {
                 // build this users stage status object
                 let stage_status = StageStats {
