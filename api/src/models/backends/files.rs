@@ -821,7 +821,7 @@ impl CommentSupport for Sample {
         if let Some(comment) = self.comments.iter().find(|com| &com.id == comment) {
             // make sure this attachment is from this comment
             if comment.attachments.iter().any(|(_, id)| attachment == id) {
-                // build the path to this atachment
+                // build the path to this attachment
                 let path = format!("{}/{}/{}", self.sha256, comment.id, attachment);
                 // download and return this attachment
                 return shared.s3.attachments.download(&path).await;

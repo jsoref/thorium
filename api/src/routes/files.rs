@@ -437,7 +437,7 @@ async fn delete_comment(
 /// # Arguments
 ///
 /// * `user` - The user that is downloading this comment attachment
-/// * `sha256` - The sample this comment attachement is tied to
+/// * `sha256` - The sample this comment attachment is tied to
 /// * `comment` - The comment ID we are downloading an attachment from
 /// * `attachment` - The id of the attachment to download
 /// * `state` - Shared Thorium objects
@@ -445,7 +445,7 @@ async fn delete_comment(
     get,
     path = "/api/files/comment/download/:sha256/:comment/:name",
     params(
-        ("sha256" = String, Path, description = "Sha256 of sample the comment atachment is tied to"),
+        ("sha256" = String, Path, description = "Sha256 of sample the comment attachment is tied to"),
         ("comment" = Uuid, Path, description = "Uuid of of the comment to download an attachment from"),
         ("attachment" = Uuid, Path, description = "Uuid of the attachment to download")
     ),

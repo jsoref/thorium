@@ -36,7 +36,7 @@ pub struct Comment {
     pub author: String,
     /// The comment for this file
     pub comment: String,
-    /// Any paths in s3 to files/attachements for this comment
+    /// Any paths in s3 to files/attachments for this comment
     pub files: String,
 }
 
