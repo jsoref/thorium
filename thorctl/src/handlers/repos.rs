@@ -506,7 +506,7 @@ impl RepoBuild {
         let build_args = add_option!(build_args, "--CC", self.cc);
         let build_args = add_option!(build_args, "--CXX", self.cxx);
         let build_args = add_option!(build_args, "--tags", batch);
-        // build the repo depeendency request
+        // build the repo dependency request
         let repo = RepoDependencyRequest {
             url: self.repo,
             commitish: self.commitish,
