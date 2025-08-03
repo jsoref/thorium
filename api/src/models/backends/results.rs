@@ -85,7 +85,7 @@ impl<O: OutputSupport> OutputFormBuilder<O> {
     /// # Arguments
     ///
     /// * `user` - The user that is adding new results
-    /// * `upload` - The mutlipart form containing our results
+    /// * `upload` - The multipart form containing our results
     /// * `form` - The results form to add our multipart entries too
     /// * `shared` - Shared objects in Thorium
     #[instrument(
@@ -154,7 +154,7 @@ impl<O: OutputSupport> OutputFormBuilder<O> {
     /// * `user` - The user that is adding new results
     /// * `kind` - The kind of data we are saving results for
     /// * `key` - The key for the data we are saving results for
-    /// * `upload` - The mutlipart form containing our results
+    /// * `upload` - The multipart form containing our results
     /// * `shared` - Shared objects in Thorium
     #[instrument(
         name = "OutputForm::create_results",
