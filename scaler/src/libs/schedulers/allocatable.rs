@@ -510,7 +510,7 @@ impl Allocatable {
         cache: &Cache,
         spawn_slots: &mut usize,
     ) -> Result<(), Error> {
-        // get the system stats for for Thorium so we can assign resources to users
+        // get the system stats for Thorium so we can assign resources to users
         let stats = thorium.system.stats().await?;
         // Build a map of each users outstanding job reqs
         let mut map = stats.users_jobs();
