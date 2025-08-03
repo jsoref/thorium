@@ -281,7 +281,7 @@ async fn get_ids(
         let query_rows = query.into_rows_result()?;
         // turn our query results into a typed iter
         let typed_iter = query_rows.rows::<OutputIdRow>()?;
-        // dudplicate our rows based on id and build the correct order to return them in
+        // duplicate our rows based on id and build the correct order to return them in
         let mut order: BTreeMap<DateTime<Utc>, Uuid> = BTreeMap::default();
         // crawl over our output id rows
         for row in typed_iter {
