@@ -614,7 +614,7 @@ async fn delete_notification_bad() -> Result<(), Error> {
     let user_client = generators::client(&client).await?;
     // Create a group
     let group = generators::groups(1, &user_client).await?.remove(0).name;
-    // setup a random pipeline
+    // set up a random pipeline
     let pipe_req = generators::pipelines(&group, 1, false, &user_client)
         .await?
         .remove(0);

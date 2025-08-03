@@ -1,4 +1,4 @@
-//! Setup the nodes tables/prepared statements in Scylla
+//! Set up the nodes tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
@@ -35,7 +35,7 @@ impl NodesPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the node table
+        // set up the node table
         setup_node_table(session, config).await;
         // setup our prepared statements
         let insert = insert(session, config).await;
@@ -62,7 +62,7 @@ impl NodesPreparedStatements {
     }
 }
 
-/// Setup the nodes table
+/// Set up the nodes table
 ///
 /// This table trackes nodes and their health
 ///

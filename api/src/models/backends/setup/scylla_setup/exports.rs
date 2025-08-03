@@ -1,4 +1,4 @@
-//! Setup the exports tables/prepared statements in Scylla
+//! Set up the exports tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
@@ -35,7 +35,7 @@ impl ExportsPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the exports table
+        // set up the exports table
         setup_exports(session, config).await;
         setup_export_errors(session, config).await;
         // setup our materialized views
@@ -65,7 +65,7 @@ impl ExportsPreparedStatements {
     }
 }
 
-/// Setup the export status table
+/// Set up the export status table
 ///
 /// This table tracks the status and owner of an export.
 ///
@@ -92,7 +92,7 @@ async fn setup_exports(session: &Session, config: &Conf) {
         .expect("failed to add the exports table");
 }
 
-/// Setup the export errors table
+/// Set up the export errors table
 ///
 /// This table tracks any failed exports
 ///
@@ -123,7 +123,7 @@ async fn setup_export_errors(session: &Session, config: &Conf) {
         .expect("failed to add the export errors table");
 }
 
-/// Setup the repo materialized view for Thorium
+/// Set up the repo materialized view for Thorium
 ///
 /// # Arguments
 ///

@@ -469,7 +469,7 @@ impl User {
         }
         // if ldap is configured then authenticated against ldap and pull unix info
         let (password, unix) = match (&shared.config.thorium.auth.ldap, req.local) {
-            // ldap config is setup and a local account was not requested
+            // ldap config is set up and a local account was not requested
             (Some(conf), false) => {
                 // authenticate against ldap
                 let mut ldap = basic_auth_ldap(&req.username, &req.password, shared).await?;

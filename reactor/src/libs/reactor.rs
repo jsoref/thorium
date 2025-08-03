@@ -99,7 +99,7 @@ impl Reactor {
             .with_cpu(CpuRefreshKind::new())
             .with_disks()
             .with_disks_list();
-        // setup a system poller
+        // set up a system poller
         let system = System::new_with_specifics(refresh);
         // build our launcher
         let launcher = launchers::new(&args);

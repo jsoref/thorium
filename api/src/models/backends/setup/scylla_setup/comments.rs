@@ -1,4 +1,4 @@
-//! Setup the comments tables/prepared statements in Scylla
+//! Set up the comments tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
@@ -25,7 +25,7 @@ impl CommentsPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the comments tables
+        // set up the comments tables
         setup_comments_table(session, config).await;
         // set up the comments materialized views
         setup_comments_mat_view(session, config).await;
@@ -44,7 +44,7 @@ impl CommentsPreparedStatements {
     }
 }
 
-/// Setup the comments table for Thorium
+/// Set up the comments table for Thorium
 ///
 /// # Arguments
 ///
@@ -71,7 +71,7 @@ async fn setup_comments_table(session: &Session, config: &Conf) {
         .expect("failed to add comments table");
 }
 
-/// Setup the repo materialized view for Thorium
+/// Set up the repo materialized view for Thorium
 ///
 /// # Arguments
 ///

@@ -1204,7 +1204,7 @@ pub enum LogLevel {
     Error,
     /// Log at the warning level
     Warn,
-    /// Only Setup and up info
+    /// Only Set up and up info
     Setup,
     /// Log at the info level
     Info,

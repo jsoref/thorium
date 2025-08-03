@@ -208,7 +208,7 @@ pub async fn new_session(config: &Conf) -> Session {
         .expect("Failed to build scylla session")
 }
 
-/// Setup a keyspace for Thorium
+/// Set up a keyspace for Thorium
 ///
 /// # Arguments
 ///

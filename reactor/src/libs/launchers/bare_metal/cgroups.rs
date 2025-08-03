@@ -1,4 +1,4 @@
-//! Setup the correct cgroups for a specific image
+//! Set up the correct cgroups for a specific image
 use cgroups_rs::cpu::CpuController;
 use cgroups_rs::memory::MemController;
 use cgroups_rs::Controller;

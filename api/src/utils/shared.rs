@@ -24,7 +24,7 @@ use crate::{conf::Conf, error};
 /// * `timeout` - How long to wait for each attempt to complete
 macro_rules! retry {
     ($future:expr, $timeout:expr, $name:expr, $config:expr) => {{
-        // setup a counter variable at 0 to track how many attempts have been made
+        // set up a counter variable at 0 to track how many attempts have been made
         let mut i = 0;
         // loop and try to complete this future
         loop {
@@ -164,7 +164,7 @@ impl Shared {
         let redis = retry!(setup::redis(&config), 2, "Redis setup", config);
         // setup scylla session and prepared statements
         let scylla = Scylla::new(&config).await;
-        // setup the elastic client
+        // set up the elastic client
         let elastic = retry!(setup::elastic(&config), 60, "Elastic setup", &config);
         // build an email client if its configured
         let email = EmailClient::new(&config).await;

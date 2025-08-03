@@ -1,4 +1,4 @@
-//! Setup the repos tables/prepared statements in Scylla
+//! Set up the repos tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
@@ -41,10 +41,10 @@ impl ReposPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the repos tables
+        // set up the repos tables
         setup_repos_data_table(session, config).await;
         setup_repos_list_table(session, config).await;
-        // setup the repos materialized view
+        // set up the repos materialized view
         setup_repos_mat_view(session, config).await;
         // setup our prepared statements
         let insert = insert(session, config).await;
@@ -77,7 +77,7 @@ impl ReposPreparedStatements {
     }
 }
 
-/// Setup the repo data table for Thorium
+/// Set up the repo data table for Thorium
 ///
 /// # Arguments
 ///
@@ -98,7 +98,7 @@ async fn setup_repos_data_table(session: &Session, config: &Conf) {
         .expect("failed to add repo data table");
 }
 
-/// Setup the repo list table for Thorium
+/// Set up the repo list table for Thorium
 ///
 /// # Arguments
 ///
@@ -131,7 +131,7 @@ async fn setup_repos_list_table(session: &Session, config: &Conf) {
         .expect("failed to add repos list table");
 }
 
-/// Setup the repo materialized view for Thorium
+/// Set up the repo materialized view for Thorium
 ///
 /// # Arguments
 ///

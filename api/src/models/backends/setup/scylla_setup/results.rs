@@ -1,4 +1,4 @@
-//! Setup the results tables/prepared statements in Scylla
+//! Set up the results tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
@@ -47,10 +47,10 @@ impl ResultsPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the results tables
+        // set up the results tables
         setup_results_table(session, config).await;
         setup_results_stream_table(session, config).await;
-        // setup the results materialized views
+        // set up the results materialized views
         setup_results_auth_mat_view(session, config).await;
         setup_results_auth_id_mat_view(session, config).await;
         // setup our prepared statements
@@ -90,7 +90,7 @@ impl ResultsPreparedStatements {
     }
 }
 
-/// Setup the results stream materialized view
+/// Set up the results stream materialized view
 ///
 /// # Arguments
 ///
@@ -121,7 +121,7 @@ async fn setup_results_stream_table(session: &Session, config: &Conf) {
         .expect("failed to add result stream table");
 }
 
-/// Setup the results table for Thorium
+/// Set up the results table for Thorium
 ///
 /// # Arguments
 ///
@@ -150,7 +150,7 @@ async fn setup_results_table(session: &Session, config: &Conf) {
         .expect("failed to add results table");
 }
 
-/// Setup the results authorization table for Thorium
+/// Set up the results authorization table for Thorium
 ///
 /// # Arguments
 ///
@@ -179,7 +179,7 @@ async fn setup_results_auth_mat_view(session: &Session, config: &Conf) {
         .expect("failed to add results auth materialized view");
 }
 
-/// Setup the results authorization local index for Thorium
+/// Set up the results authorization local index for Thorium
 ///
 /// # Arguments
 ///

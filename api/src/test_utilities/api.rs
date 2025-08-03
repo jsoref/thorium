@@ -52,7 +52,7 @@ async fn get_scylla_client(config: &Conf) -> Result<Session, Error> {
     Ok(scylla)
 }
 
-/// Setup a connection pool to the redis backend
+/// Set up a connection pool to the redis backend
 ///
 /// # Arguments
 ///

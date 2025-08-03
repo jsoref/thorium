@@ -87,7 +87,7 @@ pub struct DownloadWorker {
 }
 
 impl DownloadWorker {
-    /// Setup the paths for this repo download based on user provided args
+    /// Set up the paths for this repo download based on user provided args
     async fn setup_organization(&self, target: &RepoTarget) -> Result<PathBuf, Error> {
         // setup any folders needed for the desired organizational structure
         match self.cmd.organization {
@@ -388,7 +388,7 @@ impl Worker for DownloadWorker {
         self.bar.rename(job.url.clone());
         // set that we are tarring this repository
         self.bar.refresh("", BarKind::UnboundIO);
-        // setup any organizational structure
+        // set up any organizational structure
         let output = match self.setup_organization(&job).await {
             Ok(output) => output,
             Err(error) => {

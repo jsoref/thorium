@@ -56,7 +56,7 @@ pub trait Scheduler {
         settings: &SystemSettings,
     ) -> Result<AllocatableUpdate, Error>;
 
-    /// Schedulers need to be able to setup their environment before scheduling jobs
+    /// Schedulers need to be able to set up their environment before scheduling jobs
     ///
     /// # Arguments
     ///
