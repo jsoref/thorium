@@ -1,4 +1,4 @@
-//! Laucnhes KVM vms for Thorium
+//! Launches KVM vms for Thorium
 
 use std::collections::{BTreeSet, HashMap, HashSet};
 use std::path::PathBuf;
