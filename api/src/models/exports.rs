@@ -80,7 +80,7 @@ impl ExportCursorRequest {
     /// # Arguments
     ///
     /// * `id` - The id of the cursor to add
-    /// * `start` - The newwest timestamp of data this cursor will export
+    /// * `start` - The newest timestamp of data this cursor will export
     /// * `current` - The current timestamp this cursor has exported
     /// * `end` - The oldest timestamp of data this cursor will export
     pub fn new(id: Uuid, start: DateTime<Utc>, current: DateTime<Utc>, end: DateTime<Utc>) -> Self {
