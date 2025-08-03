@@ -612,7 +612,7 @@ async fn delete_comment_fail() -> Result<(), thorium::Error> {
         .buffer(Buffer::new("I am an attachment"));
     // comment on this file
     let resp = client.files.comment(comment_req.clone()).await?;
-    // try to delete a non-existent comment
+    // try to delete a nonexistent comment
     let del_result = client
         .files
         .delete_comment(
@@ -1160,7 +1160,7 @@ async fn delete_from_group() -> Result<(), thorium::Error> {
     // attempt to delete from groups that all do not have access
     let result = client.files.delete(&resp.sha256, &resp.id, &del_opts).await;
     fail!(result, 404);
-    // attempt to delete from non-existent groups
+    // attempt to delete from nonexistent groups
     let fake_groups = vec!["fake".to_owned(), "groups".to_owned()];
     let fake_del_opts = FileDeleteOpts::default().groups(fake_groups);
     let result = client

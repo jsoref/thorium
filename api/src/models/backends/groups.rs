@@ -593,7 +593,7 @@ impl Group {
         // make sure the user has some role in this group
         if user.is_admin() {
             // if we are an admin we need to do a second call to make sure these groups exist
-            // this is because non existent groups will still return empty user lists
+            // this is because nonexistent groups will still return empty user lists
             if !db::groups::exists(names, shared).await? {
                 // one or more of the groups don't exist throw an error
                 return not_found!(format!("all of {:?} groups must exist", names));
@@ -654,7 +654,7 @@ impl Group {
                 group.allowable(action)?;
             }
             // if we are an admin we need to do a second call to make sure these groups exist
-            // this is because non existent groups will still return empty user lists
+            // this is because nonexistent groups will still return empty user lists
             if !db::groups::exists(names, shared).await? {
                 // one or more of the groups don't exist throw an error
                 return not_found!(format!("all of {:?} groups must exist", names));
