@@ -806,7 +806,7 @@ where
                     // this is not a tag based query so use our types partitions size
                     D::partition_size(shared)
                 };
-                // determin our current year and our end year
+                // determine our current year and our end year
                 let year = retain.start.year();
                 let end_year = retain.end.year();
                 // get our starting/ending bucket
