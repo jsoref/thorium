@@ -1068,7 +1068,7 @@ impl LdapUserMap {
                     Self::group_name_extract(&entry.dn),
                     entry.attrs.remove(&conf.group_members_attr),
                 ) {
-                    // extract our usernames if necesary
+                    // extract our usernames if necessary
                     let mut users = Self::group_member_extract(users, conf);
                     // trim the user list down to only valid Thorium users
                     users.retain(|name| valid_users.contains(name));
