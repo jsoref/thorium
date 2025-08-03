@@ -114,7 +114,7 @@ impl RawJob {
                 // this job is just empty
                 event!(Level::ERROR, empty = true);
             } else {
-                // this job contains data but not the requried values
+                // this job contains data but not the required values
                 // log the data that was missing required values
                 event!(Level::ERROR, malformed = true, data = format!("{raw:?}"));
             }
