@@ -509,7 +509,7 @@ pub async fn upload(thorium: &Thorium, cmd: &UploadResults) -> Result<(), Error>
     Ok(())
 }
 
-/// Handle all reults commands
+/// Handle all results commands
 ///
 /// # Arguments
 ///
