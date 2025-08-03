@@ -2313,7 +2313,7 @@ impl OutputSupport for Sample {
     ///
     /// # Arguments
     ///
-    /// * `user` - The use rthat is validating this object is in some groups
+    /// * `user` - The user that is validating this object is in some groups
     /// * `groups` - The user specified groups to check against
     /// * `shared` - Shared objects in Thorium
     #[cfg(feature = "api")]
@@ -2334,7 +2334,7 @@ impl OutputSupport for Sample {
     ///
     /// # Arguments
     ///
-    /// * `user` - The use rthat is validating this object is in some groups
+    /// * `user` - The user that is validating this object is in some groups
     /// * `groups` - The user specified groups to check against
     /// * `shared` - Shared objects in Thorium
     #[cfg(feature = "api")]
