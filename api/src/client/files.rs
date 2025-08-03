@@ -154,7 +154,7 @@ impl Files {
             .multipart(file_req.to_form().await?)
             .header("authorization", &self.token)
             // use a really long timeout for really large files
-            // this is probably done better some otherway
+            // this is probably done better some other way
             // 86,400 seconds == a day
             .timeout(std::time::Duration::from_secs(86_400));
         // send this request

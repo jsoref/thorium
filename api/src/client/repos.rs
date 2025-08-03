@@ -129,7 +129,7 @@ impl Repos {
             .header("authorization", &self.token)
             .json(req)
             // use a really long timeout for really large repos
-            // this is probably done better some otherway
+            // this is probably done better some other way
             // 86,400 seconds == a day
             .timeout(std::time::Duration::from_secs(86_400));
         // send this request
