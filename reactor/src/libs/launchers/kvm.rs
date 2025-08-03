@@ -109,7 +109,7 @@ impl Kvm {
     /// # Arguments
     ///
     /// * `golden` - The name of the golden image that was used
-    /// * `worker` - The worker we are assining a golden image too
+    /// * `worker` - The worker we are assigning a golden image too
     /// * `span` - The span to log traces under
     pub async fn convert(
         &mut self,
