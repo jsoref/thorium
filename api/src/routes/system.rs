@@ -462,7 +462,7 @@ async fn register_node(
 ///
 /// # Arguments
 ///
-/// * `user` - The user that is gettting this nodes info
+/// * `user` - The user that is getting this nodes info
 /// * `cluster` - The cluster this node is in
 /// * `node` - The node this heart beat is from
 /// * `state` - Shared Thorium objects
@@ -540,7 +540,7 @@ async fn update_node(
 ///
 /// # Arguments
 ///
-/// * `user` - The user that is gettting this nodes info
+/// * `user` - The user that is getting this nodes info
 /// * `params` - The params to use when listing node names
 /// * `state` - Shared Thorium objects
 /// * `heatbeat` - The heart beat info for this node
@@ -573,7 +573,7 @@ async fn list_nodes(
 ///
 /// # Arguments
 ///
-/// * `user` - The user that is gettting this nodes info
+/// * `user` - The user that is getting this nodes info
 /// * `params` - The params to use when listing node details
 /// * `state` - Shared Thorium objects
 /// * `heatbeat` - The heart beat info for this node

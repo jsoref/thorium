@@ -297,7 +297,7 @@ pub async fn download_tags<P: AsRef<Path>>(
     }
     // crawl over any repos and try to download them
     for repo in job.repos.iter() {
-        // log the sha256 we are gettting tags for
+        // log the sha256 we are getting tags for
         event!(Level::INFO, repo = &repo.url);
         // convert this url to a path
         let path = PathBuf::from(repo.url.clone());
