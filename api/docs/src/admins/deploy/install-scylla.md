@@ -647,7 +647,7 @@ developer_mode: false
 #  [shard0] [shard1] ... [shardN-1] [shard0] [shard1] ... [shardN-1] ...
 #
 # Scylla versions 1.6 and below used just one repetition of the pattern;
-# this intefered with data placement among nodes (vnodes).
+# this interfered with data placement among nodes (vnodes).
 #
 # Scylla versions 1.7 and above use 4096 repetitions of the pattern; this
 # provides for better data distribution.
