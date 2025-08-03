@@ -853,7 +853,7 @@ where
             // try to deserialize our query string
             Ok(serde_qs::Config::new(5, false).deserialize_str(query)?)
         } else {
-            bad!("result file query paramter required but was not given".to_string())
+            bad!("result file query parameter required but was not given".to_string())
         }
     }
 }
