@@ -678,7 +678,7 @@ impl PartialEq<Reaction> for GenericJob {
         same!(&self.args, &args);
         //make sure this jobs parent reaction is set
         matches_opt!(&self.parent, &react.parent);
-        // make sure our trigger dpeth matches
+        // make sure our trigger depth matches
         same!(&self.trigger_depth, &react.trigger_depth);
         true
     }
