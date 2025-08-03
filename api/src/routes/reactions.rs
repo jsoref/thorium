@@ -28,12 +28,12 @@ use crate::utils::{ApiError, AppState};
 ///
 /// * `user` - The user that is creating this reaction
 /// * `state` - Shared Thorium objects
-/// * `req` - The reaction request used to create a reqction
+/// * `req` - The reaction request used to create a reaction
 #[utoipa::path(
     post,
     path = "/api/reactions/",
     params(
-        ("req" = ReactionRequest, description = "The reaction request used to create a reqction"),
+        ("req" = ReactionRequest, description = "The reaction request used to create a reaction"),
     ),
     responses(
         (status = 200, description = "Pipeline created", body = ReactionIdResponse),
