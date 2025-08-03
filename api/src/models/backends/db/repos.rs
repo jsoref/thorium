@@ -618,7 +618,7 @@ pub async fn upload(repo: &str, sha256: &str, shared: &Shared) -> Result<(), Api
 async fn delete_repo_data(repo: &str, hash: &str, shared: &Shared) -> Result<(), ApiError> {
     // delete this object from s3
     shared.s3.repos.delete(hash).await?;
-    // detele this repos data from scylla
+    // delete this repos data from scylla
     shared
         .scylla
         .session
