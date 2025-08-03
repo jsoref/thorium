@@ -684,7 +684,7 @@ impl PartialEq<Reaction> for GenericJob {
     }
 }
 
-/// The infomation in a specific job claim status queue
+/// The information in a specific job claim status queue
 #[cfg(feature = "api")]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct JobReactionIds {
