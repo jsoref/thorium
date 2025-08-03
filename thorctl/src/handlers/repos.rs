@@ -340,7 +340,7 @@ async fn update(
         loop {
             // crawl over the repos and add them to our update queue
             for line in repos_cursor.data.drain(..) {
-                // skip any repos we aleady added
+                // skip any repos we already added
                 if added.insert(line.url.clone()) {
                     // all update repos will be a remote job
                     let job = IngestJob::Remote(line.url);
