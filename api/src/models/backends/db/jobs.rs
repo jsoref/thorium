@@ -690,7 +690,7 @@ pub async fn error<'a>(
 
     // if this job is a generator then remove it from this reactions generators
     if job.generator {
-        // build key to this reactions genrator set
+        // build key to this reactions generator set
         let gen_key = ReactionKeys::generators(&job.group, &job.reaction, shared);
         pipe.cmd("srem").arg(gen_key).arg(&job.id.to_string());
     }
