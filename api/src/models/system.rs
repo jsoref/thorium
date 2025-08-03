@@ -67,7 +67,7 @@ impl SystemInfo {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ScalerStats {
-    /// The number of jobs curerntin the deadline queue
+    /// The number of jobs currently in the deadline queue
     pub deadlines: i64,
     /// The number of jobs currently running
     pub running: i64,
