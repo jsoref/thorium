@@ -259,7 +259,7 @@ const ReposList = () => {
   const getFreshReposList = () => {
     if (!loading) {
       setLoading(true);
-      // reseting the list op requires resetting the page and has "more files" boolean
+      // resetting the list op requires resetting the page and has "more files" boolean
       setPage(0);
       setHasMoreRepos(true);
       getRepos(true);

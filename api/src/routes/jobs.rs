@@ -252,7 +252,7 @@ async fn checkpoint(
 ///
 /// # Arguments
 ///
-/// * `user` - The user that is reseting these jobs
+/// * `user` - The user that is resetting these jobs
 /// * `state` - Shared Thorium objects
 /// * `resets` - The jobs to reset
 #[utoipa::path(
