@@ -329,7 +329,7 @@ impl GroupRequest {
 
     /// Sets the managers that should be specified in a [`GroupRequest`]
     ///
-    /// Managers can not delete the group but can add users and delete users jobs within this group.
+    /// Managers cannot delete the group but can add users and delete users jobs within this group.
     ///
     /// # Arguments
     ///
@@ -377,7 +377,7 @@ impl GroupRequest {
 
     /// Sets the monitors that should be specified in a [`GroupRequest`]
     ///
-    /// Monitors can not create/delete jobs/users but can monitor the jobs and users within a group
+    /// Monitors cannot create/delete jobs/users but can monitor the jobs and users within a group
     ///
     /// # Arguments
     ///

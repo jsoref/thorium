@@ -86,13 +86,13 @@ pub struct EventRequest {
     pub data: EventData,
 }
 
-/// Whether a trigger is, could be, or can not be triggered
+/// Whether a trigger is, could be, or cannot be triggered
 pub enum TriggerPotential {
     /// The triggers conditions are met by an event
     Confirmed,
     /// This trigger conditions could potentially be met by an event
     Potentially,
-    /// This triggers conditions can not be met by an event
+    /// This triggers conditions cannot be met by an event
     CanNot,
 }
 

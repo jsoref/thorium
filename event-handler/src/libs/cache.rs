@@ -202,7 +202,7 @@ impl TriggerCache {
         events: Vec<Event>,
         filtered: &mut FilteredEvents<'a>,
     ) {
-        // split out events up into potential events and events can not meet any triggers
+        // split out events up into potential events and events cannot meet any triggers
         for event in events {
             // check this event
             self.check_event(&event, filtered);
