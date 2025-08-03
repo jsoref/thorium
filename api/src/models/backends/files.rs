@@ -528,7 +528,7 @@ impl Sample {
             }
             // make sure we actually have access to all requested groups
             let info = Group::authorize_all(user, &groups, shared).await?;
-            // make sure we have modification privleges in these groups if we are editing data
+            // make sure we have modification privileges in these groups if we are editing data
             if editable {
                 can_create_all!(info, user, shared);
             }
@@ -593,7 +593,7 @@ impl Sample {
             }
             // make sure we actually have access to all requested groups
             let info = Group::authorize_check_allow_all(user, &groups, action, shared).await?;
-            // make sure we have modification privleges in these groups
+            // make sure we have modification privileges in these groups
             can_create_all!(info, user, shared);
         }
         // make sure at least some groups valid

@@ -218,7 +218,7 @@ impl Repo {
             let info = Group::authorize_all(user, &groups, shared).await?;
             // if we want to edit these repos then check for edit permissions
             if editable {
-                // make sure we have modification privleges in these groups
+                // make sure we have modification privileges in these groups
                 can_create_all!(info, user, shared);
             }
         } else {
@@ -282,7 +282,7 @@ impl Repo {
             }
             // make sure we actually have access to all requested groups
             let info = Group::authorize_check_allow_all(user, &groups, action, shared).await?;
-            // make sure we have modification privleges in these groups
+            // make sure we have modification privileges in these groups
             can_create_all!(info, user, shared);
         } else {
             // this user specified no groups so default to the ones we can edit
