@@ -162,7 +162,7 @@ redis-0   1/1     Running   0          1m
 # 1g => 1000000000 bytes
 # 1gb => 1024*1024*1024 bytes
 #
-# units are case insensitive so 1GB 1Gb 1gB are all the same.
+# units are case-insensitive so 1GB 1Gb 1gB are all the same.
 
 ################################## INCLUDES ###################################
 
@@ -324,7 +324,7 @@ tcp-keepalive 300
 #
 # tls-cluster yes
 
-# Explicitly specify TLS versions to support. Allowed values are case insensitive
+# Explicitly specify TLS versions to support. Allowed values are case-insensitive
 # and include "TLSv1", "TLSv1.1", "TLSv1.2", "TLSv1.3" (OpenSSL >= 1.1.1) or
 # any combination. To enable only TLSv1.2 and TLSv1.3, use:
 #
