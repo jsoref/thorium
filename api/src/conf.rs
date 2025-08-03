@@ -624,7 +624,7 @@ pub struct BareMetalCluster {
 }
 
 impl Default for BareMetalCluster {
-    /// Craete a default bare metal config
+    /// Create a default bare metal config
     fn default() -> Self {
         BareMetalCluster {
             username: default_bare_metal_user(),
