@@ -364,7 +364,7 @@ impl<O: OutputSupport> OutputRequest<O> {
     //}
 }
 
-/// Optional arameters for getting results
+/// Optional parameters for getting results
 #[derive(Clone, Default, Debug, Serialize, Deserialize)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ResultGetParams {

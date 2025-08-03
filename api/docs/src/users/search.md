@@ -6,7 +6,7 @@ the home page. Thorium uses the [Lucene syntax](https://www.elastic.co/guide/en/
 for search queries.
 
 It's important to note that documents are indexed **per group**. This means that
-for a document to be returned, **all** search parametes must be met by at least
+for a document to be returned, **all** search parameters must be met by at least
 one group (see the below [FAQ](#what-do-groups-have-to-do-with-searching-in-thorium)
 for more details).
 
