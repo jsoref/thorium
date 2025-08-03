@@ -814,7 +814,7 @@ pub async fn delete_workers(
         let maybe_info: Vec<Option<String>> = pipe.query_async(conn!(shared)).await?;
         // convert our info list to an iterator
         let mut info_iter = maybe_info.iter();
-        // build the pipeline for deleteing workers
+        // build the pipeline for deleting workers
         let mut pipe = redis::pipe();
         // combine our worker and cluster/node info
         for worker in chunk {
