@@ -582,11 +582,11 @@ pub async fn sub_execute(
             // send any logs in our logs channel
             agent.send_channel_logs().await?;
             // collect any children files
-            let mut childs = agent.executor.children(&agent.image).await?;
+            let mut children = agent.executor.children(&agent.image).await?;
             // send any logs in our logs channel
             agent.send_channel_logs().await?;
             // submit any collected children
-            childs
+            children
                 .submit(
                     &agent.thorium,
                     &agent.job,
