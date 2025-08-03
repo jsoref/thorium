@@ -858,7 +858,7 @@ pub async fn proceed(mut reaction: Reaction, shared: &Shared) -> Result<JobHandl
 
     // check if we any active generators
     if reaction.generators.is_empty() {
-        // either all generatos completed or we never had any
+        // either all generators completed or we never had any
         // so increment current stage
         reaction.current_stage += 1;
         // get pipeline data
