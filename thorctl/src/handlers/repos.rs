@@ -287,7 +287,7 @@ async fn ingest(
     ingest_positionals(&mut controller, cmd, &mut added).await?;
     // ingest any repos from any lists in files
     ingest_files_lists(&mut controller, cmd, &mut added).await?;
-    // track and remove any duplicate local repos as its wasteful to ingest them more then once
+    // track and remove any duplicate local repos as its wasteful to ingest them more than once
     let mut local_added = HashSet::with_capacity(100);
     // Add any locally cloned repos
     ingest_local_positionals(&mut controller, cmd, &mut local_added).await?;

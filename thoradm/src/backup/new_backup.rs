@@ -120,7 +120,7 @@ impl ArchiveWriter {
         let map = PartitionArchive::new(self.written, end, partition, sha256);
         // archive this partition and log its size
         let archived_map = rkyv::to_bytes::<_, 1024>(&map).unwrap();
-        // panic if our len is greater then 96 bytes
+        // panic if our len is greater than 96 bytes
         if archived_map.len() != 96 {
             panic!("entry len is {}", archived_map.len());
         }

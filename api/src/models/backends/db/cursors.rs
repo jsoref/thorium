@@ -1811,7 +1811,7 @@ where
                 let found = typed_iter.filter_map(|res| log_scylla_err!(res));
                 // add this data to the data to return
                 self.data.extend(found);
-                // if cnt is less then our limit then go to the next partition
+                // if cnt is less than our limit then go to the next partition
                 if cnt < limit {
                     // check if we are at the last index
                     if self.retain.index == self.retain.partitions.len() - 1 {
@@ -2607,7 +2607,7 @@ impl ExistsCursor {
                 .execute_unpaged(prepared, (self.year, buckets, key));
             // add this future out our futures list
             futures.push(query);
-            // if we have more then 100 futures to crawl then send them all at once
+            // if we have more than 100 futures to crawl then send them all at once
             if futures.len() >= 100 {
                 // build our stream of futures
                 let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);

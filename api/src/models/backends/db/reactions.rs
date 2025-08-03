@@ -1044,9 +1044,9 @@ pub async fn stage_logs(
 ) -> Result<StageLogs, ApiError> {
     // convert our cursor to an i64
     let cursor: i64 = cursor.try_into()?;
-    // if we want to crawl more then 250,000 things then return an error
+    // if we want to crawl more than 250,000 things then return an error
     if limit > 250_000 {
-        return bad!("Limit can be no more then 250,000 lines".to_owned());
+        return bad!("Limit can be no more than 250,000 lines".to_owned());
     }
     // determine our current bucket
     let current_bucket: i32 = (cursor / 2500).try_into()?;

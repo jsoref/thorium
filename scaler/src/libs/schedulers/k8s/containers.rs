@@ -67,21 +67,21 @@ impl Containers {
         // build the resource memory map
         btree.insert("cpu".to_owned(), quantity!(format!("{}m", raw.cpu))?);
         btree.insert("memory".to_owned(), quantity!(format!("{}Mi", raw.memory))?);
-        // inject ephemeral storage if its greater then 0
+        // inject ephemeral storage if its greater than 0
         if raw.ephemeral_storage > 0 {
             btree.insert(
                 "ephemeral-storage".to_owned(),
                 quantity!(format!("{}Mi", raw.ephemeral_storage))?,
             );
         }
-        // inject nvidia gpu if its greater then 0
+        // inject nvidia gpu if its greater than 0
         if raw.nvidia_gpu > 0 {
             btree.insert(
                 "nvidia/gpu".to_owned(),
                 quantity!(raw.nvidia_gpu.to_string())?,
             );
         }
-        // inject amd gpu if its greater then 0
+        // inject amd gpu if its greater than 0
         if raw.amd_gpu > 0 {
             btree.insert("amd/gpu".to_owned(), quantity!(raw.amd_gpu.to_string())?);
         }

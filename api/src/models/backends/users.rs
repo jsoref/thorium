@@ -946,7 +946,7 @@ impl User {
                 return Ok(());
             }
             // no groups were provided so get 10000 groups
-            // this is a bit of a hack and means if theres more then 10000 groups we silently miss things
+            // this is a bit of a hack and means if theres more than 10000 groups we silently miss things
             // TODO: Fix this
             let mut list = db::groups::list(0, 10000, shared).await?;
             // extend our groups list

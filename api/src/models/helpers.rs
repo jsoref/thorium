@@ -330,7 +330,7 @@ macro_rules! set {
     };
 }
 
-/// Returns the right value if its greater then the left
+/// Returns the right value if its greater than the left
 #[doc(hidden)]
 #[macro_export]
 macro_rules! at_least {

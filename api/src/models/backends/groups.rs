@@ -752,9 +752,9 @@ impl Group {
                 return conflict!("You cannot update a group to have no owners".to_owned());
             }
         } else {
-            // only check manager if we are doing more then just removing ourselves
+            // only check manager if we are doing more than just removing ourselves
             if !update.removes_only_user(&user.username) {
-                // we are removing more then just ourselves so check for arbitrary delete perms
+                // we are removing more than just ourselves so check for arbitrary delete perms
                 self.modifiable(user)?;
             }
         }

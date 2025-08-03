@@ -128,7 +128,7 @@ impl<D: DataSource> Monitor<D> {
                 }
                 // increment our counter
                 since_send_status += 1;
-                // if there has been more then 5000 iterations since we've sent status, break out
+                // if there has been more than 5000 iterations since we've sent status, break out
                 if since_send_status > 5000 {
                     break;
                 }

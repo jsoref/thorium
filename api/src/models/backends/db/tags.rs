@@ -283,7 +283,7 @@ async fn get_tag_rows(
 ) -> Result<Vec<FullTagRow>, ApiError> {
     // default to 30 rows
     let mut full_rows = Vec::with_capacity(30);
-    // if we have more then 100 groups then chunk it into bathes of 100  otherwise just get our tag rows
+    // if we have more than 100 groups then chunk it into bathes of 100  otherwise just get our tag rows
     if groups.len() > 100 {
         // break our groups into chunks of 100
         for chunk in groups.chunks(100) {
@@ -489,7 +489,7 @@ pub async fn get(
     map: &mut TagMap,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we have more then 100 groups then chunk it into bathes of 100  otherwise just get our info
+    // if we have more than 100 groups then chunk it into bathes of 100  otherwise just get our info
     if groups.len() > 100 {
         // break our groups into chunks of 100
         for chunk in groups.chunks(100) {
@@ -519,7 +519,7 @@ pub async fn get(
             }
         }
     } else {
-        // we have less then 100 groups so just get their data
+        // we have less than 100 groups so just get their data
         let query = shared
             .scylla
             .session

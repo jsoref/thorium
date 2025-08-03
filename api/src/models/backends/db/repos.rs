@@ -418,7 +418,7 @@ async fn get_base(
 ) -> Result<Option<Repo>, ApiError> {
     // build a btree to sort our submissions
     let mut sorted: BTreeMap<DateTime<Utc>, Vec<RepoSubmission>> = BTreeMap::default();
-    // if we have more then 100 groups then chunk it into bathes of 100  otherwise just get our info
+    // if we have more than 100 groups then chunk it into bathes of 100  otherwise just get our info
     if groups.len() > 100 {
         // break our groups into chunks of 100
         for chunk in groups.chunks(100) {
@@ -932,7 +932,7 @@ pub async fn commitish_exists(
     commit: &str,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we have more then 100 groups then break them into chunks of 50
+    // if we have more than 100 groups then break them into chunks of 50
     if groups.len() > 100 {
         // cast our hashset to a vector so we can chunk it up
         let group_cast = groups.iter().map(|name| *name).collect::<Vec<&String>>();
@@ -1103,7 +1103,7 @@ pub async fn repo_data_hash(
 ) -> Result<String, ApiError> {
     // track our previous kinds across checks
     let mut previous = None;
-    // if we have more then 100 groups then break them into chunks of 50
+    // if we have more than 100 groups then break them into chunks of 50
     if groups.len() > 32 {
         // track the last repo_data hash
         let mut last_repo_data_hash = None;
