@@ -253,7 +253,7 @@ impl Error {
 }
 
 impl std::fmt::Display for Error {
-    /// display this error in a easy readble format
+    /// display this error in a easy readable format
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match (self.status(), self.msg()) {
             (Some(code), Some(msg)) => write!(f, "Code: {} Error: {}", code, msg),
