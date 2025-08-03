@@ -246,7 +246,7 @@ impl SampleCheck {
         self
     }
 
-    /// Sets the origin for this extence check
+    /// Sets the origin for this existence check
     ///
     /// # Arguments
     ///
