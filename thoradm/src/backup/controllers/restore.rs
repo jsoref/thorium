@@ -340,7 +340,7 @@ impl<R: S3Restore> S3RestoreController<R> {
 
     /// Start our global progress tracker
     pub fn start_monitor(&mut self) -> JoinHandle<Result<(), Error>> {
-        // get a handle to our update recieve channel
+        // get a handle to our update receive channel
         let update_rx = self.updates_rx.clone();
         // build the style for our progress bar
         let bar_style = ProgressStyle::with_template(

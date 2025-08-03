@@ -99,7 +99,7 @@ impl<S: Scrub> TableScrub<S> {
 
     /// Start our global progress tracker
     async fn start_global_tracker(&self) -> JoinHandle<()> {
-        // get a handle to our update recieve channel
+        // get a handle to our update receive channel
         let update_rx = self.updates_rx.clone();
         // build the style for our progress bar
         let bar_style = ProgressStyle::with_template(

@@ -727,7 +727,7 @@ impl Worker for IngestWorker {
     /// The command part of our args for this specific worker
     type Cmd = IngestRepos;
 
-    /// The type of jobs to recieve
+    /// The type of jobs to receive
     type Job = String;
 
     /// An update for the repo ingest monitor

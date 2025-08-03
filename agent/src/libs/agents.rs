@@ -155,7 +155,7 @@ pub struct Agent {
     pub job: GenericJob,
     /// The stage logs to send to Thorium
     stage_logs: StageLogsAdd,
-    /// A reciever for a channel of logs to add for this job
+    /// A receiver for a channel of logs to add for this job
     receiver: Receiver<String>,
     /// A sender for a channel of logs to add for this job
     pub sender: Sender<String>,
