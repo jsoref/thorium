@@ -97,7 +97,7 @@ pub async fn get(
     }
 }
 
-/// Updates the curernt timestamp for an ongoing export operation
+/// Updates the current timestamp for an ongoing export operation
 ///
 /// # Arguments
 ///
