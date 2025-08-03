@@ -157,7 +157,7 @@ pub struct Agent {
     stage_logs: StageLogsAdd,
     /// A reciever for a channel of logs to add for this job
     receiver: Receiver<String>,
-    /// A sender for a chennel of logs to add for this job
+    /// A sender for a channel of logs to add for this job
     pub sender: Sender<String>,
     /// The agent executor this agent is using
     pub executor: Box<dyn AgentExecutor + Send + Sync>,

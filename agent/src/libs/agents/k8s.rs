@@ -18,7 +18,7 @@ use crate::{build_path_args, deserialize, log, purge};
 pub struct K8s {
     /// A client to Thorium
     pub thorium: Thorium,
-    /// A sender for a chennel of logs to add for this job
+    /// A sender for a channel of logs to add for this job
     pub logs: Sender<String>,
     /// The original entrypoint for the image we are in
     entrypoint: Vec<String>,

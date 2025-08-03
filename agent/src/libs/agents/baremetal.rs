@@ -43,7 +43,7 @@ fn isolate<P: AsRef<Path>>(raw: P, id: &str) -> Result<PathBuf, Error> {
 pub struct BareMetal {
     /// A client to Thorium
     pub thorium: Thorium,
-    /// A sender for a chennel of logs to add for this job
+    /// A sender for a channel of logs to add for this job
     pub logs: Sender<String>,
     /// The path to write sample dependencies to
     pub samples_path: PathBuf,
