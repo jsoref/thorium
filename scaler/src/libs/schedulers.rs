@@ -1,6 +1,6 @@
 //! Abstracts the different schedulers for Thorium
 //!
-//! Currently we only support Kubernetes but that will likely change in the futrue.
+//! Currently we only support Kubernetes but that will likely change in the future.
 use chrono::prelude::*;
 use std::collections::{BTreeMap, HashMap, HashSet};
 use thorium::models::{ImageScaler, SystemSettings};
