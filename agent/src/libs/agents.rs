@@ -41,7 +41,7 @@ const MAX_BATCHES: usize = 10;
 async fn check_child(child: &mut Child) -> Result<JobStatus, Error> {
     // check if this sub process has finished yet
     match child.try_wait() {
-        // get our exit code on MacOS
+        // get our exit code on macOS
         #[cfg(target_os = "macos")]
         Ok(Some(status)) => {
             // get and set the return code
