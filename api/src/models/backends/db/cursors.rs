@@ -325,7 +325,7 @@ pub trait ScyllaCursorSupport: CursorCore {
                 let pos = entry
                     .iter()
                     .position(|item| inter_unique == item.get_unique_key());
-                // drop our reference to our interemdiate unique value
+                // drop our reference to our intermediate unique value
                 drop(inter_unique);
                 // if we found this item already exists then add our intermediate row
                 match pos {
