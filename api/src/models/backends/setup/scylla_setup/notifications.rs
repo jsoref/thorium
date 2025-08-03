@@ -11,11 +11,11 @@ pub struct NotificationsPreparedStatements {
     pub insert: PreparedStatement,
     /// Insert a new notification that doesn't expire
     pub insert_no_expire: PreparedStatement,
-    /// Get all notications for a specific entity
+    /// Get all notifications for a specific entity
     pub get: PreparedStatement,
     /// Delete a notification
     pub delete: PreparedStatement,
-    /// Delete all notications for a specific entity
+    /// Delete all notifications for a specific entity
     pub delete_all: PreparedStatement,
 }
 
