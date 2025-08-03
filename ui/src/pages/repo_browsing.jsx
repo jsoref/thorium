@@ -126,7 +126,7 @@ const ReposList = () => {
       if (res.cursor) {
         setCursor(res.cursor);
       } else {
-        // no cursor is returned when exausted
+        // no cursor is returned when exhausted
         setHasMoreRepos(false);
       }
     }
