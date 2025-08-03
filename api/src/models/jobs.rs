@@ -583,7 +583,7 @@ impl GenericJobArgsUpdate {
         self
     }
 
-    /// Sets the options for GenericJobArgs completely overwritting the original options
+    /// Sets the options for GenericJobArgs completely overwriting the original options
     ///
     /// # Arguments
     ///

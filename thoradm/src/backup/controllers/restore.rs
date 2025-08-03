@@ -596,7 +596,7 @@ impl RestoreController {
         for node in &config.scylla.nodes {
             println!("  - {node}");
         }
-        // log the buckets we will be overwritting
+        // log the buckets we will be overwriting
         println!("Buckets:");
         println!("  Files: {}", config.thorium.files.bucket);
         println!("  Repos: {}", config.thorium.repos.bucket);
