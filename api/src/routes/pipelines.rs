@@ -254,7 +254,7 @@ async fn delete_pipeline(
 /// # Arguments
 ///
 /// * `user` - The user sending the request
-/// * `group` - The group the pipeline is in
+/// * `group` - The group containing the pipeline
 /// * `pipeline` - The name of the pipeline the notification will be created for
 /// * `state` - Shared Thorium objects
 /// * `params` - The notification params sent with the request
@@ -298,7 +298,7 @@ async fn create_notification(
 /// # Arguments
 ///
 /// * `user` - The user that is requesting the notifications
-/// * `group` - The group the pipeline is in
+/// * `group` - The group containing the pipeline
 /// * `pipeline` - The name of the pipeline whose notifications are being requested
 /// * `state` - Shared Thorium objects
 #[utoipa::path(
@@ -335,7 +335,7 @@ async fn get_notifications(
 /// # Arguments
 ///
 /// * `user` - The user that is requesting the deletion
-/// * `group` - The group the pipeline is in
+/// * `group` - The group containing the pipeline
 /// * `pipeline` - The name of the pipeline whose log is being deleted
 /// * `id` - The notification's unique ID
 /// * `state` - Shared Thorium objects
