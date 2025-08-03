@@ -1393,7 +1393,7 @@ impl OutputCollectionUpdate {
         self
     }
 
-    /// Sets the result groups restictions to be cleared
+    /// Sets the result groups restrictions to be cleared
     ///
     /// # Examples
     ///
