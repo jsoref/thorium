@@ -69,7 +69,7 @@ pub fn storage<T: AsRef<str>>(raw: T) -> Result<u64, ConversionError> {
         return Ok(bytes * 1_048_576);
     }
 
-    // u64 failed parse check lets find first occurence of a any valid char
+    // u64 failed parse check lets find first occurrence of a any valid char
     let unit_regex = match Regex::new(r"[KMGTPE]") {
         Ok(regex) => regex,
         Err(error) => return err!(format!("Failed to compile regex: {error}")),
