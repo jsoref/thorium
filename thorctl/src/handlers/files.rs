@@ -242,7 +242,7 @@ async fn download_targets(
 ) {
     // add any files from our cmd
     for sha256 in &cmd.sha256s {
-        // check if this repo has already been addded to be downloaded
+        // check if this repo has already been added to be downloaded
         if added.insert(sha256.clone()) {
             // try to add this download job
             if let Err(error) = controller.add_job(sha256.clone()).await {
@@ -275,7 +275,7 @@ async fn download_search(
     loop {
         // add each of these sha256s to be downloaded
         for line in cursor.data.drain(..) {
-            // check if this repo has already been addded to be downloaded
+            // check if this repo has already been added to be downloaded
             if added.insert(line.sha256.clone()) {
                 // try to add this download job
                 if let Err(error) = controller.add_job(line.sha256).await {
