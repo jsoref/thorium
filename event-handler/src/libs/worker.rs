@@ -324,7 +324,7 @@ impl EventWorker {
         // create a data cache object
         let mut data_cache = DataCache::default();
         let mut event_cache = HashMap::with_capacity(1000);
-        // resest any tasks from a previous worker
+        // reset any tasks from a previous worker
         self.thorium.events.reset_all(self.kind).await?;
         // keep looping and handling results
         loop {
