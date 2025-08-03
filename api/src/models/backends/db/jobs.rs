@@ -567,7 +567,7 @@ pub async fn proceed(
     let mut pipe = redis::pipe();
     // add running job specific commands if our status is running
     if job.status == JobStatus::Running {
-        // inrement progress for this reactions current stage
+        // increment progress for this reactions current stage
         pipe.cmd("hincrby").arg(&reaction_data).arg("current_stage_progress").arg(1)
             // get this reactions current stage length
             .cmd("hget").arg(&reaction_data).arg("current_stage_length")

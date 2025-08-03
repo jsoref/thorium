@@ -111,7 +111,7 @@ impl Lifetime {
         }
     }
 
-    /// incrment our job counter if necessary
+    /// increment our job counter if necessary
     pub fn claimed_job(&mut self) {
         // increment lifetime
         if let Lifetime::JobCount { current, limit: _ } = self {
