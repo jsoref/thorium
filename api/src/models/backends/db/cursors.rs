@@ -878,7 +878,7 @@ where
         // check if we got any cursor data
         match data {
             Some(data) => {
-                // try to deseruialize this cursors retained data
+                // try to deserialize this cursors retained data
                 let retain: ScyllaCursorRetain<D> = deserialize!(&data);
                 // tag based cursors have a different chunk size
                 let chunk = if retain.tags_retain.is_some() {
