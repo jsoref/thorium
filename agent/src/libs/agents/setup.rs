@@ -573,14 +573,14 @@ pub async fn download_children<P: Into<PathBuf>>(
                     tokio::fs::create_dir_all(&target).await?;
                     // download these children
                     for (child, _) in &output.children {
-                        // add this childs sha256
+                        // add this child's sha256
                         target.push(child);
                         log!(logs, "Downloading child: {}", child);
                         // download this child
                         thorium.files.download(&child, &target, &mut opts).await?;
                         // add this path to our downloaded children
                         downloaded.push(target.clone());
-                        // remove our childs sha256
+                        // remove our child's sha256
                         target.pop();
                     }
                     // remove our tool name
@@ -613,14 +613,14 @@ pub async fn download_children<P: Into<PathBuf>>(
                         tokio::fs::create_dir_all(&target).await?;
                         // download these children
                         for (child, _) in &output.children {
-                            // add this childs sha256
+                            // add this child's sha256
                             target.push(child);
                             log!(logs, "Downloading child: {}", child);
                             // download this child
                             thorium.files.download(&child, &target, &mut opts).await?;
                             // add this path to our downloaded children
                             downloaded.push(target.clone());
-                            // remove our childs sha256
+                            // remove our child's sha256
                             target.pop();
                         }
                         // remove our tool name

@@ -204,7 +204,7 @@ impl Launcher for Windows {
                 return Err(Error::from(error));
             }
         };
-        // get our childs process id
+        // get our child's process id
         Ok(())
     }
 
