@@ -352,7 +352,7 @@ pub async fn delete_all(
 /// Checks if a pipeline exists in the Redis backend after authentication
 ///
 /// Requiring a reference to a Group object obtained after authorization
-/// decreases the likelyhood of prematurely checking for the existence of
+/// decreases the likelihood of prematurely checking for the existence of
 /// the pipeline and leaking information to an unauthorized user
 ///
 /// # Arguments
