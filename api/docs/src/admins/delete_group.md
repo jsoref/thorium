@@ -35,7 +35,7 @@ If you do want to delete a group, you will need to manually delete any files, re
 
 ### Manually Deleting Files
 ---
-When you request to delete a file, you are deleting a file submission from a database. A file can have many different submissions from one or more groups. Therefore, a file will only be deleted from the backend object store when the last submission for a file is deleted. This means that a file can be safely "deleted" from one group without removing that file from other groups.
+When you request to delete a file, you are deleting a file submission from a database. A file can have many different submissions from one or more groups. Therefore, a file will only be deleted from the backend object store when the last submission for it is deleted. This means that a file can be safely "deleted" from one group without removing that file from other groups.
 
 File submissions can be deleted in Thorctl, the Web UI, or through direct API requests. When using Thorctl to delete files in bulk it is important to specify a group to limit the deletion operation to using the `-g` flag. You must also use the `--force` flag when not limiting the deletion to a specific target sha256/tag, because this is considered an especially dangerous operation.
 
