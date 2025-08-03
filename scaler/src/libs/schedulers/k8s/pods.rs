@@ -221,7 +221,7 @@ impl Pods {
         let params = DeleteParams::default().grace_period(0);
         // delete target pod
         if let Err(error) = pod_api.delete(name, &params).await {
-            // if we got an erorr while deleting this pod then check if its a 404
+            // if we got an error while deleting this pod then check if its a 404
             // if it was ignore it since the pod is already gone
             // match on the error enum
             match &error {

@@ -197,7 +197,7 @@ impl Jobs {
         };
         // delete target job
         if let Err(error) = job_api.delete(&name, &params).await {
-            // if we got an erorr while deleting this job then check if its a 404
+            // if we got an error while deleting this job then check if its a 404
             // if it was ignore it since the job is already gone
             // match on the error enum
             match error {

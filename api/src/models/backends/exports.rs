@@ -104,7 +104,7 @@ impl Export {
     ///
     /// # Arguments
     ///
-    /// * `op` - The type of export operation to list erorrs from
+    /// * `op` - The type of export operation to list errors from
     /// * `params` - The query params to use when listing errors
     /// * `shared` - Shared Thorium objects
     /// * `span` - The span to log traces under
