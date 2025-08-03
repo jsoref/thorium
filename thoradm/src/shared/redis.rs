@@ -4,7 +4,7 @@ use thorium::Conf;
 
 use crate::Error;
 
-/// Setup a connection pool to the redis backend
+/// Set up a connection pool to the redis backend
 ///
 /// # Arguments
 ///

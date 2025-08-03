@@ -120,7 +120,7 @@ impl ConfigMaps {
         Ok(())
     }
 
-    /// Setup a users passwd config map in Thorium
+    /// Set up a users passwd config map in Thorium
     ///
     /// # Arguments
     ///

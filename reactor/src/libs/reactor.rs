@@ -98,7 +98,7 @@ impl Reactor {
         let refresh = RefreshKind::default()
             .with_cpu(CpuRefreshKind::everything())
             .with_memory(MemoryRefreshKind::everything());
-        // setup a system poller
+        // set up a system poller
         let system = System::new_with_specifics(refresh);
         // build our launcher
         let launcher = launchers::new(&args);

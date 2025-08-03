@@ -1,4 +1,4 @@
-//! Setup the samples tables/prepared statements in Scylla
+//! Set up the samples tables/prepared statements in Scylla
 
 use scylla::client::session::Session;
 use scylla::statement::prepared::PreparedStatement;
@@ -64,7 +64,7 @@ impl SamplesPreparedStatements {
     }
 }
 
-/// Setup the samples table for Thorium
+/// Set up the samples table for Thorium
 ///
 /// This is the ground truth table for all samples
 ///

@@ -1,4 +1,4 @@
-//! Setup an environment for executing a Thorium job
+//! Set up an environment for executing a Thorium job
 
 use crossbeam::channel::Sender;
 use std::collections::{HashMap, HashSet};

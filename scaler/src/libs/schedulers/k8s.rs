@@ -209,7 +209,7 @@ impl K8s {
         Ok(())
     }
 
-    /// Setup a normal users groups
+    /// Set up a normal users groups
     ///
     /// # Arguments
     ///
@@ -237,7 +237,7 @@ impl K8s {
                 // add this namespace to our list already created namespaces
                 checked.insert(ns);
             }
-            // make sure this users secret is setup and correct
+            // make sure this users secret is set up and correct
             if let Err(err) = self.secrets.check_secret(ns, user).await {
                 // log that we failed to setup this users secret
                 event!(
@@ -250,13 +250,13 @@ impl K8s {
             }
             // if this user has unix info then create their passwd file
             if user.unix.is_some() {
-                // make sure this users passwd is setup and correct
+                // make sure this users passwd is set up and correct
                 self.configs.setup_passwd(ns, user, &mut bans.users).await;
             }
         }
     }
 
-    /// Setup an admins configs in all namespaces
+    /// Set up an admins configs in all namespaces
     ///
     /// # Arguments
     ///
@@ -286,7 +286,7 @@ impl K8s {
                 // add this namespace to our list already created namespaces
                 checked.insert(ns);
             }
-            // make sure this users secret is setup and correct
+            // make sure this users secret is set up and correct
             if let Err(err) = self.secrets.check_secret(ns, user).await {
                 // log that we failed to setup this users secret
                 event!(
@@ -299,7 +299,7 @@ impl K8s {
             }
             // if this user has unix info then create their passwd file
             if user.unix.is_some() {
-                // make sure this users passwd is setup and correct
+                // make sure this users passwd is set up and correct
                 self.configs.setup_passwd(ns, user, &mut bans.users).await;
             }
         }
@@ -867,7 +867,7 @@ impl Scheduler for K8s {
         self.cluster.resources_available(thorium).await
     }
 
-    /// Setup the K8's cluster before scheduling any jobs, ensuring the
+    /// Set up the K8's cluster before scheduling any jobs, ensuring the
     /// cluster's state is equivalent to the info in Thorium
     ///
     /// # Arguments

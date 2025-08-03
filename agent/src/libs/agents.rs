@@ -425,11 +425,11 @@ pub trait AgentExecutor {
     /// Get the paths to this executors current jobs results and result files
     fn result_paths(&self, image: &Image) -> (String, String);
 
-    /// Setup the environment for executing a single job in Thorium
+    /// Set up the environment for executing a single job in Thorium
     ///
     /// # Arguments
     ///
-    /// * `image` - The Image to setup a job for
+    /// * `image` - The Image to set up a job for
     /// * `job` - The job we are setting up for
     /// * `commits` - The commit that each repo is checked out too
     async fn setup(

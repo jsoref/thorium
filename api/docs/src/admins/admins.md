@@ -11,4 +11,4 @@ admins may need to use an API client to make direct web requests to the API.
 
 Before you begin your journey as an admin, we recommend you familiarize yourself with Thorium's [architecture](../architecture/architecture.md) and
 components. After that, you are ready to start [operating](../admins/operations.md) your Thorium cluster. If you have not yet deployed your Thorium
-instance, you can read a description of how to setup an [example deployment](../admins/deploy/deploy.md).
+instance, you can read a description of how to set up an [example deployment](../admins/deploy/deploy.md).

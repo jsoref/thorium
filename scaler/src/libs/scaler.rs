@@ -334,7 +334,7 @@ impl Scaler {
     async fn setup(&mut self) -> Result<(), Error> {
         // crawl over each cluster and get it setup for executing jobs
         for (name, scheduler) in &mut self.schedulers {
-            // setup the scheduler before we schedule jobs
+            // set up the scheduler before we schedule jobs
             scheduler
                 .setup(name, &self.cache, &mut self.allocatable.bans)
                 .await?;

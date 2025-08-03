@@ -1,4 +1,4 @@
-//! Setup the notifications tables/prepared statements in Scylla
+//! Set up the notifications tables/prepared statements in Scylla
 
 use scylla::client::session::Session;
 use scylla::statement::prepared::PreparedStatement;
@@ -27,7 +27,7 @@ impl NotificationsPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the notifications table
+        // set up the notifications table
         setup_notifications_table(session, config).await;
         // setup our prepared statements
         let insert = insert(session, config).await;
@@ -46,7 +46,7 @@ impl NotificationsPreparedStatements {
     }
 }
 
-/// Setup a notifications table for Thorium
+/// Set up a notifications table for Thorium
 ///
 /// # Arguments
 ///

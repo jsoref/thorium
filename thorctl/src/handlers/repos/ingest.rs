@@ -90,7 +90,7 @@ fn parse_url(raw: &str, conf: &CtlConf) -> Result<(String, String, String), Erro
             let scheme = url.scheme();
             // build our thorium url
             let thorium_url = trimmed[scheme.len() + 3..].to_string();
-            // if we have ssh keys setup then clone with ssh instead
+            // if we have ssh keys set up then clone with ssh instead
             if conf.git.is_some() {
                 // skip the opening ""://" and replace the first / with a :
                 let replaced = trimmed[scheme.len() + 3..].replacen('/', ":", 1);
@@ -119,7 +119,7 @@ fn parse_url(raw: &str, conf: &CtlConf) -> Result<(String, String, String), Erro
             let parsable = format!("https://{raw}");
             // get our trimmed url
             let (url, trimmed) = trim_url(&parsable)?;
-            // if we have ssh keys setup then clone with ssh instead
+            // if we have ssh keys set up then clone with ssh instead
             if conf.git.is_some() {
                 // replace the first / with a :
                 let replaced = trimmed[8..].replacen('/', ":", 1);

@@ -625,7 +625,7 @@ repl-diskless-sync no
 repl-diskless-sync-delay 5
 
 # -----------------------------------------------------------------------------
-# WARNING: RDB diskless load is experimental. Since in this setup the replica
+# WARNING: RDB diskless load is experimental. Since in this set up the replica
 # does not immediately store an RDB on disk, it may cause data loss during
 # failovers. RDB diskless load + Redis modules not handling I/O reads may also
 # cause Redis to abort in case of I/O errors during the initial synchronization

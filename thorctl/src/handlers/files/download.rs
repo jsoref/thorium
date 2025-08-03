@@ -319,7 +319,7 @@ impl FilesDownloadWorker {
         }
     }
 
-    /// Setup the paths for downloading this file based on this submission chunk
+    /// Set up the paths for downloading this file based on this submission chunk
     async fn setup_organization(&self, sample: &mut Sample) -> Result<PathBuf, Error> {
         // get the path to write this file too based on our args
         match self.cmd.organization {

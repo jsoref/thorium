@@ -328,7 +328,7 @@ impl Secrets {
             .await
     }
 
-    /// Setup a users secret in Thorium
+    /// Set up a users secret in Thorium
     ///
     /// # Arguments
     ///

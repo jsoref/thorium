@@ -1,4 +1,4 @@
-//! Setup the s3 IDs tables/prepared statements in Scylla
+//! Set up the s3 IDs tables/prepared statements in Scylla
 
 use scylla::client::session::Session;
 use scylla::statement::prepared::PreparedStatement;
@@ -48,7 +48,7 @@ impl S3PreparedStatements {
     }
 }
 
-/// Setup the s3 sample IDs table for Thorium
+/// Set up the s3 sample IDs table for Thorium
 ///
 /// This is the ground truth table for all samples
 ///
