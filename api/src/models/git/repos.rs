@@ -830,9 +830,9 @@ cfg_if::cfg_if! {
                 let repo = gix::open(&self.path)?;
                 // get an iterator over this repos references
                 let refs = repo.references()?;
-                // build a map of all branche and their last updated timestamp
+                // build a map of all branches and their last updated timestamp
                 let mut branch_map = BTreeMap::default();
-                // keep track of the preferred banches that we find
+                // keep track of the preferred branches that we find
                 let mut found_pref = Vec::with_capacity(preferred.len() - 1);
                 // crawl over all branches and find the most likely default branch
                 for info in refs.remote_branches()? {
