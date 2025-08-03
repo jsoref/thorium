@@ -72,7 +72,7 @@ impl std::fmt::Display for GroupAllowAction {
     }
 }
 
-/// The data that is allowed to be added/uploaded to a groupi
+/// The data that is allowed to be added/uploaded to a group
 ///
 /// These permission are not retroactive.
 #[derive(Serialize, Deserialize, Clone, Debug)]
@@ -559,7 +559,7 @@ fn default_as_false() -> bool {
     false
 }
 
-/// The updates to the data that is allowed to be added/uploaded to a groupi
+/// The updates to the data that is allowed to be added/uploaded to a group
 ///
 /// These permission are not retroactive.
 #[derive(Serialize, Deserialize, Clone, Debug, Default)]

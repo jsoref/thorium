@@ -1040,7 +1040,7 @@ impl Allocatable {
                     &mut self.image_counts,
                     &mut self.counts,
                 );
-                // get an entry to this clusters new cpu grop
+                // get an entry to this clusters new cpu group
                 let cpu_entry = self.clusters.entry(cluster.resources.cpu).or_default();
                 // add our cluster to its new cpu group
                 cpu_entry.insert(name, cluster);
