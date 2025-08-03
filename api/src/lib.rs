@@ -273,7 +273,7 @@ pub async fn axum(config: Conf) {
         // increment our attempt count
         attempts += 1;
         // check if we reached our attempt limit
-        assert!(attempts <= 10, "Faild to bind server in 10 attempts");
+        assert!(attempts <= 10, "Failed to bind server in 10 attempts");
         // sleep for 3 seconds between attempts
         tokio::time::sleep(std::time::Duration::from_secs(3)).await;
     }

@@ -705,7 +705,7 @@ impl Scaler {
                     failed.insert(worker.name);
                 }
                 Err(error) => {
-                    // we faled to get this jobs worker
+                    // we failed to get this jobs worker
                     event!(Level::ERROR, error = error.msg());
                 }
             }
