@@ -254,17 +254,17 @@ const FileInfo = ({ details, setDetails, groupDetails, screenWidth, setDeletionS
     const sortAndSetSubmissions = (details) => {
       const unsortedSubs = {};
       const generalDeletePermissions = {};
-      const groupDeletePerimissions = {};
+      const groupDeletePermissions = {};
 
       // Get permissions based solely on group roles
       for (const group of Object.values(groupDetails)) {
         if (isGroupAdmin(group, userInfo)) {
-          groupDeletePerimissions[group.name] = true;
+          groupDeletePermissions[group.name] = true;
         } else {
-          groupDeletePerimissions[group.name] = false;
+          groupDeletePermissions[group.name] = false;
         }
       }
-      setGroupPermissions(groupDeletePerimissions);
+      setGroupPermissions(groupDeletePermissions);
 
       // Determine general overall permission to delete something
       // based on submitter status and group roles.
@@ -276,7 +276,7 @@ const FileInfo = ({ details, setDetails, groupDetails, screenWidth, setDeletionS
           generalDeletePermissions[value.id] = false;
         }
         for (const group of Object.values(value.groups)) {
-          if (groupDeletePerimissions[group]) {
+          if (groupDeletePermissions[group]) {
             generalDeletePermissions[value.id] = true;
           }
         }
