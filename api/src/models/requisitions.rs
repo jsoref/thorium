@@ -247,7 +247,7 @@ impl TryFrom<&String> for ScopedRequisition {
             Ok(scoped_req)
         } else {
             Err(Error::new(format!(
-                "{raw} can not be cast to a scoped requisition!",
+                "{raw} cannot be cast to a scoped requisition!",
             )))
         }
     }
