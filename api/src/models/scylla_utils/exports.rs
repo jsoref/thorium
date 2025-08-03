@@ -35,7 +35,7 @@ impl std::fmt::Display for ExportOps {
 impl FromStr for ExportOps {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`ExportOps`]
+    /// Convert this str to an [`ExportOps`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "Results" => Ok(ExportOps::Results),

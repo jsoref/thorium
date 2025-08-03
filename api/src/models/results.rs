@@ -46,7 +46,7 @@ impl OutputKind {
 impl FromStr for OutputKind {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`OutputKind`]
+    /// Convert this str to an [`OutputKind`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "Files" => Ok(OutputKind::Files),

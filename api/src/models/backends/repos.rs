@@ -1085,7 +1085,7 @@ impl ApiCursor<Commitish> {
 }
 
 impl From<RepoListRow> for RepoListLine {
-    /// Covnert a repo list row to a repo list line
+    /// Convert a repo list row to a repo list line
     fn from(row: RepoListRow) -> RepoListLine {
         // build our intitial group set
         let mut groups = HashSet::with_capacity(1);
@@ -1102,7 +1102,7 @@ impl From<RepoListRow> for RepoListLine {
 }
 
 impl From<TagListRow> for RepoListLine {
-    /// Covnert a tag list row to a repo list line
+    /// Convert a tag list row to a repo list line
     fn from(row: TagListRow) -> RepoListLine {
         // build our intitial group set
         let mut groups = HashSet::with_capacity(1);
