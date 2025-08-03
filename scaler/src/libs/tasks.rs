@@ -152,7 +152,7 @@ impl ZombieChecker {
 
     /// Get the currently running jobs
     async fn get_jobs(&self) -> Result<Vec<RunningJob>, Error> {
-        // build arbitrary dates for reading the urnning jobs queue
+        // build arbitrary dates for reading the running jobs queue
         let start = DateTime::from_timestamp(0, 0).unwrap();
         let end = Utc::now() + chrono::Duration::weeks(1000);
         // get the running jobs for this page
