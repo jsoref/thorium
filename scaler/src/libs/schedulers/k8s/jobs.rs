@@ -23,7 +23,7 @@ fn stage_filter(metadata: &ObjectMeta, pipeline: &str, stage: &str) -> bool {
         if labels.get("pipeline") == Some(&pipeline.to_owned())
             && labels.get("stage") == Some(&stage.to_owned())
         {
-            // this is obejct is owned by our pipeline/stage
+            // this is object is owned by our pipeline/stage
             return true;
         }
     }
