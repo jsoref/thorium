@@ -5,7 +5,7 @@ files. This is currently only available in the Web UI and can be accessed on
 the home page. Thorium uses the [Lucene syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html)
  for search queries. It is also important to remember that documents are
 searched for a single group at a time. This means that for a document to be
-returned all search parametes must be met by at least one group.
+returned all search parameters must be met by at least one group.
 
 The following are some examples:
 
