@@ -260,7 +260,7 @@ pub struct BackupWorker<T: Backup> {
     prepared: PreparedStatement,
     /// The kanal channel workers should send backup updates over
     updates: AsyncSender<MonitorUpdate>,
-    /// Our current parititons key
+    /// Our current partitions key
     partition: Option<u64>,
     /// The rows for our current partition
     rows: Vec<T>,
@@ -347,9 +347,9 @@ impl<T: Backup> BackupWorker<T> {
         Ok(())
     }
 
-    /// Check if we started a new parititon with this row
+    /// Check if we started a new partition with this row
     ///
-    /// This will flush the old partitiont to disk.
+    /// This will flush the old partition to disk.
     ///
     /// # Arguments
     ///
