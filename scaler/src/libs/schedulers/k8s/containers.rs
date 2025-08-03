@@ -17,7 +17,7 @@ macro_rules! quantity {
 
 /// K8s API wrappers for containers
 pub struct Containers {
-    /// The name of the cluster this contianer will be spawned on
+    /// The name of the cluster this container will be spawned on
     pub cluster_name: String,
 }
 
