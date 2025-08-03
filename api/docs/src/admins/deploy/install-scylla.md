@@ -614,7 +614,7 @@ commitlog_total_space_in_mb: -1
 #      this means XFS.
 #
 # false: strict environment checks are in place; do not start if they are not met.
-# true: relaxed environment checks; performance and reliability may degraade.
+# true: relaxed environment checks; performance and reliability may degrade.
 #
 developer_mode: false
 
