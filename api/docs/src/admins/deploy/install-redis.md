@@ -833,7 +833,7 @@ replica-priority 100
 # The special username "default" is used for new connections. If this user
 # has the "nopass" rule, then new connections will be immediately authenticated
 # as the "default" user without the need of any password provided via the
-# AUTH command. Otherwise if the "default" user is not flagged with "nopass"
+# AUTH command. Otherwise, if the "default" user is not flagged with "nopass"
 # the connections will start in not authenticated state, and will require
 # AUTH (or the HELLO command AUTH option) in order to be authenticated and
 # start to work.
@@ -1287,7 +1287,7 @@ appendfsync everysec
 # possible to lose up to 30 seconds of log in the worst scenario (with the
 # default Linux settings).
 #
-# If you have latency problems turn this to "yes". Otherwise leave it as
+# If you have latency problems turn this to "yes". Otherwise, leave it as
 # "no" that is the safest pick from the point of view of durability.
 
 no-appendfsync-on-rewrite no
