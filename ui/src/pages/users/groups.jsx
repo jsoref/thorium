@@ -1030,7 +1030,7 @@ const Groups = () => {
                 </center>
               )}
               <Form.Text className="text-muted">
-                {`Group descriptions should explain a group's indended membership and owned
+                {`Group descriptions should explain a group's intended membership and owned
                 resources.`}
               </Form.Text>
             </Form.Group>
