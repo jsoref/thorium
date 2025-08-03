@@ -1546,7 +1546,7 @@ impl Origin {
                 tag!(tags, "Parent", parent);
                 // if any reconstruction methods are set then tag them
                 if !reconstructed.is_empty() {
-                    // get an entry to the reconstruction menthods tag values
+                    // get an entry to the reconstruction methods tag values
                     let entry = tags
                         .entry("MemoryDumpReconstructed".to_owned())
                         .or_default();
