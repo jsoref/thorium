@@ -83,7 +83,7 @@ async fn clear(
     Ok(StatusCode::NO_CONTENT)
 }
 
-/// Eeset all in flight events
+/// Reset all in flight events
 ///
 /// # Arguments
 //

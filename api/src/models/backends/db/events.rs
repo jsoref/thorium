@@ -116,7 +116,7 @@ async fn filter_immature(
             // add our still serialized but filtered info
             filtered_serial.push((serial, timestamp));
         } else {
-            // this event is not yet mature so add it to the reste list
+            // this event is not yet mature so add it to the reset list
             resets.push((serial, timestamp));
         }
     }
