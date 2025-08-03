@@ -91,7 +91,7 @@ impl ThoriumClientBuilder {
     ///
     /// # Arguments
     ///
-    /// * `username` - The username to authetnicate with
+    /// * `username` - The username to authenticate with
     /// * `password` - The password to authenticate with
     ///
     /// # Examples
