@@ -354,7 +354,7 @@ impl Scaler {
         for mut handle in self.active.drain(..) {
             // check if this future has completed
             if let Poll::Ready(join_result) = poll!(&mut handle) {
-                // get our compelted task
+                // get our completed task
                 let completed = join_result??;
                 // log that a task was completed
                 event!(Level::INFO, task = completed.as_str());
