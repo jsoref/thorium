@@ -159,7 +159,9 @@ Volumes are explored more [here](./volumes.md).
 ---
 The modifiers path is where the Thorium agent should look for files dropped while
 this stage was executing that tell Thorium how it should modify the remaining stages
-of this reaction. They are discussed more [here](./../reactions/modifiers.md).
+of this reaction.
+
+For more information, see [Modifiers](./../reactions/modifiers.md).
 
 #### Security Context 
 ---
