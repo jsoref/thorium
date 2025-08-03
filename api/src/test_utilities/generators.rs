@@ -429,7 +429,7 @@ pub async fn gen_jobs(
     Ok(())
 }
 
-/// Setup a number of random pipelines and returnn all request data needed
+/// Setup a number of random pipelines and return all request data needed
 ///
 /// # Arguments
 ///
