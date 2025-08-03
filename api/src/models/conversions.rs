@@ -8,10 +8,10 @@ macro_rules! err {
     };
 }
 
-/// An error that occured while converting values
+/// An error that occurred while converting values
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ConversionError {
-    /// The message explaining the error that occured
+    /// The message explaining the error that occurred
     pub msg: String,
 }
 
@@ -26,7 +26,7 @@ impl ConversionError {
     ///
     /// # Arguments
     ///
-    /// * `msg` - The error that occured during this conversion
+    /// * `msg` - The error that occurred during this conversion
     #[must_use]
     pub fn new(msg: String) -> Self {
         ConversionError { msg }

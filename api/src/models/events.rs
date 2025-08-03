@@ -163,7 +163,7 @@ impl Event {
         true
     }
 
-    /// Check if a new tag event trigger occured
+    /// Check if a new tag event trigger occurred
     fn check_tag_trigger(
         new_type: &TagType,
         new_tags: &HashMap<String, HashSet<String>>,

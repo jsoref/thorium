@@ -234,9 +234,9 @@ pub struct ExportError {
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<u16>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }
 
@@ -248,9 +248,9 @@ pub struct ExportErrorRequest {
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<u16>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }
 
@@ -261,7 +261,7 @@ impl ExportErrorRequest {
     ///
     /// * `start` - The start of the chunk of data that we failed to export
     /// * `end` - The end of the chunk of data that we failed to export
-    /// * `msg` - A message explaining that error that occured
+    /// * `msg` - A message explaining that error that occurred
     pub fn new<M: Into<String>>(start: DateTime<Utc>, end: DateTime<Utc>, msg: M) -> Self {
         ExportErrorRequest {
             start,
@@ -271,21 +271,21 @@ impl ExportErrorRequest {
         }
     }
 
-    /// Set the code for the error that occured
+    /// Set the code for the error that occurred
     ///
     /// # Arguments
     ///
-    /// * `code` - The error code that occured
+    /// * `code` - The error code that occurred
     pub fn code(mut self, code: u16) -> Self {
         self.code = Some(code);
         self
     }
 
-    /// set the code for the error that occured with a mutable reference
+    /// set the code for the error that occurred with a mutable reference
     ///
     /// # Arguments
     ///
-    /// * `code` - The error code that occured
+    /// * `code` - The error code that occurred
     pub fn code_mut(&mut self, code: u16) {
         self.code = Some(code);
     }

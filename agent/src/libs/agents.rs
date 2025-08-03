@@ -50,7 +50,7 @@ async fn check_child(child: &mut Child) -> Result<JobStatus, Error> {
                 // the proc was killed by a signal so assume we failed
                 None => Some(-1),
             };
-            // check if an error occured or not
+            // check if an error occurred or not
             if code == Some(0) {
                 Ok(JobStatus::Finished(code))
             } else {
@@ -66,7 +66,7 @@ async fn check_child(child: &mut Child) -> Result<JobStatus, Error> {
                 // the proc was killed by a signal
                 None => status.signal(),
             };
-            // check if an error occured or not
+            // check if an error occurred or not
             if code == Some(0) {
                 Ok(JobStatus::Finished(code))
             } else {
@@ -78,7 +78,7 @@ async fn check_child(child: &mut Child) -> Result<JobStatus, Error> {
         Ok(Some(status)) => {
             // get our exit code
             let code = status.code();
-            // check if an error occured or not
+            // check if an error occurred or not
             if code == Some(0) {
                 Ok(JobStatus::Finished(code))
             } else {

@@ -12,15 +12,15 @@ pub enum Error {
     Generic(String),
     /// A Thorium API error
     Thorium(thorium::Error),
-    /// A Scylla new session error occured
+    /// A Scylla new session error occurred
     ScyllaNewSession(scylla::errors::NewSessionError),
     /// An error preparing a scylla statement
     ScyllaPrepareSatement(scylla::errors::PrepareError),
-    /// A Scylla query error occured
+    /// A Scylla query error occurred
     ScyllaQuery(scylla::errors::ExecutionError),
-    /// A Scylla paged query error occured
+    /// A Scylla paged query error occurred
     ScyllaPagedQuery(scylla::errors::PagerExecutionError),
-    /// A Scylla next row error occured
+    /// A Scylla next row error occurred
     ScyllaNextRow(scylla::client::pager::NextRowError),
     /// A Redis error
     Redis(redis::RedisError),

@@ -277,7 +277,7 @@ impl Pods {
             .buffered(5)
             .collect::<Vec<Result<_, _>>>()
             .await;
-        // crawl our deletes and determine if any failures occured
+        // crawl our deletes and determine if any failures occurred
         for (spawn, delete) in spawns.iter().zip(deletes.into_iter()) {
             // check if our delete failed
             if let Err(error) = delete {
@@ -570,7 +570,7 @@ impl Pods {
             .buffered(5)
             .collect::<Vec<Result<_, _>>>()
             .await;
-        // crawl our deployments and determine if any failures occured
+        // crawl our deployments and determine if any failures occurred
         for (name, deploy) in names.into_iter().zip(deploys.into_iter()) {
             // check if our deployment failed
             if let Err(error) = deploy {

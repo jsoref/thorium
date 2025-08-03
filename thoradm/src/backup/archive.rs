@@ -104,7 +104,7 @@ impl ArchiveReader {
             // if this is the end of the file then we reached the end of the map
             match error.kind() {
                 std::io::ErrorKind::UnexpectedEof => return Ok(None),
-                // some other error occured
+                // some other error occurred
                 _ => return Err(Error::from(error)),
             }
         }
@@ -134,7 +134,7 @@ impl ArchiveReader {
             // if this is the end of the file then we reached the end of the map
             match error.kind() {
                 std::io::ErrorKind::UnexpectedEof => return Ok(None),
-                // some other error occured
+                // some other error occurred
                 _ => return Err(Error::from(error)),
             }
         }

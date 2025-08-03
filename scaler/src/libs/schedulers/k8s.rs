@@ -975,7 +975,7 @@ impl Scheduler for K8s {
                         // add this pod to this namespaces spawn list
                         entry.push(pod);
                     }
-                    // some error occured during pod generation
+                    // some error occurred during pod generation
                     Err(err) => {
                         errors.insert(spawn.name.clone(), err);
                     }

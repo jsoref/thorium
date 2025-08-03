@@ -83,7 +83,7 @@ async fn initial_settings_consistency_scan(
                 return Err(utils::ApiError::new(
                     err.code,
                     Some(format!(
-                        "An error occured retrieving system settings: {}",
+                        "An error occurred retrieving system settings: {}",
                         err.msg.unwrap_or("An unknown error occurred".to_string())
                     )),
                 ));

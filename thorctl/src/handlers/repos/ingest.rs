@@ -440,7 +440,7 @@ impl CommitishIngestor {
     async fn wait_for_all(&mut self) {
         // poll our futures until they are all complete
         while let Some(handle) = self.active.next().await {
-            // check if an error occured
+            // check if an error occurred
             match handle {
                 Ok(Ok(_map)) => (),
                 Ok(Err((_map, error))) => {
