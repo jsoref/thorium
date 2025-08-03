@@ -179,7 +179,7 @@ impl EventWorker {
                 let req = match &event.data {
                     EventData::NewSample { sample, .. } => req.sample(sample),
                     EventData::NewTags { tag_type, item, .. } => {
-                        // add either a sample dependency or repo dependency basd on tag type
+                        // add either a sample dependency or repo dependency based on tag type
                         match tag_type {
                             TagType::Files => req.sample(item),
                             TagType::Repos => req.repo(RepoDependencyRequest::new(item)),
