@@ -632,7 +632,7 @@ async fn get_results(
 //     get,
 //     path = "/api/files/results/:sha256/:tool/:result_id/*path",
 //     params(
-//         ("path_params" = Vec<String>, Path, description = "3 path-formatted paramters containing the sample sha256, tool name, and result uuid")
+//         ("path_params" = Vec<String>, Path, description = "3 path-formatted parameters containing the sample sha256, tool name, and result uuid")
 //     ),
 //     responses(
 //         (status = 200, description = "Response containing body of requested result file", body = Vec<u8>),
