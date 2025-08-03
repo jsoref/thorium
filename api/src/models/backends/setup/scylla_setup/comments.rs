@@ -1,4 +1,4 @@
-//! Setup the coments tables/prepared statements in Scylla
+//! Setup the comments tables/prepared statements in Scylla
 
 use scylla::client::session::Session;
 use scylla::statement::prepared::PreparedStatement;
