@@ -170,7 +170,7 @@ impl DownloadWorker {
             prune_file!(&mut base, ".gitlab-ci.yml");
             prune_file!(&mut base, ".gitmodules");
             prune_file!(&mut base, ".gitattributes");
-            // check for emtpy dirs
+            // check for empty dirs
             check_empty_dirs = true;
         }
         // crawl over all files and remove any that are not wanted
@@ -187,7 +187,7 @@ impl DownloadWorker {
                     tokio::fs::remove_file(&entry.path()).await?;
                 }
             }
-            // check for emtpy dirs
+            // check for empty dirs
             check_empty_dirs = true;
         }
         // if needed check and delete any empty dirs
