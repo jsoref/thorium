@@ -26,7 +26,7 @@ impl Secrets {
     ///
     /// # Arguments
     ///
-    /// * `client` - kuberentes client
+    /// * `client` - kubernetes client
     /// * `conf` - Thorium Config
     /// * `context` - The name of the context to create secrets for
     pub fn new(client: &kube::Client, conf: &Conf, context: &str) -> Self {
