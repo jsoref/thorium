@@ -449,7 +449,7 @@ fn update_first_last(
     if new_first < *first {
         *first = new_first;
     }
-    // check if this bucket range brings the overlaping buckets with data up
+    // check if this bucket range brings the overlapping buckets with data up
     if new_last > *last {
         *last = new_last;
     }
