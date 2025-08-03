@@ -1054,7 +1054,7 @@ async fn is_ambiguous(
             Some(previous_kind) => {
                 if *previous_kind != first_kind {
                     return bad!(format!(
-                        "{} is ambigous please restrict the commitish kind to download",
+                        "{} is ambiguous please restrict the commitish kind to download",
                         commitish
                     ));
                 }
@@ -1070,7 +1070,7 @@ async fn is_ambiguous(
             // check if this kind is different
             if kind != first_kind {
                 return bad!(format!(
-                    "{} is ambigous please restrict the commitish kind to download",
+                    "{} is ambiguous please restrict the commitish kind to download",
                     commitish
                 ));
             }
@@ -1120,7 +1120,7 @@ pub async fn repo_data_hash(
                     (kinds, group_chunk, repo, commitish),
                 )
                 .await?;
-            // check if this commitish is ambigous or not
+            // check if this commitish is ambiguous or not
             let repo_data = is_ambiguous(repo, commitish, &mut previous, query).await?;
             // set our repo data hash
             last_repo_data_hash = Some(repo_data);
@@ -1139,7 +1139,7 @@ pub async fn repo_data_hash(
                 (kinds, groups, repo, commitish),
             )
             .await?;
-        // check if this commitish is ambigous or not
+        // check if this commitish is ambiguous or not
         return is_ambiguous(repo, commitish, &mut previous, query).await;
     }
     not_found!(format!(

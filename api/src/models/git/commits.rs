@@ -813,7 +813,7 @@ impl CommitishListParams {
             None => match Utc.timestamp_opt(shared.config.thorium.repos.earliest, 0) {
                 chrono::LocalResult::Single(default_end) => Ok(default_end),
                 _ => crate::internal_err!(format!(
-                    "default earliest repos timestamp is invalid or ambigous - {}",
+                    "default earliest repos timestamp is invalid or ambiguous - {}",
                     shared.config.thorium.repos.earliest
                 )),
             },
