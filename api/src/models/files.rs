@@ -514,7 +514,7 @@ impl SampleRequest {
         let mut form = multipart_list!(form, "groups", self.groups);
         // add any tags to this form
         for (key, mut values) in self.tags {
-            // build the tag key to for this tag
+            // build the tag key for this tag
             let tag_key = format!("tags[{key}]");
             // add this tags list of values to our form
             form = multipart_set!(form, &tag_key, values);

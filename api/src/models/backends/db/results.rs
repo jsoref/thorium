@@ -480,7 +480,7 @@ pub async fn prune(
         let year = result.uploaded.year();
         // get the partition size for results
         let chunk_size = shared.config.thorium.results.partition_size;
-        // get the partition to for this result
+        // get the partition for this result
         let bucket = helpers::partition(result.uploaded, year, chunk_size);
         // track if we pruned this result for a group
         let mut prune_flag = false;
