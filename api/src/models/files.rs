@@ -2263,7 +2263,7 @@ impl PartialEq<TagRequest<Sample>> for Sample {
     ///
     /// * `req` - The `TagRequest` to compare against
     fn eq(&self, req: &TagRequest<Sample>) -> bool {
-        // crawl over the tags we requeted to be added
+        // crawl over the tags we requested to be added
         for (key, values) in &req.tags {
             // make sure each tag was added
             if let Some(updated) = self.tags.get(key) {
