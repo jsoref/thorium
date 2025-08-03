@@ -692,7 +692,7 @@ async fn latest_ids(
 ///
 /// # Arguments
 ///
-/// * `temp` - The latest reuslts to get output chunks for
+/// * `temp` - The latest results to get output chunks for
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::results::get_output_chunks", skip_all)]
 pub async fn get_output_chunks(
