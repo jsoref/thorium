@@ -60,7 +60,7 @@ impl Default for ClientSettings {
     }
 }
 
-/// Provide a default default editor for serde
+/// Provide a default editor for serde
 #[must_use]
 pub fn default_default_editor() -> String {
     "vi".to_string()

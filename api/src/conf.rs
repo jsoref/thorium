@@ -35,7 +35,7 @@ pub struct NodeFilters {
 }
 
 impl Default for NodeFilters {
-    /// Create defaultt `NodeFilter` object
+    /// Create default `NodeFilter` object
     fn default() -> Self {
         NodeFilters {
             master: false,
