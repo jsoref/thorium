@@ -29,7 +29,7 @@ pub struct Args {
     /// The number of workers to use
     #[clap(short, long, default_value = "10")]
     pub workers: usize,
-    /// The sub command for to execute
+    /// The sub command to execute
     #[clap(subcommand)]
     pub cmd: SubCommands,
     /// The path to the config for the Thorium cluster to backup
