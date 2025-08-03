@@ -559,7 +559,7 @@ async fn parse_tag_queries<'a>(
     Ok(())
 }
 
-/// A cursor for a listing group permisisoned data within scylla
+/// A cursor for a listing group permissioned data within scylla
 #[derive(Debug)]
 pub struct ScyllaCursor<D>
 where
@@ -1936,7 +1936,7 @@ pub struct GroupedScyllaCursorRetain<D: GroupedScyllaCursorSupport> {
     pub current_sort_by: Option<D::SortBy>,
 }
 
-/// A cursor for a listing group permisisoned data within scylla
+/// A cursor for a listing group permissioned data within scylla
 #[derive(Debug)]
 pub struct GroupedScyllaCursor<D>
 where
