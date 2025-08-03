@@ -174,7 +174,7 @@ async fn clone_repo_https(clone_url: String, path: PathBuf, bar: &Bar) -> Result
         // build our proxy options
         let mut proxy = ProxyOptions::new();
         proxy.auto();
-        // add our proxy options to our fetch optioins
+        // add our proxy options to our fetch options
         let mut fetch = FetchOptions::default();
         fetch.proxy_options(proxy);
         // build our repo builder and add our fetch options
@@ -211,7 +211,7 @@ async fn clone_repo_ssh(
         // build our proxy options
         let mut proxy = ProxyOptions::new();
         proxy.auto();
-        // add our proxy options to our fetch optioins
+        // add our proxy options to our fetch options
         let mut fetch = FetchOptions::default();
         fetch.proxy_options(proxy);
         // build a new callback to setup
