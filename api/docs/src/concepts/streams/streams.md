@@ -10,7 +10,7 @@ The features Thorium would need to distill are:
  - SLA
 
 The other problem is calculating a single score would require us to constantly
-recalculate every jobs score in order to prevent starvation from occuring. This
+recalculate every jobs score in order to prevent starvation from occurring. This
 could get incredibly costly compute wise and also has the problem that we need to
 ensure one score does not outweigh the others in an unexpected way.
 
