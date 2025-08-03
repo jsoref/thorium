@@ -391,7 +391,7 @@ impl GenericJobArgs {
         // figure out how large our vec should be
         let size = self.positionals.len() + self.kwargs.len() + self.switches.len();
         let mut casts = Vec::with_capacity(size);
-        // start with our posiitonals and switches
+        // start with our positionals and switches
         casts.extend_from_slice(&self.positionals);
         casts.extend_from_slice(&self.switches);
         // crawl over our kwarg keys
