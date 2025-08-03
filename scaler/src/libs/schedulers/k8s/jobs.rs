@@ -295,7 +295,7 @@ impl Jobs {
             let name = format!("{}-{}-{}", &spec.pipeline, &spec.image.name, append);
             // update the name and labels in this pods metadata
             job.metadata.name = Some(name.clone());
-            // labels are wrapped in an opt so we have to get a mutable refernce to it
+            // labels are wrapped in an opt so we have to get a mutable reference to it
             if let Some(labels) = job.metadata.labels.as_mut() {
                 labels.insert("name".into(), name);
             }
