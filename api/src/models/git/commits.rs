@@ -871,7 +871,7 @@ impl std::fmt::Display for CommitishKinds {
 impl FromStr for CommitishKinds {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`CommitishKinds`]
+    /// Convert this str to an [`CommitishKinds`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "Commit" => Ok(CommitishKinds::Commit),

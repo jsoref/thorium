@@ -48,7 +48,7 @@ impl From<&EventData> for EventType {
 impl FromStr for EventType {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`EventType`]
+    /// Convert this str to an [`EventType`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "ReactionTrigger" => Ok(EventType::ReactionTrigger),
