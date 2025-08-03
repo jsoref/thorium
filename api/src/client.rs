@@ -480,7 +480,7 @@ impl Thorium {
     ///
     /// # async fn exec() -> Result<(), Error> {
     /// let client = reqwest::Client::new();
-    /// let (token, expriation) = Thorium::auth("http://127.0.0.1",
+    /// let (token, expiration) = Thorium::auth("http://127.0.0.1",
     ///     Some("user".into()),
     ///     Some("pass".into()),
     ///     &client)

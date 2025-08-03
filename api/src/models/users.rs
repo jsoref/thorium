@@ -340,7 +340,7 @@ impl PartialEq<ScrubbedUser> for ScrubbedUser {
         same!(self.email, request.email);
         // make sure the group list is the same
         matches_vec!(self.groups, request.groups);
-        // make sure the token and its expriation are the same
+        // make sure the token and its expiration are the same
         same!(self.token, request.token);
         same!(self.token_expiration, request.token_expiration);
         // make sure our settings are the same
