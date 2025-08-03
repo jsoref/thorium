@@ -653,7 +653,7 @@ impl Sample {
             Some(raw) => Origin::deserialize(groups, raw, shared).await?,
             None => Origin::None,
         };
-        // downselect ot just the fields for a submission chunk
+        // downselect to just the fields for a submission chunk
         let chunk = SubmissionChunk {
             id: sub.id,
             name: sub.name,
@@ -685,7 +685,7 @@ impl Sample {
                 Some(raw_origin) => deserialize!(raw_origin),
                 None => Origin::None,
             };
-            // downselect ot just the fields for a submission chunk
+            // downselect to just the fields for a submission chunk
             let chunk = SubmissionChunk {
                 id: row.id,
                 name: row.name,
@@ -908,7 +908,7 @@ impl TryFrom<SubmissionRow> for Sample {
             Some(raw_origin) => deserialize!(raw_origin),
             None => Origin::None,
         };
-        // downselect ot just the fields for a submission chunk
+        // downselect to just the fields for a submission chunk
         let sub = SubmissionChunk {
             id: row.id,
             name: row.name,

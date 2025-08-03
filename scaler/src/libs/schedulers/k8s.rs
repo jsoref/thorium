@@ -833,7 +833,7 @@ type K8sThoriumPolicies = (
 
 #[async_trait::async_trait]
 impl Scheduler for K8s {
-    /// Determine how long ot wait before running a task again
+    /// Determine how long to wait before running a task again
     ///
     /// # Arguments
     ///
