@@ -1,6 +1,6 @@
 # Deployer
 
-The depolyer is responsible for deploying Thorium ontop of your Kubernetes
+The deployer is responsible for deploying Thorium ontop of your Kubernetes
 cluster and making ongoing maintainence with Thorium easy. It supports the
 following commands:
 
