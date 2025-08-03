@@ -898,7 +898,7 @@ pub async fn proceed(mut reaction: Reaction, shared: &Shared) -> Result<JobHandl
 ///
 /// # Arguments
 ///
-/// * `reaction` - The reaction to delete epemeral files from
+/// * `reaction` - The reaction to delete ephemeral files from
 /// * `shared` - Shared Thorium objects
 async fn delete_ephemeral(reaction: &Reaction, shared: &Shared) -> Result<(), ApiError> {
     // crawl over any ephemeral files and delete them
