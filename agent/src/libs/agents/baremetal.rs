@@ -1,4 +1,4 @@
-//! Implements the Thorium agent for baremetal jobs
+//! Implements the Thorium agent for bare-metal jobs
 
 use crossbeam::channel::Sender;
 use std::collections::HashMap;
@@ -95,7 +95,7 @@ impl BareMetal {
         let result_files_path = isolate(&target.image.output_collection.files.result_files, &id)?;
         let tags_path = isolate(&target.image.output_collection.files.tags, &id)?;
         let children_path = isolate(&target.image.output_collection.children, &id)?;
-        // build our baremetal object
+        // build our bare-metal object
         let bare_metal = BareMetal {
             thorium: target.thorium.clone(),
             logs,
