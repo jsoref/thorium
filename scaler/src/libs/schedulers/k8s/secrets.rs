@@ -118,8 +118,8 @@ impl Secrets {
         if self.registry_token.is_some() {
             // create registry token if it does not exist in this group
             let name = Some("thorium-registry-token".to_owned());
-            let impage_pull_secret = LocalObjectReference { name };
-            vec![impage_pull_secret]
+            let image_pull_secret = LocalObjectReference { name };
+            vec![image_pull_secret]
         } else {
             Vec::default()
         }
