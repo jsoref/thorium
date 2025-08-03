@@ -98,7 +98,7 @@ async fn uncart_target(
                     Ok(Err(err)) => UncartLine::error(entry_path, &err),
                     Err(join_err) => UncartLine::error(entry_path, &Error::from(join_err)),
                 }
-            }), // await the mapped futures, limiting the maxmimum running at any given time by the number of workers
+            }), // await the mapped futures, limiting the maximum running at any given time by the number of workers
     )
     .for_each_concurrent(workers, |future| future)
     .await;

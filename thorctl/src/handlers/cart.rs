@@ -114,7 +114,7 @@ async fn cart_target(
                 }
             }),
     )
-    // await the mapped futures, limiting the maxmimum running at any given time by the number of workers
+    // await the mapped futures, limiting the maximum running at any given time by the number of workers
     .for_each_concurrent(workers, |future| future)
     .await;
 }
