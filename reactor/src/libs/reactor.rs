@@ -1,7 +1,7 @@
 //! Handles spawning containers directly for windows nodes
 //!
 //! This support could likely be extended to linux k8s and baremetal nodes but
-//! for k8s nodes would come at the cost of everthing k8s buys us.
+//! for k8s nodes would come at the cost of everything k8s buys us.
 
 use chrono::prelude::*;
 use std::collections::{BTreeMap, HashMap, HashSet};

@@ -99,7 +99,7 @@ pub struct GroupAllowed {
 impl Default for GroupAllowed {
     /// All actions are allowed in a group by default
     fn default() -> Self {
-        // create a group allowed structure where everthing is allowed by default
+        // create a group allowed structure where everything is allowed by default
         GroupAllowed {
             files: true,
             repos: true,
