@@ -632,7 +632,7 @@ impl RestoreController {
     }
 }
 
-/// Handle a restore sub comamnd
+/// Handle a restore sub command
 ///
 /// # Arguments
 ///
