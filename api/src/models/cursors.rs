@@ -149,7 +149,7 @@ cfg_if::cfg_if! {
                     .query(query);
                 // send request and build the data and id for this cursor
                 let raw = send_build!(client, req, CursorData<T>)?;
-                // get the length of the data we recieived
+                // get the length of the data we received
                 let gathered = raw.data.len();
                 // build our final cursor object
                 let cursor = Cursor {
