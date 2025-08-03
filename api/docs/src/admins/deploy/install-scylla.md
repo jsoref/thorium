@@ -152,7 +152,7 @@ num_tokens: 256
 
 # Directory where Scylla should store all its files, which are commitlog,
 # data, hints, view_hints and saved_caches subdirectories. All of these
-# subs can be overriden by the respective options below.
+# subs can be overridden by the respective options below.
 # If unset, the value defaults to /var/lib/scylla
 # workdir: /var/lib/scylla
 
