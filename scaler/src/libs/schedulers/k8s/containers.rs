@@ -107,7 +107,7 @@ impl Containers {
     ///
     /// # Arguments
     ///
-    /// * `iamge` - The details for this container image in Thorium
+    /// * `image` - The details for this container image in Thorium
     fn build_security_context(image: &Image) -> SecurityContext {
         // build this containers security context
         SecurityContext {

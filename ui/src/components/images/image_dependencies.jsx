@@ -522,7 +522,7 @@ const updateEditRequestDependencies = (initialDependencies, newDependencies, set
       (value) => !requestDependencies.results.images.includes(value),
     );
   }
-  // filter out all images that were added, these must be new iamges as we ignore duplicates
+  // filter out all images that were added, these must be new images as we ignore duplicates
   if (requestDependencies.results.images.length > 0) {
     requestDependencies.results['add_images'] = requestDependencies.results.images.filter(
       (value) => !initialDependencies.results.images.includes(value),

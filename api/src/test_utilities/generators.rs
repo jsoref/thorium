@@ -457,7 +457,7 @@ pub async fn gen_all(
         for image in group_images.iter() {
             client.images.create(image).await?;
         }
-        // create pipelines using these random iamges
+        // create pipelines using these random images
         for _ in 0..cnt {
             // generate randome pipeline name
             let pipe_name = gen_string(25);
