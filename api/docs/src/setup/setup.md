@@ -21,7 +21,7 @@ you do not change the inventory files at all) are:
 - scylla.nodes (A list of IPs/hostnames the api can reach Scylla at)
 
 You can also enable LDAP settings if you wish to authenticate against LDAP. You can read
-more about LDAP usage with Thorium [here](../concepts/groups/groups.md).
+more about [LDAP usage with Thorium](../concepts/groups/groups.md).
 
 ```yaml
 # Thorium settings
