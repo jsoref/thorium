@@ -785,7 +785,7 @@ pub async fn bulk_reset(
     for job in &jobs.details {
         // cast the id for this job to a string
         let job_id = job.id.to_string();
-        // log that we are reseting this job
+        // log that we are resetting this job
         event!(Level::INFO, job=&job_id, old_status=job.status.to_string());
         // build the status queues keys for non external jobs
         let src = JobKeys::status_queue(&job.group, &job.pipeline, &job.stage, &job.creator, &job.status, shared);

@@ -193,7 +193,7 @@ impl SystemSettings {
     ///
     /// # Arguments
     ///
-    /// * `user` - The user that is reseting system settings
+    /// * `user` - The user that is resetting system settings
     /// * `shared` - Shared Thorium objects
     pub async fn reset(user: &User, shared: &Shared) -> Result<(), ApiError> {
         // only admins can reset system settings
