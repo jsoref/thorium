@@ -88,7 +88,7 @@ const UploadFilesContainer = () => {
   useEffect(() => {
     const allGroups = [];
     const selectableGroups = {};
-    // dictionaries of name: boolean pairs reprenting whether a user has
+    // dictionaries of name: boolean pairs representing whether a user has
     // selected a group to give access to a set of uploaded files
     if (userInfo && userInfo.groups) {
       // build a list of all detailed Groups that a user can access
