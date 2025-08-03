@@ -116,7 +116,7 @@ impl From<&Spawned> for SpawnedUpdate {
     }
 }
 
-/// A Map of requestions along with the number of pods possible to spawn
+/// A Map of requisitions along with the number of pods possible to spawn
 #[derive(Default, Debug, Clone)]
 pub struct ReqMap {
     /// The resources to spawn
