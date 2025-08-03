@@ -323,7 +323,7 @@ impl Agent {
         let timeout = self.image.timeout.map(|seconds| from_now!(start, seconds));
         // get the duration to sleep between checks
         let sleep = Duration::from_millis(100);
-        // wait for this job to finish exeucting
+        // wait for this job to finish executing
         loop {
             // send any logs in our log file
             self.send_file_logs(reader).await?;
@@ -549,7 +549,7 @@ pub async fn sub_execute(
         .await?;
     // send any logs in our logs channel
     agent.send_channel_logs().await?;
-    // wait for this job to finish exeucting
+    // wait for this job to finish executing
     let status = agent.monitor(in_flight, reader).await?;
     // send any remaining logs from our log file
     agent.send_file_logs(reader).await?;
