@@ -184,7 +184,7 @@ pub async fn restore(pipelines: &[Pipeline], shared: &Shared) -> Result<(), ApiE
 ///
 /// # Arguments
 ///
-/// * `group` - The group the pipeline is in
+/// * `group` - The group containing the pipeline
 /// * `name` - The name of the pipeline to check
 /// * `shared` - Shared Thorium objects
 #[instrument(name = "db::pipelines::get", skip(shared), err(Debug))]
