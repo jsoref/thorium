@@ -735,7 +735,7 @@ impl Group {
         // get a list of all valid users in Thorium to validate against
         let valid = HashSet::from_iter(db::users::list(shared).await?);
         // make sure we can modify this group with our role
-        // if we are adding/removing owners we need to also be an owner
+        // if we are adding/removing owners we also need to be an owner
         if !update.owners.is_empty() {
             // make sure we are an owner
             self.is_owner(user)?;
