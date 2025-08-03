@@ -618,7 +618,7 @@ pub async fn proceed(
         // check if we should proceed or not
         progress.0 >= progress.1
     } else {
-        // exceute our query
+        // execute our query
         let _: () = pipe.atomic().query_async(conn!(shared)).await?;
         // check if we should proceed or not
         job.status == JobStatus::Sleeping
