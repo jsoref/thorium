@@ -29,7 +29,7 @@ pub enum Error {
     GitFindReference(gix::reference::find::existing::Error),
     /// An error from a gix reference iter
     GitReferenceIter(gix::reference::iter::Error),
-    /// An error from initing a git refernce iter
+    /// An error from initing a git reference iter
     GitReferenceIterInit(gix::reference::iter::init::Error),
     /// An error from peeling a git reference
     GitReferencePeel(gix::reference::peel::Error),
