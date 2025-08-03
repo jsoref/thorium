@@ -262,7 +262,7 @@ impl<R: Restore> TableRestore<R> {
         self.wait_for_workers().await?;
         // tell our monitor to finish
         self.updates_tx.send(MonitorUpdate::Finished).await?;
-        // wait for our ntracker monitor finish
+        // wait for our tracker monitor finish
         handle.await?;
         Ok(())
     }
