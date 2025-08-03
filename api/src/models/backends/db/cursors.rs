@@ -1132,7 +1132,7 @@ where
 
     /// Check if this cursor has been exhausted
     pub fn exhausted(&mut self) -> bool {
-        // if we have nove no more mapped values then check if we have mapped our full time range
+        // if we have no more mapped values then check if we have mapped our full time range
         if self.mapped == 0 {
             // this be the same across tags/files when files also uses census caching
             if self.retain.tags.is_some() {
