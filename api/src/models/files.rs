@@ -2618,10 +2618,10 @@ pub struct CommentRequest {
     pub groups: Vec<String>,
     /// A description for this sample
     pub comment: String,
-    /// The path to the file to upload if attachemnts are on disk
+    /// The path to the file to upload if attachments are on disk
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub files: Vec<OnDiskFile>,
-    /// The attachemnts to upload directly
+    /// The attachments to upload directly
     pub buffers: Vec<Buffer>,
 }
 
