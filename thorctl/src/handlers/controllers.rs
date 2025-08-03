@@ -45,7 +45,7 @@ impl<W: Worker> Controller<W> {
     ) -> Self {
         // build a new multiprogress bar
         let multi = MultiBar::default();
-        // build our channel for sending/receiving messeges
+        // build our channel for sending/receiving messages
         let (jobs_tx, jobs_rx) = kanal::unbounded_async();
         // build our channel for sending/receiving monitor updates on
         let (monitor_tx, monitor_rx) = kanal::unbounded_async();
