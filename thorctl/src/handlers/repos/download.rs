@@ -339,7 +339,7 @@ impl Worker for DownloadWorker {
     /// The cmd part of args for this specific worker
     type Cmd = DownloadRepos;
 
-    /// The type of jobs to recieve
+    /// The type of jobs to receive
     type Job = RepoTarget;
 
     /// The global monitor to use

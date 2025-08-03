@@ -49,7 +49,7 @@ pub enum Error {
     },
     /// An s3 bytestream error
     S3ByteStream(aws_sdk_s3::primitives::ByteStreamError),
-    /// Failed to recieve data from a kanal channel
+    /// Failed to receive data from a kanal channel
     KanalRecv(kanal::ReceiveError),
     /// An error with deserializing rkyv data
     RkyvDeserialize(String),

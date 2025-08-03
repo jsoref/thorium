@@ -369,7 +369,7 @@ impl Worker for FilesDownloadWorker {
     /// The cmd part of args for this specific worker
     type Cmd = DownloadFiles;
 
-    /// The type of jobs to recieve
+    /// The type of jobs to receive
     type Job = String;
 
     /// The global monitor to use

@@ -77,7 +77,7 @@ impl<W: Worker> Controller<W> {
     /// * `thorium` - A Thorium client
     /// * `workers` - The number of workers to spawn
     /// * `jobs_tx` - The channel to send new jobs on
-    /// * `jobs_rx` - The channel to recieve new jobs on
+    /// * `jobs_rx` - The channel to receive new jobs on
     /// * `conf` - The config for Thorctl
     /// * `args` - The arguments that were passed to Thorctl
     /// * `cmd` - The specific args for this controllers workers
