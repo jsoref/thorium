@@ -176,7 +176,7 @@ const SecurityContextFields = ({ initialSecurityContext, setRequestFields, disab
               <h6>
                 <Form.Check
                   type="switch"
-                  id="allow-escalalation"
+                  id="allow-escalation"
                   label=""
                   checked={securityContext.allow_privilege_escalation}
                   disabled={disabled}
