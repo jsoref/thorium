@@ -401,7 +401,7 @@ async fn download(
         // turn this repo into a repo target
         match RepoTarget::try_from(repo) {
             Ok(target) => {
-                // check if this repo has already been addded to be downloaded
+                // check if this repo has already been added to be downloaded
                 if added.insert(target.url.clone()) {
                     // try to add this download job
                     if let Err(error) = controller.add_job(target).await {
@@ -441,7 +441,7 @@ async fn download(
         loop {
             // otherwise just print immediately
             for repo in repos_cursor.data.drain(..) {
-                // check if this repo has already been addded to be downloaded
+                // check if this repo has already been added to be downloaded
                 if added.insert(repo.url.clone()) {
                     // build the repo target for this repo
                     let target = RepoTarget::new(repo.url);
