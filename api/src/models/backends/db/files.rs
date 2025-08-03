@@ -304,7 +304,7 @@ pub async fn authorize(
     sha256s: &Vec<String>,
     shared: &Shared,
 ) -> Result<(), ApiError> {
-    // if we specified no groups then we do not have acess to this sample
+    // if we specified no groups then we do not have access to this sample
     if groups.is_empty() {
         return unauthorized!();
     }
