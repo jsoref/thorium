@@ -205,7 +205,7 @@ pub struct RepoSubmission {
     pub creator: String,
     /// When this repo was added to Thorium
     pub uploaded: DateTime<Utc>,
-    // The scheme to use when cloning thixys repo
+    // The scheme to use when cloning this repo
     pub scheme: RepoScheme,
     /// The default checkout behavior for this repo
     pub default_checkout: Option<RepoCheckout>,
