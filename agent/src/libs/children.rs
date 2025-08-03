@@ -710,7 +710,7 @@ impl Children {
         }
     }
 
-    /// submit charved children files to Thorium
+    /// submit carved children files to Thorium
     ///
     /// # Arguments
     ///
