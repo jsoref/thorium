@@ -49,7 +49,7 @@ impl FromStr for ExportOps {
 pub struct ExportRow {
     /// The ID for this export operation
     pub id: Uuid,
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The user that owns this export operation
     pub user: String,
