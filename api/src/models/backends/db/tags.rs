@@ -1,7 +1,7 @@
 //! Handles tag operations in Thorium
 //!
 //! This does not handle create operations as they are very specific to the type
-//! of data they are tied too. This is largely becuause how they determine the
+//! of data they are tied too. This is largely because how they determine the
 //! timestamp each tag should be uploaded at.
 
 use chrono::prelude::*;
