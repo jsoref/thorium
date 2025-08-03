@@ -35,7 +35,7 @@ use crate::utils::{ApiError, AppState};
    The affected function is marked with 'TODO_UTOIPA: WIDLCARD'
    and the utoipa annotation is commented out. The annotation
    should be at least somewhat functional if it were able to be used
-   but has not been tested due to the afforementioned compilation
+   but has not been tested due to the aforementioned compilation
    issue.
 */
 
