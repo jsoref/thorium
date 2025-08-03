@@ -2750,7 +2750,7 @@ impl ElasticCursor {
             .collect::<Vec<&str>>();
         // get a new point in time id for this search
         let pit = elastic::PointInTime::new(&indexes, shared).await?.id;
-        // build an intial cursor retained data struct
+        // build an initial cursor retained data struct
         let retain = ElasticCursorRetain {
             start: params.start,
             end: params.end(shared)?,
