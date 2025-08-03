@@ -1567,7 +1567,7 @@ impl Origin {
                 tag!(tags, "Repo", repo);
                 opt_tag!(tags, "Commitish", commitish);
                 tag!(tags, "Commit", commit);
-                // if any build flagss are set then tag them
+                // if any build flags are set then tag them
                 if !flags.is_empty() {
                     // get an entry to the build flag tag values
                     let entry = tags.entry("BuildFlags".to_owned()).or_default();

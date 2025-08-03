@@ -29,7 +29,7 @@ pub const EXTERNAL_CACHE_KEY: &str = "external_cache";
 #[derive(Deserialize, Serialize, Debug)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct SystemInfoParams {
-    /// Whether to reset any system info flage
+    /// Whether to reset any system info flags
     pub reset: Option<ImageScaler>,
 }
 
