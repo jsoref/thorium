@@ -97,7 +97,7 @@ Lifetime and limits are still optional.
 
 #### Requests & Limits
 ---
-Requests and limits are very similiar, but represent the minumum and maximum
+Requests and limits are very similiar, but represent the minimum and maximum
 bounds on the amount of resources a image may consume. This means that if you
 set your requested resources to be 16 cpu cores your image will only be spawned
 if the cluster has at minimum 16 cores.
