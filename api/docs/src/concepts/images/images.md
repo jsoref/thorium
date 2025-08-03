@@ -153,7 +153,7 @@ volume bound in when being spawned. Currently Thorium supports three volume type
 - Secret
 - NFS
 
-Volumes are explored more [here](./volumes.md).
+For more information, see [Volumes in Images](./volumes.md).
 
 #### Volumes 
 ---
