@@ -317,7 +317,7 @@ fn overlay(mut tags: RawTags, path: &Path, logs: &mut Sender<String>) -> Result<
                 // the value for this is an array so crawl the values in the array
                 Value::Array(values) => {
                     for value in values {
-                        // try to add each idividual value and error on objects or nested vectors
+                        // try to add each individual value and error on objects or nested vectors
                         match value {
                             // The value for this is just a string so just add it
                             Value::String(value) => tags.add_ref(&key, value),
