@@ -610,7 +610,7 @@ commitlog_total_space_in_mb: -1
 # not met, performance and reliability can be degraded.
 #
 # These requirements include:
-#    - A filesystem with good support for aysnchronous I/O (AIO). Currently,
+#    - A filesystem with good support for asynchronous I/O (AIO). Currently,
 #      this means XFS.
 #
 # false: strict environment checks are in place; do not start if they are not met.
