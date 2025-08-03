@@ -551,7 +551,7 @@ impl Children {
         groups: &Vec<String>,
         logs: &mut Sender<String>,
     ) -> Result<(), Error> {
-        // only attemp to ingest children if some exist
+        // only attempt to ingest children if some exist
         if !self.source.is_empty() {
             // get the flags for this build job if any were set
             let flags = match job.args.kwargs.get("--flags") {
