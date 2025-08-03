@@ -303,7 +303,7 @@ async fn update(
         loop {
             // crawl over the repos and add them to our update queue
             for line in repos_cursor.data.drain(..) {
-                // skip any repos we aleady added
+                // skip any repos we already added
                 if added.insert(line.url.clone()) {
                     // add this repo to our jobs queue
                     if let Err(error) = controller.add_job(line.url).await {
