@@ -901,7 +901,7 @@ impl ResultsClient for Files {
     ///
     /// # Arguments
     ///
-    /// * `output_req` - The ouput request to use to add output from a tool
+    /// * `output_req` - The output request to use to add output from a tool
     ///
     /// # Examples
     ///
