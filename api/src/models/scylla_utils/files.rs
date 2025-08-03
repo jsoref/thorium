@@ -93,6 +93,6 @@ pub struct CommentRow {
     pub author: String,
     /// The comment for this file
     pub comment: String,
-    /// Any paths in s3 to files/attachements for this comment in serialized form
+    /// Any paths in s3 to files/attachments for this comment in serialized form
     pub files: String,
 }
