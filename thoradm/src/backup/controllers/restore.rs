@@ -607,7 +607,7 @@ impl RestoreController {
     /// * `path` - The path to the data to restore
     pub async fn restore(&mut self, path: &Path) -> Result<(), Error> {
         let path = path.to_path_buf();
-        // restore our redis clsuter
+        // restore our redis cluster
         self.restore_redis(path.clone()).await?;
         // restore our tables
         self.samples_list.restore(path.clone()).await?;

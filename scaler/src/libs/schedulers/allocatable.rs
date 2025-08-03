@@ -1030,7 +1030,7 @@ impl Allocatable {
         let old_clusters = std::mem::take(&mut self.clusters);
         // crawl over our cluster cpu groups
         for cluster_group in old_clusters.into_values() {
-            // crawl over the clsuters in this cpu group
+            // crawl over the clusters in this cpu group
             for (name, mut cluster) in cluster_group {
                 // free any deleted workers in this cluster
                 cluster.free(
