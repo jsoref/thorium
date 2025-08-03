@@ -83,7 +83,7 @@ async fn reset_pops(
 
 /// Filter and reset any events that are younger then 3 seconds
 ///
-/// We are filting events younger then 3 seconds to ensure the DB has a chance
+/// We are filtering events younger then 3 seconds to ensure the DB has a chance
 /// to reach consistency.
 ///
 /// # Arguments
