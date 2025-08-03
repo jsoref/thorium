@@ -22,7 +22,7 @@ where
 /// The docker config from skopeo
 #[derive(Debug, Deserialize, Clone)]
 pub struct DockerConfig {
-    /// All enivronment variables set in the container
+    /// All environment variables set in the container
     #[allow(dead_code)]
     #[serde(rename = "Env", default)]
     pub env: Option<Vec<String>>,
