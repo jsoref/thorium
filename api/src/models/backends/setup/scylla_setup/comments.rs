@@ -27,7 +27,7 @@ impl CommentsPreparedStatements {
     pub async fn new(session: &Session, config: &Conf) -> Self {
         // setup the comments tables
         setup_comments_table(session, config).await;
-        // setup the comments materialied views
+        // set up the comments materialized views
         setup_comments_mat_view(session, config).await;
         // setup our prepared statements
         let insert = insert(session, config).await;
