@@ -66,7 +66,7 @@ pub async fn login(args: &Args, cmd: &Login) -> Result<(), Error> {
     if let Some(invalid_hostnames) = cmd.invalid_hostnames {
         builder.settings.invalid_hostnames = invalid_hostnames;
     }
-    if let Some(certificate_authorities) = &cmd.certificate_authorites {
+    if let Some(certificate_authorities) = &cmd.certificate_authorities {
         builder
             .settings
             .certificate_authorities
