@@ -84,9 +84,9 @@ cfg_if::cfg_if! {
             pub cover_term: Option<String>,
             /// The mission team that handled this incident
             pub mission_team: Option<String>,
-            /// The network this incident occured on
+            /// The network this incident occurred on
             pub network: Option<String>,
-            /// The IP or hostname of the machine this occured on
+            /// The IP or hostname of the machine this occurred on
             pub machine: Option<String>,
             /// The physical location of this incident
             pub location: Option<String>,
@@ -704,10 +704,10 @@ pub struct OriginRequest {
     /// The mission team that handled this incident
     #[serde(skip_serializing_if = "Option::is_none")]
     pub mission_team: Option<String>,
-    /// The network this incident occured on
+    /// The network this incident occurred on
     #[serde(skip_serializing_if = "Option::is_none")]
     pub network: Option<String>,
-    /// The IP or hostname of the machine this occured on
+    /// The IP or hostname of the machine this occurred on
     #[serde(skip_serializing_if = "Option::is_none")]
     pub machine: Option<String>,
     /// The physical location of this incident
@@ -949,8 +949,8 @@ impl OriginRequest {
     /// * `incident` - The name or other unique identifier for this incident
     /// * `cover_term` - The cover term for this incident
     /// * `mission_team` - The mission team for this incident
-    /// * `network` - The name of the network this occured on
-    /// * `machine` - The machine this incident occured on
+    /// * `network` - The name of the network this occurred on
+    /// * `machine` - The machine this incident occurred on
     /// * `location` - The physical location of this incident (building/office)
     pub fn incident<T: Into<String>>(
         incident: T,

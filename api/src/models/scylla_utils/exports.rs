@@ -95,8 +95,8 @@ pub struct ExportErrorRow {
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<i32>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }

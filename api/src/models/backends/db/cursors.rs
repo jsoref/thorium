@@ -2779,7 +2779,7 @@ impl ElasticCursor {
             .body(body)
             .send()
             .await?;
-        // deserialize the response if no error occured
+        // deserialize the response if no error occurred
         if resp.status_code().is_success() {
             // get the respose
             let cast = resp.json::<ElasticResponse>().await?;

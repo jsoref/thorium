@@ -85,7 +85,7 @@ pub async fn create(user: &User, request: ImageRequest, shared: &Shared) -> Resu
     build(&mut pipe, &cast, shared)?;
     // save image to backend
     let status: Vec<bool> = pipe.query_async(conn!(shared)).await?;
-    // check if any errors occured in all commands except for the final one as
+    // check if any errors occurred in all commands except for the final one as
     // hset will return 0 if the key already exists regardless of if we updated the value
     if status[..status.len() - 1].iter().any(|x|!x) {
         conflict!(

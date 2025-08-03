@@ -358,7 +358,7 @@ impl Scaler {
                 let completed = join_result??;
                 // log that a task was completed
                 event!(Level::INFO, task = completed.as_str());
-                // check if a join error occured
+                // check if a join error occurred
                 match completed {
                     // All zombie jobs were completed
                     TaskResult::ZombieJobs => add_task!(self, Tasks::ZombieJobs),

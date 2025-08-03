@@ -154,7 +154,7 @@ pub struct ReactionIdResponse {
 #[derive(Serialize, Deserialize, Debug, Default, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct BulkReactionResponse {
-    /// Any errors that occured while creating reactions
+    /// Any errors that occurred while creating reactions
     pub errors: HashMap<usize, String>,
     /// The successfully created reactions
     pub created: Vec<Uuid>,

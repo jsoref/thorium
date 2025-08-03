@@ -86,7 +86,7 @@ impl SearchStore for Elastic {
             .await?;
         // check if we ran into an error or not
         if resp.status_code().is_success() {
-            // check if any errors occured
+            // check if any errors occurred
             let resp: ElasticResp = resp.json().await?;
             if resp.errors {
                 Err(Error::new("Failed to stream documents to elastic"))

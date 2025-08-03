@@ -672,7 +672,7 @@ pub struct OutputChunk {
     pub tool_version: Option<ImageVersion>,
     /// When this result was uploaded
     pub uploaded: DateTime<Utc>,
-    /// Set to true if a deserialization failure occured
+    /// Set to true if a deserialization failure occurred
     #[serde(skip_serializing_if = "Option::is_none")]
     pub deserialization_error: Option<String>,
     /// The result

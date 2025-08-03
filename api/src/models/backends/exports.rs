@@ -82,7 +82,7 @@ impl Export {
         exports::update(&self.name, op, update, shared).await
     }
 
-    /// Saves an error that occured during this export operation
+    /// Saves an error that occurred during this export operation
     ///
     /// # Arguments
     ///

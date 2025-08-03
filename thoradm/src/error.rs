@@ -12,11 +12,11 @@ pub enum Error {
     Generic(String),
     /// A Thorium API error
     Thorium(thorium::Error),
-    /// A Scylla new session error occured
+    /// A Scylla new session error occurred
     ScyllaNewSession(scylla::transport::errors::NewSessionError),
-    /// A Scylla query error occured
+    /// A Scylla query error occurred
     ScyllaQuery(scylla::transport::errors::QueryError),
-    /// A Scylla next row error occured
+    /// A Scylla next row error occurred
     ScyllaNextRow(scylla::transport::iterator::NextRowError),
     /// A Redis error
     Redis(redis::RedisError),
