@@ -152,7 +152,7 @@ pub async fn authorize(
             }
         }
     } else {
-        // we have less then 100 groups so just query them all at aonce
+        // we have less then 100 groups so just query them all at once
         // check if any of our groups have access to this sample
         let query = shared
             .scylla
