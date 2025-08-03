@@ -1020,7 +1020,7 @@ impl TryFrom<OriginRequest> for Origin {
     ///
     /// * `req` - The origin request
     fn try_from(req: OriginRequest) -> Result<Self, Self::Error> {
-        // if an origin update was set then validate and serailize it
+        // if an origin update was set then validate and serialize it
         let origin = match req.origin_type.as_ref() {
             "Downloaded" => Origin::Downloaded {
                 url: get!(req.url, "url"),
