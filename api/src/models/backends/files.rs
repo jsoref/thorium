@@ -180,7 +180,7 @@ impl Sample {
     ) -> Result<SampleSubmissionResponse, ApiError> {
         // build a sample form to populate
         let mut form = SampleForm::default();
-        // biuld an option to store our hashes and file_name
+        // build an option to store our hashes and file_name
         let mut hashes_opt = None;
         let mut file_opt = None;
         // begin crawling over our multipart form upload
