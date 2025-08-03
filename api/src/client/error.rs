@@ -63,7 +63,7 @@ pub enum Error {
     UrlParse(url::ParseError),
     /// An error from parsing an IP CIDR
     CidrParse(cidr::errors::NetworkParseError),
-    /// An error from aprsing an int
+    /// An error from parsing an int
     ParseInt(std::num::ParseIntError),
     /// An error from joining a tokio task
     JoinError(tokio::task::JoinError),
