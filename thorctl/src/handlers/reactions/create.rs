@@ -363,7 +363,7 @@ async fn get_args_info(
         .await
         .into_iter()
         .collect::<Result<Vec<Pipeline>, Error>>()
-        .map_err(|err| Error::new(format!("Error retreiving info on pipelines: {err}")))?;
+        .map_err(|err| Error::new(format!("Error retrieving info on pipelines: {err}")))?;
     let pipelines_images: HashMap<String, HashSet<String>> = pipelines
         .into_iter()
         .map(|pipeline| {
