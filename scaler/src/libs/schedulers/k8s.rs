@@ -215,7 +215,7 @@ impl K8s {
     ///
     /// * `user` - The user to setup groups for
     /// * `namespaces` - The namespaces that currently exist in K8s
-    /// * `checked` - The set of namespces we have already initially setup
+    /// * `checked` - The set of namespaces we have already initially setup
     #[instrument(name = "K8s::setup_user", skip_all, fields(user = user.username, namespaces_count = namespaces.len()))]
     pub async fn setup_user<'a>(
         &mut self,
@@ -263,7 +263,7 @@ impl K8s {
     /// * `cache` - A cache of info from Thorium to use while setting things up
     /// * `user` - The user to setup groups for
     /// * `namespaces` - The namespaces that currently exist in K8s
-    /// * `checked` - The set of namespces we have already initially setup
+    /// * `checked` - The set of namespaces we have already initially setup
     #[instrument(name = "K8s::setup_admin", skip_all, fields(user = user.username, namespaces_count = namespaces.len()))]
     pub async fn setup_admin<'a>(
         &mut self,
