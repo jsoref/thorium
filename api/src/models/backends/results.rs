@@ -505,7 +505,7 @@ impl CursorCore for OutputListLine {
         params: &Self::Params,
         shared: &Shared,
     ) -> Result<(DateTime<Utc>, DateTime<Utc>), ApiError> {
-        // get our end timestmap
+        // get our end timestamp
         let end = params.end(shared)?;
         Ok((params.start, end))
     }
