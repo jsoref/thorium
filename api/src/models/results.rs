@@ -474,7 +474,7 @@ impl ResultGetParams {
     }
 }
 
-/// An ondisk file to upload to Thorium
+/// An on-disk file to upload to Thorium
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct OnDiskFile {
