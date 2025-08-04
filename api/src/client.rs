@@ -507,7 +507,7 @@ impl Thorium {
     ) -> Result<(String, Option<DateTime<Utc>>), Error> {
         // make sure both username and password are specified
         if username.is_none() || password.is_none() {
-            panic!("Both username and password must be specfied if token is not");
+            panic!("Both username and password must be specified if token is not");
         }
 
         // create auth handler and get token
