@@ -1217,7 +1217,7 @@ impl OriginRequest {
         self
     }
 
-    /// Ads a list of result idis to this origin
+    /// Adds a list of result idis to this origin
     ///
     /// # Arguments
     ///
