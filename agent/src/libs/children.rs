@@ -357,7 +357,7 @@ macro_rules! submit {
                 .await
                 .into_iter()
                 .map(|res| match res {
-                    // this child was submitted succesfully so log its sha256 and id
+                    // this child was submitted successfully so log its sha256 and id
                     Ok(sub) => {
                         log!($logs, "{} Submitted {} - {}", $msg, sub.sha256, sub.id);
                         Ok(())

@@ -555,7 +555,7 @@ pub async fn sub_execute(
     agent.send_file_logs(reader).await?;
     // if this job finished successfully then look for results
     let code = match status {
-        // this job successfuly completed its job
+        // this job successfully completed its job
         JobStatus::Finished(code) => {
             // collect any results from this job
             let raw_results = agent.executor.results(&agent.image).await?;
