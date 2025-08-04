@@ -2452,11 +2452,11 @@ impl EphemeralDependencySettingsUpdate {
         self
     }
 
-    /// Add a new name to the list of dependencias to download
+    /// Add a new name to the list of dependencies to download
     ///
     /// # Arguments
     ///
-    /// * `name` - The name to add our list of dependencias to download
+    /// * `name` - The name to add our list of dependencies to download
     ///
     /// # Examples
     ///
@@ -2472,11 +2472,11 @@ impl EphemeralDependencySettingsUpdate {
         self
     }
 
-    /// Removes a name from the list of dependencias to download
+    /// Removes a name from the list of dependencies to download
     ///
     /// # Arguments
     ///
-    /// * `name` - The name to remove from our list of dependencias to download
+    /// * `name` - The name to remove from our list of dependencies to download
     ///
     /// # Examples
     ///
