@@ -19,7 +19,7 @@ async function fetchSingleImage(image, setImage, setLoading) {
 /**
  * Get a list of images from a users accessible groups
  * @param {object} groups A list of string groups a user can see
- * @param {Function} setImages usestate seter for image details
+ * @param {Function} setImages usestate setter for image details
  * @param {boolean} cancelUpdate boolean indicating do not update if component is mounted
  * @param {Function} setError an auth hook for validating cookies when 401s are returned
  * @param {Function} setLoading is the fetch function loading new data
