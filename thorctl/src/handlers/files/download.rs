@@ -421,7 +421,7 @@ impl Worker for FilesDownloadWorker {
         check!(self.bar, self.download(&sample, &output).await);
         // if this file needs to be copied to other paths on disk then do that
         if self.cmd.organization.may_copy() {
-            // iterato over the other submissions and copy them to the required positions
+            // iterate over the other submissions and copy them to the required positions
             while !sample.submissions.is_empty() {
                 // create the required organization structure for downloading this file
                 let target = check!(self.bar, self.setup_organization(&mut sample).await);
