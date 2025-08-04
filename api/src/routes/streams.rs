@@ -55,7 +55,7 @@ pub async fn depth(
 ///
 /// # Arguments
 ///
-/// * `user` - The user that is getting tream depths
+/// * `user` - The user that is getting stream depths
 /// * `group` - The group this stream is in
 /// * `stream` - The name of the stream to count objects in
 /// * `start` - The starting point in an epoch timestamp to count objects at
