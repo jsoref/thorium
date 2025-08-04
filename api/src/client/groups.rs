@@ -284,7 +284,7 @@ impl Groups {
         send!(self.client, req)
     }
 
-    /// Synca all [`Group`] data with LDAP
+    /// Sync all [`Group`] data with LDAP
     ///
     /// # Examples
     ///
