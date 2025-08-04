@@ -231,7 +231,7 @@ pub struct RawJob {
     pub worker: Option<String>,
     /// The parent reaction to this jobs reaction if it exists
     pub parent: Option<Uuid>,
-    /// Whether this rawjob is a generator or not
+    /// Whether this raw-job is a generator or not
     pub generator: bool,
     /// What scaler is responsible for scaling this image
     pub scaler: ImageScaler,
