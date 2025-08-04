@@ -36,7 +36,7 @@ impl Spawned {
     /// # Arguments
     ///
     /// * `cluster` - The cluster this worker was spawned on
-    /// * `node` - The node this wokrer was spawned on
+    /// * `node` - The node this worker was spawned on
     /// * `req` - The requisition that led to this worker
     /// * `image` - The image for this worker
     /// * `pool` - The pool this worker was spawned in
