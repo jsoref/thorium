@@ -174,7 +174,7 @@ impl Secrets {
         let params = ListParams::default().fields(&format!("metadata.namespace=={}", ns));
         // get list of secrets in this namespace
         let secrets = self.api.list(&params).await?;
-        // check if the secret wass already created
+        // check if the secret was already created
         let created = secrets
             .iter()
             .any(|secret| secret.metadata.name == Some(name.to_owned()));
