@@ -36,7 +36,7 @@ pub async fn health(shared: &Shared) -> Result<bool, ApiError> {
     if status == "PONG" {
         return Ok(true);
     }
-    // default to an unhealhy status
+    // default to an unhealthy status
     Ok(false)
 }
 
