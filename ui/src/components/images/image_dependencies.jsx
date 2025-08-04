@@ -1012,10 +1012,10 @@ const EditDependencyFields = ({ initialDependencies, images, setUpdatedDependenc
 const CreateDependencyFields = ({ images, mode, initialDependencies, setCreateDependencies, disabled }) => {
   if (mode && mode == 'Copy') {
     // None, List, Map
-    const kwartOption = initialDependencies.results['kwarg'];
+    const kwargOption = initialDependencies.results['kwarg'];
     // add selectable kwargList
     if (!initialDependencies.results['kwargList']) {
-      initialDependencies.results['kwargList'] = kwartOption == 'None' ? 'None' : Object.keys(initialDependencies.results['kwarg'])[0];
+      initialDependencies.results['kwargList'] = kwargOption == 'None' ? 'None' : Object.keys(initialDependencies.results['kwarg'])[0];
     }
   }
 
