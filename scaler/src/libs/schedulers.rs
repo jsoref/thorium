@@ -138,7 +138,7 @@ pub trait Scheduler {
 /// * `scaler` - The type of scaler to build
 /// * `dry_run` - Whether this is a dry run or not
 /// * `context_name` - The name of the context to use for k8s service accounts
-/// * `conf` - The Thoriumm config
+/// * `conf` - The Thorium config
 pub async fn new(
     schedulers: &mut HashMap<String, Box<dyn Scheduler + Send>>,
     scaler: &ImageScaler,

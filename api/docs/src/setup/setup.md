@@ -15,7 +15,7 @@ changing any settings in the deployment files within the inventory folder.
 Here is an example thorium.yaml. The only settings you are required to change (assuming
 you do not change the inventory files at all) are:
 
-- thorim.secret_key (This should be kept secure)
+- thorium.secret_key (This should be kept secure)
 - thorium.nodes (The nodes that Thorium can spawn pods on)
 - redis.host (The IP/hostname the api can reach Redis at)
 - scylla.nodes (A list of IPs/hostnames the api can reach Scylla at)
