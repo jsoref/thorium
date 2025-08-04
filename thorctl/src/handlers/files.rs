@@ -55,7 +55,7 @@ impl UploadLine {
     /// * `path` - The path this file was uploaded from
     /// * `resp` - The submission response from the API
     pub fn uploaded(path: &Path, resp: &SampleSubmissionResponse) {
-        // print an uplopaded line
+        // print an uploaded line
         upload_print!("200".bright_green(), path, resp.sha256, resp.id, "-");
     }
 
