@@ -87,11 +87,11 @@ pub type SpawnMap<'a> = HashMap<&'a String, BTreeMap<u64, Vec<(Requisition, u64)
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct SystemStats {
-    /// The total number of deadlines currently in the sytem across all scalers
+    /// The total number of deadlines currently in the system across all scalers
     pub deadlines: i64,
-    /// The total number of running jobs currently in the sytem across all scalers
+    /// The total number of running jobs currently in the system across all scalers
     pub running: i64,
-    /// The number of users currently in the sytem
+    /// The number of users currently in the system
     pub users: i64,
     /// The stats for jobs under the k8s scaler
     pub k8s: ScalerStats,
