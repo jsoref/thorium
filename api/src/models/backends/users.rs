@@ -580,7 +580,7 @@ impl User {
         client.send(&self.email, subject, body).await
     }
 
-    /// Verify an email for a useri
+    /// Verify an email for a user
     ///
     /// # Arguments
     ///
