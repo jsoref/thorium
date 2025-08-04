@@ -256,7 +256,7 @@ async fn delete_tags(
     Ok(StatusCode::NO_CONTENT)
 }
 
-/// List the commitshes for a repo
+/// List the commitishes for a repo
 ///
 /// # Arguments
 ///
@@ -280,7 +280,7 @@ async fn delete_tags(
 //         ("basic" = []),
 //     )
 // )]
-#[instrument(name = "routes::repos::commitshes", skip_all, err(Debug))]
+#[instrument(name = "routes::repos::commitishes", skip_all, err(Debug))]
 async fn commitishes(
     user: User,
     params: CommitishListParams,
@@ -323,7 +323,7 @@ async fn commitishes(
 //         ("basic" = []),
 //     )
 // )]
-#[instrument(name = "routes::repos::commitsh_details", skip_all, err(Debug))]
+#[instrument(name = "routes::repos::commitish_details", skip_all, err(Debug))]
 async fn commitish_details(
     user: User,
     params: CommitishListParams,
@@ -594,7 +594,7 @@ async fn download_result_file(
 #[derive(OpenApi)]
 #[openapi(
     // TODO_UTOIPA: WILDCARD add these back in once all the wildcard issues are resolved
-    // paths(list, create, list_details, get_repo, upload, commitshes, update_commitishes, commitsh_details, download, tag, delete_tags, get_results, upload_results, download_result_file, bundle_results),
+    // paths(list, create, list_details, get_repo, upload, commitishes, update_commitishes, commitish_details, download, tag, delete_tags, get_results, upload_results, download_result_file, bundle_results),
     paths(list, create, list_details),
     components(schemas(ApiCursor<Repo>, ApiCursor<RepoListLine>, Branch, BranchDetails, BranchRequest, Commit, CommitDetails, Commitish, CommitishDetails, CommitishKinds, CommitishMapRequest, CommitishRequest, CommitRequest, GitTag, GitTagDetails, GitTagRequest, OutputMap, OutputResponse, Repo, RepoCheckout, RepoCreateResponse, RepoDownloadOpts, RepoListParams, RepoDataUploadResponse, RepoRequest, RepoScheme, RepoSubmissionChunk, ResultGetParams, TagDeleteRequest<Repo>, TagRequest<Repo>)),
     modifiers(&OpenApiSecurity),

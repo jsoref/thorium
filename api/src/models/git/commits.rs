@@ -850,7 +850,7 @@ impl CommitishKinds {
         vec![Self::Commit, Self::Branch, Self::Tag]
     }
 
-    /// Cast our [`ComitishKind`] to a str
+    /// Cast our [`CommittishKind`] to a str
     #[must_use]
     pub fn as_str(&self) -> &str {
         match self {

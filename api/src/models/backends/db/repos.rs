@@ -858,7 +858,7 @@ async fn commitish_details_helper(
     let kind = commitish.kind();
     let key = commitish.key();
     let groups = commitish.groups();
-    // query scylla for this comittishes data
+    // query scylla for this commitishes data
     let query = shared
         .scylla
         .session
