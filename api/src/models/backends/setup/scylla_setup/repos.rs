@@ -5,7 +5,7 @@ use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for repos
+/// The prepared statements for repos
 pub struct ReposPreparedStatements {
     /// Insert a new repo
     pub insert: PreparedStatement,

@@ -5,7 +5,7 @@ use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for tags
+/// The prepared statements for tags
 pub struct CommentsPreparedStatements {
     /// Insert a comment
     pub insert: PreparedStatement,

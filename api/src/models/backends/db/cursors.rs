@@ -2448,7 +2448,7 @@ impl ExistsCursor {
     ///
     /// # Arguments
     ///
-    /// * `prepared` - The statment to execute
+    /// * `prepared` - The statement to execute
     /// * `key` - The key to use when checking for the existence of rows
     /// * `shared` - Shared Thorium objects
     /// * `span` - The span to log traces under

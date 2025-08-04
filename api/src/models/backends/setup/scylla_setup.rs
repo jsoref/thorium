@@ -110,7 +110,7 @@ impl ScyllaPreparedStatements {
     }
 }
 
-/// The scylla client and prepared statments
+/// The scylla client and prepared statements
 pub struct Scylla {
     /// The scylla session object
     pub session: Session,

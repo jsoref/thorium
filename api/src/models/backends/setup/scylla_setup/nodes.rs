@@ -5,7 +5,7 @@ use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for nodes
+/// The prepared statements for nodes
 pub struct NodesPreparedStatements {
     /// Insert a node
     pub insert: PreparedStatement,

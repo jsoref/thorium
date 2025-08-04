@@ -5,7 +5,7 @@ use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for events
+/// The prepared statements for events
 pub struct EventsPreparedStatements {
     /// Insert an event
     pub insert: PreparedStatement,

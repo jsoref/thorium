@@ -5,7 +5,7 @@ use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for Samples
+/// The prepared statements for Samples
 pub struct SamplesPreparedStatements {
     /// Insert a sample
     pub insert: PreparedStatement,
