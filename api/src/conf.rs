@@ -427,7 +427,7 @@ pub struct K8sCluster {
 }
 
 impl Default for K8sCluster {
-    /// Create a default k8s cluster iconfig
+    /// Create a default k8s cluster config
     fn default() -> Self {
         K8sCluster {
             alias: None,
