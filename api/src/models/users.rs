@@ -353,7 +353,7 @@ impl PartialEq<ScrubbedUser> for ScrubbedUser {
     }
 }
 
-/// Response to a sucessful auth
+/// Response to a successful auth
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct AuthResponse {

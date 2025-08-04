@@ -225,7 +225,7 @@ impl Cache {
                                     image.image.as_ref().unwrap(),
                                     &span,
                                 ) {
-                                    // docker image info retrieved sucessfully
+                                    // docker image info retrieved successfully
                                     Ok(docker) => Some((Some(docker), image)),
                                     Err(e) => {
                                         event!(
