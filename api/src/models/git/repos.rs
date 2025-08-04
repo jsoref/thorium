@@ -997,7 +997,7 @@ pub struct RepoListLine {
     pub uploaded: DateTime<Utc>,
 }
 
-/// A request for a specic repo/commit to be downloaded executing a job
+/// A request for a specific repo/commit to be downloaded executing a job
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct RepoDependencyRequest {
@@ -1050,7 +1050,7 @@ impl RepoDependencyRequest {
     }
 }
 
-/// A specic repo/commit to download before executing a job
+/// A specific repo/commit to download before executing a job
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "trace", derive(valuable::Valuable))]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]

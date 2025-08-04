@@ -247,7 +247,7 @@ impl Users {
         send_build!(client, req, AuthResponse)
     }
 
-    /// Gets info on a specfic [`User`]
+    /// Gets info on a specific [`User`]
     ///
     /// # Arguments
     ///
