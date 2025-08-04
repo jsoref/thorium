@@ -37,7 +37,7 @@ impl Lifetime {
     /// * `target` - The target job for this worker
     #[instrument(name = "Lifetime::new", skip_all)]
     pub fn new(target: &Target) -> Self {
-        // if this was spawned under the fairshare pool then set a lifetime of 1 minute at most
+        // if this was spawned under the fair share pool then set a lifetime of 1 minute at most
         match (target.pool, &target.image.lifetime) {
             // fair share spawned workers with no lifetime can only execute 1 minute worth of jobs before dying
             (Pools::FairShare, None) => Lifetime::RunTime(from_now!(60)),

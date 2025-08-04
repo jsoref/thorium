@@ -345,7 +345,7 @@ fn default_memory_weight() -> u64 {
     1
 }
 
-/// The settings to use when calculating fairshare costs
+/// The settings to use when calculating fair share costs
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, JsonSchema)]
 pub struct FairShareWeights {
     /// The multiplier to apply to cpu costs
@@ -458,7 +458,7 @@ pub struct K8s {
     /// How long at minimum to wait between scale attempts in seconds
     #[serde(default = "default_dwell")]
     pub dwell: u64,
-    /// The settings to use when calculating fairshare costs
+    /// The settings to use when calculating fair share costs
     #[serde(default = "FairShareWeights::default")]
     pub fair_share: FairShareWeights,
     /// The divisor to use when calculating what % of resources to reduce fair share ranks by
@@ -644,7 +644,7 @@ pub struct BareMetal {
     /// How long at minimum to wait between scale attempts in seconds
     #[serde(default = "default_dwell")]
     pub dwell: u64,
-    /// The settings to use when calculating fairshare costs
+    /// The settings to use when calculating fair share costs
     #[serde(default = "FairShareWeights::default")]
     pub fair_share: FairShareWeights,
     /// The divisor to use when calculating what % of resources to reduce fair share ranks by
@@ -701,7 +701,7 @@ pub struct Windows {
     /// How long at minimum to wait between scale attempts in seconds
     #[serde(default = "default_dwell")]
     pub dwell: u64,
-    /// The settings to use when calculating fairshare costs
+    /// The settings to use when calculating fair share costs
     #[serde(default = "FairShareWeights::default")]
     pub fair_share: FairShareWeights,
     /// The divisor to use when calculating what % of resources to reduce fair share ranks by
@@ -755,7 +755,7 @@ pub struct Kvm {
     /// How long at minimum to wait between scale attempts in seconds
     #[serde(default = "default_dwell")]
     pub dwell: u64,
-    /// The settings to use when calculating fairshare costs
+    /// The settings to use when calculating fair share costs
     #[serde(default = "FairShareWeights::default")]
     pub fair_share: FairShareWeights,
     /// The divisor to use when calculating what % of resources to reduce fair share ranks by
