@@ -959,7 +959,7 @@ impl Allocatable {
         thorium: &Thorium,
         failed: &HashSet<String>,
     ) -> Result<HashSet<String>, Error> {
-        // scan our nodes 50 at at ime
+        // scan our nodes 50 at a time
         let params = NodeListParams::default().scaler(self.scaler_type).limit(50);
         // get info on the current Thorium nodes
         let mut cursor = thorium.system.list_node_details(&params).await?;
