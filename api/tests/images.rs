@@ -305,7 +305,7 @@ async fn list_details() -> Result<(), Error> {
     let group = generators::groups(1, &client).await?.remove(0).name;
     // setup 20 random images
     let images = generators::images(&group, 20, false, &client).await?;
-    // list theimages we just created
+    // list the images we just created
     let mut cursor = client.images.list(&group).details();
     cursor.next().await?;
     // make sure all the group details we tried to create are in our list
