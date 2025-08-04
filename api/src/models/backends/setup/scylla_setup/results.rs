@@ -251,7 +251,7 @@ async fn get(session: &Session, config: &Conf) -> PreparedStatement {
 /// * `session` - The scylla session to use
 /// * `config` - The Thorium config
 async fn get_uploaded_by_id(session: &Session, config: &Conf) -> PreparedStatement {
-    // build results get uplopaded timestamp prepared statement
+    // build results get uploaded timestamp prepared statement
     session
         .prepare(format!(
             "SELECT id, uploaded \
