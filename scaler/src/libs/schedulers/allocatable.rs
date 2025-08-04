@@ -901,7 +901,7 @@ impl Allocatable {
         }
         // reinsert our fair share ranks
         for (user, rank) in by_user {
-            // get an entry into this fair shar ranks set
+            // get an entry into this fair share ranks set
             let entry = self.fair_share.entry(rank).or_default();
             // add our user to the correct rank entry
             entry.insert(user);
@@ -941,7 +941,7 @@ impl Allocatable {
             .for_each(|(_, rank)| *rank = rank.saturating_sub(decr));
         // add our sorted users bank into our fair share ranking map
         for (user, rank) in sorted {
-            // get an entry into this fair shar ranks set
+            // get an entry into this fair share ranks set
             let entry = self.fair_share.entry(rank).or_default();
             // add our user to the correct rank entry
             entry.insert(user);
