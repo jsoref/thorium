@@ -51,7 +51,7 @@ Whats changed in Thorium!
 ### 🐛 Bug Fixes
 
 - *(agent)* Fixed issue where agent would fail to uncart files - (0adbb65)
-- *(agent)* Fixed issue where agents didn't properly enforce fairshare lifetimes - (10334d3)
+- *(agent)* Fixed issue where agents didn't properly enforce fair share lifetimes - (10334d3)
 - *(agent)* Fixed issue where runtime lifetimes were being incorrectly checked - (05cff4f)
 - *(api)* Fixed issue where listing repo tags would sometimes panic - (0354675)
 - *(api)* Fixed issue where jobs could end up in a dangling state - (2c40cf0)

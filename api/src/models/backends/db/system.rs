@@ -276,7 +276,7 @@ pub async fn update_settings(settings: &SystemSettings, shared: &Shared) -> Resu
         .cmd("hset").arg(&keys.settings).arg("reserved_cpu").arg(&settings.reserved_cpu)
         .cmd("hset").arg(&keys.settings).arg("reserved_memory").arg(&settings.reserved_memory)
         .cmd("hset").arg(&keys.settings).arg("reserved_storage").arg(&settings.reserved_storage)
-        // update fairshare settings
+        // update fair share settings
         .cmd("hset").arg(&keys.settings).arg("fairshare_cpu").arg(&settings.fairshare_cpu)
         .cmd("hset").arg(&keys.settings).arg("fairshare_memory").arg(&settings.fairshare_memory)
         .cmd("hset").arg(&keys.settings).arg("fairshare_storage").arg(&settings.fairshare_storage)

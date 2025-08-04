@@ -296,11 +296,11 @@ pub struct SystemSettingsUpdate {
     pub reserved_memory: Option<String>,
     /// The amount of ephemeral storage to reserve for things outside of Thorium
     pub reserved_storage: Option<String>,
-    /// The amount of millicpu to use in the fairshare pass if possible
+    /// The amount of millicpu to use in the fair share pass if possible
     pub fairshare_cpu: Option<String>,
-    /// The amount of memory to use in the fairshare pass if possible
+    /// The amount of memory to use in the fair share pass if possible
     pub fairshare_memory: Option<String>,
-    /// The amount of ephemeral storage to use in the fairshare pass if possible
+    /// The amount of ephemeral storage to use in the fair share pass if possible
     pub fairshare_storage: Option<String>,
     /// An update to the host path whitelist
     #[serde(default)]
@@ -434,11 +434,11 @@ pub struct SystemSettings {
     pub reserved_memory: u64,
     /// The amount of ephemeral storage to reserve for things outside of Thorium
     pub reserved_storage: u64,
-    /// The amount of millicpu to use in the fairshare pass if possible
+    /// The amount of millicpu to use in the fair share pass if possible
     pub fairshare_cpu: u64,
-    /// The amount of memory to use in the fairshare pass if possible
+    /// The amount of memory to use in the fair share pass if possible
     pub fairshare_memory: u64,
-    /// The amount of ephemeral storage to use in the fairshare pass if possible
+    /// The amount of ephemeral storage to use in the fair share pass if possible
     pub fairshare_storage: u64,
     /// A whitelist of host paths users can mount in their tools with no admin intervention
     ///

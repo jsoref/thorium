@@ -137,13 +137,13 @@ pub struct SettingsOpts {
     /// The amount of ephemeral storage to reserve for things outside of Thorium
     #[clap(long)]
     pub reserved_storage: Option<String>,
-    /// The amount of millicpu to use in the fairshare pass if possible
+    /// The amount of millicpu to use in the fair share pass if possible
     #[clap(long)]
     pub fairshare_cpu: Option<String>,
-    /// The amount of memory to use in the fairshare pass if possible
+    /// The amount of memory to use in the fair share pass if possible
     #[clap(long)]
     pub fairshare_memory: Option<String>,
-    /// The amount of ephemeral storage to use in the fairshare pass if possible
+    /// The amount of ephemeral storage to use in the fair share pass if possible
     #[clap(long)]
     pub fairshare_storage: Option<String>,
     /// A list host paths to add to the host path whitelist

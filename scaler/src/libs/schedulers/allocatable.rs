@@ -406,7 +406,7 @@ impl Allocatable {
         None
     }
 
-    /// Calculate the increase in fairshare for a specific resource spec
+    /// Calculate the increase in fair share for a specific resource spec
     ///
     /// # Arguments
     ///
@@ -871,7 +871,7 @@ impl Allocatable {
         map
     }
 
-    /// Increase our fairshare ranks for all resources consumed by each user
+    /// Increase our fair share ranks for all resources consumed by each user
     ///
     /// # Arguments
     ///
@@ -890,7 +890,7 @@ impl Allocatable {
                 match by_user.get_mut(&req.user) {
                     Some(rank) => *rank = self.calc_fair_share(*rank, *count, &image.resources),
                     None => {
-                        // calculate a rank for a user not in the fairshare ranks yet
+                        // calculate a rank for a user not in the fair share ranks yet
                         let rank = self.calc_fair_share(0, *count, &image.resources);
                         // insert our new rank
                         by_user.insert(req.user.clone(), rank);

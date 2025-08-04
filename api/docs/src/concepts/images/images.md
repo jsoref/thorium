@@ -200,6 +200,6 @@ Generators are preferred over just creating millions of jobs at once due to how 
 impacts scheduling. Because the Thorium scheduler cannot easily view all jobs in the
 deadline stream at once (as that would require us to download the entire stream each
 scale loop) it only looks at the next 100k jobs in the stream. This means that when
-doing fairshare scheduling if you are the 100,001th job you will not be scheduled under
+doing fair share scheduling if you are the 100,001th job you will not be scheduled under
 fair share in this scale loop. By drip feeding jobs into Thorium though we can keep
 the deadline stream smaller and more manageable without requiring human interaction.
