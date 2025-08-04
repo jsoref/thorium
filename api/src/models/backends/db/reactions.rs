@@ -158,7 +158,7 @@ pub async fn get_parent_ephemeral(
         let parent = get(group, id, shared).await?;
         // add any of our parents ephemeral files to our map of ephemeral files
         for ephemeral in parent.ephemeral {
-            // add this id and the parent reaction thts tied to it
+            // add this id and the parent reaction that's tied to it
             map.insert(ephemeral, *id);
         }
         // continue to recursively crawl any parent reactions
