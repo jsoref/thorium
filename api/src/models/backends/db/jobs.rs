@@ -504,7 +504,7 @@ pub async fn sleep(
     }
     // build key to this jobs data
     let key = JobKeys::data(&job.id, shared);
-    // updat this jobs status to be Sleeping
+    // update this jobs status to be Sleeping
     let mut pipe = redis::pipe();
     pipe.cmd("hset").arg(&key).arg("status").arg(serialize!(&JobStatus::Sleeping));
     // inject in this jobs new checkpoint arg
