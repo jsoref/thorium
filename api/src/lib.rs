@@ -38,7 +38,7 @@ pub mod client;
 #[cfg(feature = "client")]
 pub use client::{CtlConf, Cursor, Error, Keys, SearchDate, Thorium};
 
-// if the sync client is enabled then also rexport that
+// if the sync client is enabled then also re-export that
 #[cfg(feature = "sync")]
 pub use client::ThoriumBlocking;
 
