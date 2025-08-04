@@ -2449,7 +2449,7 @@ impl CartedSample {
 #[cfg(feature = "client")]
 #[derive(Debug)]
 pub struct UncartedSample {
-    /// The fild handle containing our uncarted sample
+    /// The file handle containing our uncarted sample
     pub file: File,
 }
 
