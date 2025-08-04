@@ -1682,7 +1682,7 @@ where
 {
     /// The ID for this cursor
     pub id: Uuid,
-    /// The dta that is retained thoughout this cursors life
+    /// The data that is retained thoughout this cursors life
     pub retain: SimpleScyllaCursorRetain,
     /// The max number of items to return at once
     pub limit: usize,
