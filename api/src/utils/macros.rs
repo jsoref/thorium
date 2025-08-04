@@ -499,7 +499,7 @@ macro_rules! disjoint {
                     $crate::disjoint!(item, other);
                 }
             }
-        // we have more then 200 total items so insert all iterms into a hashmap and error on dups
+        // we have more then 200 total items so insert all items into a hashmap and error on dups
         } else {
             // build a mapping of what values have been seen in what set/vect
             let mut map: std::collections::HashMap<&String, usize> = HashMap::with_capacity(size);
