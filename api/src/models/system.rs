@@ -889,7 +889,7 @@ impl TryFrom<&str> for Pools {
             "FairShare" => Ok(Pools::FairShare),
             "Deadline" => Ok(Pools::Deadline),
             _ => Err(crate::client::Error::new(format!(
-                "Uknown pool kind: {value}",
+                "Unknown pool kind: {value}",
             ))),
         }
     }
@@ -1026,7 +1026,7 @@ impl TryFrom<&String> for WorkerStatus {
             "Spawning" => Ok(WorkerStatus::Spawning),
             "Running" => Ok(WorkerStatus::Running),
             "Shutdown" => Ok(WorkerStatus::Shutdown),
-            _ => Err(InvalidEnum(format!("Uknown Worker Status: {raw}",))),
+            _ => Err(InvalidEnum(format!("Unknown Worker Status: {raw}",))),
         }
     }
 }
