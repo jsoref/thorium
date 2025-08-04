@@ -560,7 +560,7 @@ impl Node {
     ) -> Result<(), ApiError> {
         // only admins can register nodes
         is_admin!(user);
-        // TODO cxheck if node is already registered
+        // TODO check if node is already registered
         db::system::register(node, shared).await
     }
 
