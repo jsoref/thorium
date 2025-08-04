@@ -776,7 +776,7 @@ async fn bundle_cursor(
                     if let Some((res_id, result)) = chunks.remove_entry(&chunk_id) {
                         // check if this results id is newer then our current one
                         if output.latest < uploaded {
-                            // this results timestamp is newer then our other results so upate our latest
+                            // this results timestamp is newer then our other results so update our latest
                             output.latest = uploaded;
                         }
                         output.results.insert(res_id, result);

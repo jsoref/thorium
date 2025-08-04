@@ -259,7 +259,7 @@ async fn ingest(
     Ok(())
 }
 
-/// Udpate some already ingested repos
+/// Update some already ingested repos
 ///
 /// # Arguments
 ///
