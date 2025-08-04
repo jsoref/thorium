@@ -96,7 +96,7 @@ impl Streams {
     /// * `namespace` - The namespace of the stream within this group
     /// * `stream` - The name of the stream to check
     /// * `start` - The timestamp to start counting at
-    /// * `end` - The timestampt to stop counting at
+    /// * `end` - The timestamp to stop counting at
     ///
     /// # Examples
     ///
@@ -151,7 +151,7 @@ impl Streams {
     /// * `stream` - The name of the stream to check
     /// * `namespace` - The namespace of the stream within this group
     /// * `start` - The timestamp to start counting at
-    /// * `end` - The timestampt to stop counting at
+    /// * `end` - The timestamp to stop counting at
     /// * `split` - The size of chunk to use
     ///
     /// # Examples

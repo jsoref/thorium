@@ -1274,7 +1274,7 @@ pub async fn delete_all(
 #[rustfmt::skip]
 #[instrument(name = "db::reactions::expire_lists", skip_all, err(Debug))]
 pub async fn expire_lists(shared: &Shared) -> Result<(), ApiError> {
-    // get the timestampt to expire to
+    // get the timestamp to expire to
     let now = Utc::now().timestamp();
     // crawl over expire list and expire them 100k at a time
     // do at most 100 loops to keep response time low
