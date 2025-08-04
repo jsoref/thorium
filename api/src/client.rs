@@ -1,4 +1,4 @@
-//! Asynchronous and synchronus clients for Thorium
+//! Asynchronous and synchronous clients for Thorium
 
 use base64::Engine as _;
 use chrono::prelude::*;
