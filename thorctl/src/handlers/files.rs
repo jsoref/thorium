@@ -462,7 +462,7 @@ impl DeleteLine {
         }
     }
 
-    /// Log an error from writting a samples details
+    /// Log an error from writing a samples details
     pub fn error(sha256: &str, submission: Option<&Uuid>, err: &Error) {
         // print a delete file line
         match submission {

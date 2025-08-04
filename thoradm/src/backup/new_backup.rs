@@ -48,7 +48,7 @@ async fn write_all_vectored<'a>(
     Ok(())
 }
 
-/// The current archive we are writting too
+/// The current archive we are writing too
 #[derive(Debug)]
 pub struct ArchiveWriter {
     /// The name of this archive
@@ -263,7 +263,7 @@ pub struct BackupWorker<T: Backup> {
     rows: Vec<T>,
     /// The sha256 hasher we are using for partition hashes
     hasher: Sha256,
-    /// The archive we are writting too
+    /// The archive we are writing too
     writer: ArchiveWriter,
     /// The current number of rows this worker has backed up
     rows_backed_up: u64,
