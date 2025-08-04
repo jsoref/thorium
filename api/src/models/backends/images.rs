@@ -480,7 +480,7 @@ impl CleanupUpdate {
 }
 
 impl KvmUpdate {
-    /// Updates an images kvm settigns
+    /// Updates an images kvm settings
     ///
     /// # Arguments
     ///

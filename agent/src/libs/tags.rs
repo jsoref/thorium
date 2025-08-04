@@ -128,7 +128,7 @@ fn equal(
 ///
 /// # Arguments
 ///
-/// * `setttings` - The auto tag settings to use
+/// * `settings` - The auto tag settings to use
 /// * `src` - The results to pull tags from
 /// * `key` - The key to create a tag for
 /// * `logs` - The logs to send to the API
@@ -253,7 +253,7 @@ impl Extractor {
     /// # Arguments
     ///
     /// * `output` - The output to extract tags from
-    /// * `setttings` - The auto tag settings to use
+    /// * `settings` - The auto tag settings to use
     /// * `logs` - The logs to send to the API
     #[instrument(name = "tags::extract", skip_all, err(Debug))]
     fn extract(
