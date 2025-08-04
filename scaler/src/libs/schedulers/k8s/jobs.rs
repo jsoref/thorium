@@ -226,7 +226,7 @@ impl Jobs {
         let jobs = self.list(&spec.image.group, None).await?;
         let mut jobs = jobs.items;
         // sort our jobs by age older -> younger
-        // this clones data unneccesarily but I am unsure how to extract the timestamp without it
+        // this clones data unnecessarily but I am unsure how to extract the timestamp without it
         jobs.sort_unstable_by_key(|job| job.metadata.creation_timestamp.as_ref().unwrap().clone());
         // only downscale the specified number of active pods
         // go in reverse order so we start by culling younger jobs
