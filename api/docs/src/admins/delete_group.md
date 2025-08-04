@@ -39,7 +39,7 @@ When you request to delete a file, you are deleting a file submission from a dat
 
 File submissions can be deleted in Thorctl, the Web UI, or through direct API requests. When using Thorctl to delete files in bulk it is important to specify a group to limit the deletion operation to using the `-g` flag. You must also use the `--force` flag when not limiting the deletion to a specific target sha256/tag, because this is considered an especially dangerous operation.
 
-**DANGER: always specify a group using the `-g` flag, otherwise you may delete files indiscriminately.**
+**DANGER: always specify a group using the `-g` flag; otherwise, you may delete files indiscriminately.**
 
 ```bash
 $ thorctl files delete -g demo-group1234 --force
