@@ -53,7 +53,7 @@ impl Kvm {
         None
     }
 
-    /// Build the xml to attach an isoi
+    /// Build the xml to attach an iso
     ///
     /// # Arguments
     ///
