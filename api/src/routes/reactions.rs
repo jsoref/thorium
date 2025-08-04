@@ -909,7 +909,7 @@ async fn update(
 /// Deletes a reaction
 ///
 /// This will only cancel any currently active pods if this is the only reaction causing that pod
-/// type to be spawend.
+/// type to be spawned.
 ///
 /// # Arguments
 ///

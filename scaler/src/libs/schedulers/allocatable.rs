@@ -619,7 +619,7 @@ impl Allocatable {
                 // if we spawned this in the past then we should skip this spawn
                 // otherwise we will repeatedly spawn workers for the same deadlines
                 match count.cmp(&&mut 0) {
-                    // we spawened a worker for this deadline in the past
+                    // we spawned a worker for this deadline in the past
                     Ordering::Greater => {
                         // decrement our count
                         *count -= 1;
