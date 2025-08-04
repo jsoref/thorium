@@ -55,7 +55,7 @@ trace = ["tracing-opentelemetry", "opentelemetry", "opentelemetry-jaeger", "open
 # include test utilities for the Thorium api
 test-utilities = ["once_cell", "async_once", "lazy_static", "api"]
 
-# Force openssl-sys to staticly link in the openssl library. Necessary when
+# Force openssl-sys to statically link in the openssl library. Necessary when
 # cross compiling to x86_64-unknown-linux-musl.
 vendored-openssl = ["openssl/vendored"]
 
