@@ -253,7 +253,7 @@ impl S3Restore for S3Id {
         let bucket = match chunks.next().map(|comp| comp.as_os_str().to_str()) {
             Some(Some("files")) => conf.thorium.files.bucket.clone(),
             Some(Some("repos")) => conf.thorium.repos.bucket.clone(),
-            _ => return Err(Error::new("Uknown s3 id object type")),
+            _ => return Err(Error::new("Unknown s3 id object type")),
         };
         // skip the partitioning component
         let mut chunks = chunks.skip(1);

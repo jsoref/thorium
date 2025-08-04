@@ -53,7 +53,7 @@ impl Lifetime {
                         let seconds = std::cmp::min(60, lifetime.amount);
                         Lifetime::RunTime(from_now!(seconds))
                     }
-                    _ => panic!("Uknown lifetime: {}", lifetime.counter),
+                    _ => panic!("Unknown lifetime: {}", lifetime.counter),
                 }
             }
             // all other pools use the images lifetime or set it to infinite
@@ -65,7 +65,7 @@ impl Lifetime {
                             limit: lifetime.amount as usize,
                         },
                         "time" => Lifetime::RunTime(from_now!(lifetime.amount)),
-                        _ => panic!("uknown lifetime handler {}", lifetime.counter),
+                        _ => panic!("unknown lifetime handler {}", lifetime.counter),
                     }
                 } else {
                     Lifetime::Infinite()
