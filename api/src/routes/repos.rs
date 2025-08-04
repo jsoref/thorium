@@ -19,7 +19,7 @@ use utoipa::OpenApi;
    handled as Vec<String> into a single String argument that can be
    split on '/' later.
 
-   All functions affected by this are marked with 'TODO_UTOIPA: WIDLCARD'
+   All functions affected by this are marked with 'TODO_UTOIPA: WILDCARD'
    and have their utoipa annotations commented out. The annotations
    should be at least somewhat functional if they were able to be used
    but have not been tested due to the aforementioned compilation
@@ -77,7 +77,7 @@ async fn create(
 /// * `user` - The user that is uploading sample
 /// * `path` - The path of the repo to get info about
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/data/*repo_path",
@@ -110,7 +110,7 @@ async fn get_repo(
 /// * `user` - The user that is updating this repos commit data
 /// * `path` - The path of the repo to add commits too
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     post,
 //     path = "/api/repos/data/*repo_path",
@@ -146,7 +146,7 @@ async fn upload(
 /// * `user` - The user that is updating this repos commit data
 /// * `path` - The path containing this urls args
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     post,
 //     path = "/api/repos/commitishes/:data/*repo_path",
@@ -185,7 +185,7 @@ async fn update_commitishes(
 /// * `sha256` - The sample to add a tag too
 /// * `state` - Shared Thorium objects
 /// * `tags` - The new tags to apply
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     post,
 //     path = "/api/repos/tags/*repo_path",
@@ -225,7 +225,7 @@ async fn tag(
 /// * `value` - The value of the tag to delete
 /// * `params` - The url query params to use
 /// * `state` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     delete,
 //     path = "/api/repos/tags/*repo_path",
@@ -264,7 +264,7 @@ async fn delete_tags(
 /// * `params` - The params to use when listing commits for this repo
 /// * `repo` - The repo to list commits from
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/commitishes/:data/*repo_path",
@@ -307,7 +307,7 @@ async fn commitishes(
 /// * `params` - The params to use when listing commit details for this repo
 /// * `repo` - The repo to list commit details from
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/commitish-details/*repo_path",
@@ -346,7 +346,7 @@ async fn commitish_details(
 /// * `user` - The user that is uploading sample
 /// * `repo` - The repo to get info about
 /// * `shared` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/download/*repo_path",
@@ -455,7 +455,7 @@ async fn list_details(
 /// * `path` - The repo path derived from the URL path
 /// * `state` - Shared Thorium objects
 /// * `upload` - The results being submitted
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     post,
 //     path = "/api/repos/results/*repo_path",
@@ -497,7 +497,7 @@ async fn upload_results(
 /// * `path` - The repo path derived from the URL path
 /// * `params` - The query params to use with this request
 /// * `state` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/results/*repo_path",
@@ -536,7 +536,7 @@ async fn get_results(
 /// * `user` - The user submitting these results
 /// * `path_params` - All params in this url path
 /// * `state` - Shared Thorium objects
-// TODO_UTOIPA: WIDLCARD
+// TODO_UTOIPA: WILDCARD
 // #[utoipa::path(
 //     get,
 //     path = "/api/repos/result-files/:tool/:result_id/*repo_path",
