@@ -549,7 +549,7 @@ impl Jobs {
         send_build!(self.client, req, Vec<RunningJob>)
     }
 
-    /// Resets jobs in Thoium in bulk
+    /// Resets jobs in Thorium in bulk
     ///
     /// These jobs are normally reset because their worker was killed while executing this job.
     ///
