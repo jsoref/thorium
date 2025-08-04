@@ -24,7 +24,7 @@ pub struct Cmd {
     pub opts: GenericJobOpts,
     /// The source command from inspecting the docker image
     pub src: Vec<String>,
-    /// The command built from overlaying our values ontop of the source command
+    /// The command built from overlaying our values on top of the source command
     pub built: Vec<String>,
 }
 
@@ -379,7 +379,7 @@ impl Cmd {
         self.inject_reaction_id(image, job);
         // add our output path if its set
         self.overwrite_arg(output, &image.args.output);
-        // overlay custom args ontop of the docker images entrypoint/cmd
+        // overlay custom args on top of the docker images entrypoint/cmd
         // inject any positional args
         self.inject_positionals();
         // inject any kwargs

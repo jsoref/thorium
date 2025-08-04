@@ -87,7 +87,7 @@ cfg_if::cfg_if! {
             pub group: String,
             /// The pipeline this reaction is build around
             pub pipeline: String,
-            /// The args to overlay ontop of the args for images in this reaction
+            /// The args to overlay on top of the args for images in this reaction
             pub args: RawReactionArgs,
             /// The number of seconds we have to meet this reactions SLA.
             pub sla: Option<u64>,
@@ -194,7 +194,7 @@ pub struct ReactionRequest {
     pub group: String,
     /// The pipeline this reaction is build around
     pub pipeline: String,
-    /// The args to overlay ontop of the args for images in this reaction
+    /// The args to overlay on top of the args for images in this reaction
     pub args: ReactionArgs,
     /// The number of seconds we have to meet this reactions SLA.
     pub sla: Option<u64>,

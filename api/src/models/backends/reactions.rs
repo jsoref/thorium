@@ -733,7 +733,7 @@ impl Reaction {
             entry
                 .kwargs
                 .retain(|key, _| !args.remove_kwargs.contains(key));
-            // overlay any new kwargs ontop of the originals
+            // overlay any new kwargs on top of the originals
             for (key, value) in args.kwargs.drain() {
                 entry.kwargs.insert(key, value);
             }

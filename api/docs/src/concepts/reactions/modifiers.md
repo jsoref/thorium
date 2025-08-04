@@ -37,7 +37,7 @@ slightly different fields.
 | key | definition |
 | --- | ---------- |
 | positionals | The positional args to use in place of the original positonal args (optional) |
-| kwargs | The key word arguments to overlay ontop the original keyword arguments |
+| kwargs | The key word arguments to overlay on top the original keyword arguments |
 | remove_kwargs | The key word arguments to remove from the original keyword arguments |
 | add_switches | The new switches to add to the original switch arguments |
 | remove_switches | The switch arguments to remove from the original switches |

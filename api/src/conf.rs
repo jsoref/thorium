@@ -1244,7 +1244,7 @@ impl Tracing {
         config::Config::builder()
             // load from a file first
             .add_source(config::File::new(path, config::FileFormat::Yaml))
-            // then overlay any environment args ontop
+            // then overlay any environment args on top
             .add_source(config::Environment::with_prefix("TRACING").separator("__"))
             .build()?
             .try_deserialize()
@@ -2042,7 +2042,7 @@ impl Conf {
         let mut conf: Conf = config::Config::builder()
             // load from a file first
             .add_source(config::File::from(path.as_ref()).format(config::FileFormat::Yaml))
-            // then overlay any environment args ontop
+            // then overlay any environment args on top
             .add_source(
                 config::Environment::with_prefix("thorium")
                     .prefix_separator("__")

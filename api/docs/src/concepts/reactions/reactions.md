@@ -48,7 +48,7 @@ Explanations for this field are:
 
 ### Arguments
 ---
-Reaction arguments are a hashmap of arguments to overlay ontop of the docker
+Reaction arguments are a hashmap of arguments to overlay on top of the docker
 file for each image in the pipeline. So for example in the reaction above for a
 petshop we have a single image called adopt that specifies arguments to adopt a
 yellow puppy. If we assume the original docker file had its cmd set to:
@@ -57,7 +57,7 @@ yellow puppy. If we assume the original docker file had its cmd set to:
 ["--color", "brown"]
 ```
 
-Because we specified an arg to overlay ontop of "--color" that would be set to
+Because we specified an arg to overlay on top of "--color" that would be set to
 "yellow" when we call the entrypoint instead of "brown". This also means that 
 if you simply want to use the args specified in the docker file every time you
 can leave args set to an empty {}. You also do not need to specify args for

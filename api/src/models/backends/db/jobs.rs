@@ -45,7 +45,7 @@ macro_rules! status_queue {
 ///
 /// # Arguments
 ///
-/// * `pipe` - The Redis [`redis::Pipeline`] to build ontop of
+/// * `pipe` - The Redis [`redis::Pipeline`] to build on top of
 /// * `job` - The job object to add to redis
 /// * `shared` - Shared Thorium objects
 #[rustfmt::skip]

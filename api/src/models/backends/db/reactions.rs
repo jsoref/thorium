@@ -51,7 +51,7 @@ macro_rules! pipe_key {
 ///
 /// # Arguments
 ///
-/// * `pipe` - The Redis [`redis::Pipeline`] to build ontop of
+/// * `pipe` - The Redis [`redis::Pipeline`] to build on top of
 /// * `cast` - The [`Reaction`] to create in Redis
 /// * `pipeline` - The [`Pipeline`] this [`Reaction`] is based on
 /// * `shared` - Shared Thorium objects
@@ -575,7 +575,7 @@ async fn cost(
 /// # Arguments
 ///
 /// * `reaction` - The reaction to check for a parent reaction
-/// * `pipe` - The Redis [`redis::Pipeline`] to build ontop of
+/// * `pipe` - The Redis [`redis::Pipeline`] to build on top of
 /// * `shared` - Shared Thorium objects
 fn incr_parent<'a>(reaction: &Reaction, pipe: &'a mut redis::Pipeline, shared: &Shared) {
     // check if we have a parent reaction
@@ -621,7 +621,7 @@ macro_rules! add_expire {
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `keys` - The keys to this reactions dat
 /// * `dest` - The destination group status set this is being moved to
@@ -682,7 +682,7 @@ fn build_expire<'a>(
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `shared` - Shared Thorium objects
 #[rustfmt::skip]
@@ -746,7 +746,7 @@ pub async fn complete<'a>(
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `pipeline` - The [`Pipeline`] this [`Reaction`] is built around
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `shared` - Shared Thorium objects
