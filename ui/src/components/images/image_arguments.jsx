@@ -166,7 +166,7 @@ const updateCreateRequest = (args, setRequestArguments, setErrors, setHasErrors)
   setErrors(errors);
   // tell parent there are unresolved errors
   Object.keys(errors).length > 0 ? setHasErrors(true) : setHasErrors(false);
-  // update the parents request args stucture
+  // update the parents request args structure
   setRequestArguments(requestArguments);
 };
 
@@ -225,7 +225,7 @@ const updateEditRequest = (args, setRequestArguments, setErrors, setHasErrors) =
   setErrors(errors);
   // tell parent there are unresolved errors
   Object.keys(errors).length > 0 ? setHasErrors(true) : setHasErrors(false);
-  // update the parents request args stucture
+  // update the parents request args structure
   setRequestArguments(requestArguments);
 };
 
