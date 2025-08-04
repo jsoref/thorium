@@ -184,7 +184,7 @@ commitlog_sync_period_in_ms: 10000
 
 # The size of the individual commitlog file segments.  A commitlog
 # segment may be archived, deleted, or recycled once all the data
-# in it (potentially from each columnfamily in the system) has been
+# in it (potentially from each column family in the system) has been
 # flushed to sstables.
 #
 # The default size is 32, which is almost always fine, but if you are
