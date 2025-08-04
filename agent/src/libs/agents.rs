@@ -151,7 +151,7 @@ pub struct Agent {
     pub thorium: Thorium,
     /// The image we are executing a job for
     pub image: Image,
-    /// The Job thisresults_path agent is executing
+    /// The Job this results_path agent is executing
     pub job: GenericJob,
     /// The stage logs to send to Thorium
     stage_logs: StageLogsAdd,
