@@ -63,7 +63,7 @@ impl Export {
         exports::get(name, op, shared).await
     }
 
-    /// Updates an export opartion by name
+    /// Updates an export operation by name
     ///
     /// # Arguments
     ///
@@ -82,7 +82,7 @@ impl Export {
         exports::update(&self.name, op, update, shared).await
     }
 
-    /// Saves an error that occured during this export operation
+    /// Saves an error that occurred during this export operation
     ///
     /// # Arguments
     ///
@@ -104,7 +104,7 @@ impl Export {
     ///
     /// # Arguments
     ///
-    /// * `op` - The type of export operation to list erorrs from
+    /// * `op` - The type of export operation to list errors from
     /// * `params` - The query params to use when listing errors
     /// * `shared` - Shared Thorium objects
     /// * `span` - The span to log traces under

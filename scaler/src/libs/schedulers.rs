@@ -1,6 +1,6 @@
 //! Abstracts the different schedulers for Thorium
 //!
-//! Currently we only support Kubernetes but that will likely change in the futrue.
+//! Currently we only support Kubernetes but that will likely change in the future.
 use chrono::prelude::*;
 use std::collections::{BTreeMap, HashMap, HashSet};
 use thorium::models::{ImageScaler, SystemSettings};
@@ -56,7 +56,7 @@ pub trait Scheduler {
         settings: &SystemSettings,
     ) -> Result<AllocatableUpdate, Error>;
 
-    /// Schedulers need to be able to setup their environment before scheduling jobs
+    /// Schedulers need to be able to set up their environment before scheduling jobs
     ///
     /// # Arguments
     ///
@@ -137,7 +137,7 @@ pub trait Scheduler {
 /// * `scaler` - The type of scaler to build
 /// * `dry_run` - Whether this is a dry run or not
 /// * `context_name` - The name of the context to use for k8s service accounts
-/// * `conf` - The Thoriumm config
+/// * `conf` - The Thorium config
 pub async fn new(
     schedulers: &mut HashMap<String, Box<dyn Scheduler + Send>>,
     scaler: &ImageScaler,

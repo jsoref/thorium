@@ -17,7 +17,7 @@ const createGroup = async (data, errorHandler) => {
       // server responded with unauthorized
     } else if (res && res.status && res.status == 401) {
       errorHandler(`Failed to create group: Permission Denied`);
-      // group aleady exists
+      // group already exists
     } else if (res && res.status && res.status == 409) {
       errorHandler(`Group with name "${data.name}" already exists`);
     } else if (res && res.status && res.data && res.data.error) {

@@ -194,7 +194,7 @@ const deleteTags = async (sha256, data, errorHandler) => {
  * @function
  * @param {string} sha256 - sha256 hash of sample to update
  * @param {string} id - submission id to delete
- * @param {object} groups - groups to delete from, otherwise ALL of them
+ * @param {object} groups - groups to delete from; otherwise, ALL of them
  * @param {object} errorHandler - error handler function
  * @returns {object} - promise object representing tags post response.
  */
@@ -216,7 +216,7 @@ const deleteSubmission = async (sha256, id, groups, errorHandler) => {
       errorHandler(`Failed to delete submission: ${res.status}`);
       // no message or error returned
     } else {
-      errorHandler('Failed to delete sumbission: Unknown Error');
+      errorHandler('Failed to delete submission: Unknown Error');
     }
     return false;
   });

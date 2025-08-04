@@ -24,7 +24,7 @@ async fn main() {
     // setup our tracer
     thorium::utils::trace::setup(&name, &conf.thorium.tracing);
     // setup scaler
-    let mut scaler = Scaler::new(args).await.expect("Scaler failed to initalize");
+    let mut scaler = Scaler::new(args).await.expect("Scaler failed to initialize");
     // start scaler
     scaler.start().await.expect("Scaler crashed");
 }

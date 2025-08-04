@@ -325,7 +325,7 @@ pub trait ScyllaCursorSupport: CursorCore {
                 let pos = entry
                     .iter()
                     .position(|item| inter_unique == item.get_unique_key());
-                // drop our reference to our interemdiate unique value
+                // drop our reference to our intermediate unique value
                 drop(inter_unique);
                 // if we found this item already exists then add our intermediate row
                 match pos {
@@ -345,14 +345,14 @@ pub trait ScyllaCursorSupport: CursorCore {
         Ok(())
     }
 
-    /// Sort any possibly ambigous rows by their cluster key
-    fn sort_by_cluster_key(ambigous: &mut VecDeque<Self>) {
+    /// Sort any possibly ambiguous rows by their cluster key
+    fn sort_by_cluster_key(ambiguous: &mut VecDeque<Self>) {
         // create a btreemap to sort this data
         let mut sorted = BTreeMap::default();
-        // keep a list of our ambigous rows
-        let mut to_sort = HashMap::with_capacity(ambigous.len());
+        // keep a list of our ambiguous rows
+        let mut to_sort = HashMap::with_capacity(ambiguous.len());
         // go through and get our clustering keys and insert them into our map
-        for (index, row) in ambigous.drain(..).enumerate() {
+        for (index, row) in ambiguous.drain(..).enumerate() {
             // get this rows clustering key
             let ckey = row.get_tag_clustering_key().clone();
             // insert this into our map
@@ -365,7 +365,7 @@ pub trait ScyllaCursorSupport: CursorCore {
             // get this row and insert it
             if let Some(row) = to_sort.remove(&index) {
                 // add this row in the correct order
-                ambigous.push_back(row);
+                ambiguous.push_back(row);
             }
         }
     }
@@ -449,7 +449,7 @@ fn update_first_last(
     if new_first < *first {
         *first = new_first;
     }
-    // check if this bucket range brings the overlaping buckets with data up
+    // check if this bucket range brings the overlapping buckets with data up
     if new_last > *last {
         *last = new_last;
     }
@@ -559,7 +559,7 @@ async fn parse_tag_queries<'a>(
     Ok(())
 }
 
-/// A cursor for a listing group permisisoned data within scylla
+/// A cursor for a listing group permissioned data within scylla
 #[derive(Debug)]
 pub struct ScyllaCursor<D>
 where
@@ -568,7 +568,7 @@ where
     D: ScyllaCursorSupport,
     D: Debug,
 {
-    /// The Id for this cursor
+    /// The ID for this cursor
     pub id: Uuid,
     /// The cursor settings/data to retain across cursor iterations
     pub retain: ScyllaCursorRetain<D>,
@@ -645,7 +645,7 @@ where
                 let chunk = shared.config.thorium.tags.partition_size;
                 // get our tag map
                 let (_, tag_map) = tags.as_ref().unwrap();
-                // calculate the total nubmer of tags required for this query
+                // calculate the total number of tags required for this query
                 let tags_required = tag_map.values().map(|vals| vals.len()).sum();
                 (chunk, tags_required)
             } else {
@@ -731,7 +731,7 @@ where
             let (chunk, tags_required) = if let Some((_, tag_map)) = &tags {
                 // this is a tag based cursor so use our tag partition size
                 let chunk = shared.config.thorium.tags.partition_size;
-                // calculate the total nubmer of tags required for this query
+                // calculate the total number of tags required for this query
                 let tags_required = tag_map.values().map(|vals| vals.len()).sum();
                 (chunk, tags_required)
             } else {
@@ -797,7 +797,7 @@ where
         // check if we got any cursor data
         match data {
             Some(data) => {
-                // try to deseruialize this cursors retained data
+                // try to deserialize this cursors retained data
                 let retain: ScyllaCursorRetain<D> = deserialize!(&data);
                 // tag based cursors have a different chunk size
                 let chunk = if retain.tags.is_some() {
@@ -806,7 +806,7 @@ where
                     // this is not a tag based query so use our types partitions size
                     D::partition_size(shared)
                 };
-                // determin our current year and our end year
+                // determine our current year and our end year
                 let year = retain.start.year();
                 let end_year = retain.end.year();
                 // get our starting/ending bucket
@@ -906,7 +906,7 @@ where
                 // add the futures to our set
                 futures.push(future);
             }
-            // if we have have more then 30 futures to crawl then send them all at once
+            // if we have more than 30 futures to crawl then send them all at once
             if futures.len() >= 300 {
                 // wait for all of our futures to complete 50 at a time
                 let queries = stream::iter(futures.drain(..))
@@ -1132,7 +1132,7 @@ where
 
     /// Check if this cursor has been exhausted
     pub fn exhausted(&mut self) -> bool {
-        // if we have nove no more mapped values then check if we have mapped our full time range
+        // if we have no more mapped values then check if we have mapped our full time range
         if self.mapped == 0 {
             // this be the same across tags/files when files also uses census caching
             if self.retain.tags.is_some() {
@@ -1172,7 +1172,7 @@ where
                         // if we have multiple rows with the same timestamp then disambiguate them
                         // only tags have to do this
                         if self.retain.tags.is_some() && item.len() > 1 {
-                            // sort our ambigous rows by their cluster key
+                            // sort our ambiguous rows by their cluster key
                             D::sort_by_cluster_key(&mut item);
                         }
                         // consume only enough data to fill our data
@@ -1470,7 +1470,7 @@ where
         match self.retain.tags.clone() {
             // we have tags to filter on
             Some((kind, tags)) => self.next_tags(kind, &tags, shared).await,
-            // we don't any any tags to filter on
+            // we don't have any tags to filter on
             None => self.next_general(shared).await,
         }
     }
@@ -1562,7 +1562,7 @@ where
 {
     /// The ID for this cursor
     pub id: Uuid,
-    /// The dta that is retained thoughout this cursors life
+    /// The data that is retained throughout this cursors life
     pub retain: SimpleScyllaCursorRetain,
     /// The max number of items to return at once
     pub limit: usize,
@@ -1691,7 +1691,7 @@ where
                 let found = typed_iter.filter_map(|res| log_scylla_err!(res));
                 // add this data to the data to return
                 self.data.extend(found);
-                // if cnt is less then our limit then go to the next partition
+                // if cnt is less than our limit then go to the next partition
                 if cnt < limit {
                     // check if we are at the last index
                     if self.retain.index == self.retain.partitions.len() - 1 {
@@ -1734,7 +1734,7 @@ where
                 let _: () = query!(cmd("del").arg(key), shared).await?;
             }
         } else {
-            // serialize our paritions
+            // serialize our partitions
             let data = serialize!(&self.retain);
             // build the key to save this cursor data too
             let key = cursors::data(CursorKind::SimpleScylla, &self.id, shared);
@@ -1936,7 +1936,7 @@ pub struct GroupedScyllaCursorRetain<D: GroupedScyllaCursorSupport> {
     pub current_sort_by: Option<D::SortBy>,
 }
 
-/// A cursor for a listing group permisisoned data within scylla
+/// A cursor for a listing group permissioned data within scylla
 #[derive(Debug)]
 pub struct GroupedScyllaCursor<D>
 where
@@ -1945,7 +1945,7 @@ where
     D: GroupedScyllaCursorSupport,
     D: Debug,
 {
-    /// The Id for this cursor
+    /// The ID for this cursor
     pub id: Uuid,
     /// The cursor settings/data to retain across cursor iterations
     pub retain: GroupedScyllaCursorRetain<D>,
@@ -2353,7 +2353,7 @@ where
                 let _: () = query!(cmd("del").arg(key), shared).await?;
             }
         } else {
-            // serialize our paritions
+            // serialize our partitions
             let data = serialize!(&self.retain);
             // build the key to save this cursor data too
             let key = cursors::data(CursorKind::GroupedScylla, &self.id, shared);
@@ -2448,7 +2448,7 @@ impl ExistsCursor {
     ///
     /// # Arguments
     ///
-    /// * `prepared` - The statment to execute
+    /// * `prepared` - The statement to execute
     /// * `key` - The key to use when checking for the existence of rows
     /// * `shared` - Shared Thorium objects
     /// * `span` - The span to log traces under
@@ -2482,11 +2482,11 @@ impl ExistsCursor {
                 .execute_unpaged(prepared, (self.year, buckets, key));
             // add this future out our futures list
             futures.push(query);
-            // if we have have more then 100 futures to crawl then send them all at once
+            // if we have more than 100 futures to crawl then send them all at once
             if futures.len() >= 100 {
                 // build our stream of futures
                 let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
-                // check all partitons for data
+                // check all partitions for data
                 while let Some(query) = stream.next().await {
                     // unwrap our query
                     let query = query?;
@@ -2538,7 +2538,7 @@ impl ExistsCursor {
         if !futures.is_empty() {
             // build our stream of futures
             let mut stream = stream::iter(futures.drain(..)).buffer_unordered(50);
-            // check all partitons for data
+            // check all partitions for data
             while let Some(query) = stream.next().await {
                 // unwrap our query
                 let query = query?;
@@ -2621,7 +2621,7 @@ impl ElasticCursor {
         let index = params.index.full_name(shared);
         // get a new point in time id for this search
         let pit = elastic::PointInTime::new(index, shared).await?.id;
-        // build an intial cursor retained data struct
+        // build an initial cursor retained data struct
         let retain = ElasticCursorRetain {
             start: params.start,
             end: params.end(shared)?,
@@ -2779,9 +2779,9 @@ impl ElasticCursor {
             .body(body)
             .send()
             .await?;
-        // deserialize the response if no error occured
+        // deserialize the response if no error occurred
         if resp.status_code().is_success() {
-            // get the respose
+            // get the response
             let cast = resp.json::<ElasticResponse>().await?;
             // pull out just the hits
             self.data = cast.hits.hits;

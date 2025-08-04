@@ -42,7 +42,7 @@ impl CommitRequest {
                 let (topic, description) = message.split_at(index);
                 (Some(topic.to_owned()), Some(description[2..].to_owned()))
             } else {
-                // if the message is less then 80 chars then assume we just have a topic
+                // if the message is less than 80 chars then assume we just have a topic
                 if message.len() <= 80 {
                     (Some(message.to_owned()), None)
                 } else {
@@ -728,7 +728,7 @@ impl CommitishListParams {
             None => match Utc.timestamp_opt(shared.config.thorium.repos.earliest, 0) {
                 chrono::LocalResult::Single(default_end) => Ok(default_end),
                 _ => crate::internal_err!(format!(
-                    "default earliest repos timestamp is invalid or ambigous - {}",
+                    "default earliest repos timestamp is invalid or ambiguous - {}",
                     shared.config.thorium.repos.earliest
                 )),
             },
@@ -765,7 +765,7 @@ impl CommitishKinds {
         vec![Self::Commit, Self::Branch, Self::Tag]
     }
 
-    /// Cast our [`ComitishKind`] to a str
+    /// Cast our [`CommittishKind`] to a str
     #[must_use]
     pub fn as_str(&self) -> &str {
         match self {
@@ -786,7 +786,7 @@ impl std::fmt::Display for CommitishKinds {
 impl FromStr for CommitishKinds {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`CommitishKinds`]
+    /// Convert this str to an [`CommitishKinds`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "Commit" => Ok(CommitishKinds::Commit),

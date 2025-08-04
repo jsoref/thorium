@@ -47,7 +47,7 @@ pub async fn clear(kind: EventType, ids: &[Uuid], shared: &Shared) -> Result<(),
     for id in ids {
         // remove this id from our in flight queue
         pipe.cmd("zrem").arg(&queue_key).arg(id.to_string());
-        // remove it from our our in flight data map as well
+        // remove it from our in flight data map as well
         pipe.cmd("hdel").arg(&map_key).arg(id.to_string());
     }
     // execute this pipeline
@@ -83,7 +83,7 @@ async fn reset_pops(
 
 /// Filter and reset any events that are younger then 3 seconds
 ///
-/// We are filting events younger then 3 seconds to ensure the DB has a chance
+/// We are filtering events younger then 3 seconds to ensure the DB has a chance
 /// to reach consistency.
 ///
 /// # Arguments
@@ -116,7 +116,7 @@ async fn filter_immature(
             // add our still serialized but filtered info
             filtered_serial.push((serial, timestamp));
         } else {
-            // this event is not yet mature so add it to the reste list
+            // this event is not yet mature so add it to the reset list
             resets.push((serial, timestamp));
         }
     }
@@ -233,7 +233,7 @@ pub async fn reset_all(kind: EventType, shared: &Shared) -> Result<(), ApiError>
 pub async fn get_cache_status(clear: bool, shared: &Shared) -> Result<EventCacheStatus, ApiError> {
     // get our event handler cache key
     let key = EventKeys::cache(shared);
-    // build a redis pipleline
+    // build a redis pipeline
     let mut pipe = redis::pipe();
     // get our cache status
     pipe.atomic().cmd("hget").arg(&key).arg("status");

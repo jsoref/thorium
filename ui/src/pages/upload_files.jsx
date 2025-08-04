@@ -88,7 +88,7 @@ const UploadFilesContainer = () => {
   useEffect(() => {
     const allGroups = [];
     const selectableGroups = {};
-    // dictionaries of name: boolean pairs reprenting whether a user has
+    // dictionaries of name: boolean pairs representing whether a user has
     // selected a group to give access to a set of uploaded files
     if (userInfo && userInfo.groups) {
       // build a list of all detailed Groups that a user can access
@@ -582,7 +582,7 @@ const UploadFilesContainer = () => {
         [submission.path]: submitRes,
       }));
       allRunReactionsRes.push(...submitRes);
-      // Call the file done after all reactons submitted. We will get here even if
+      // Call the file done after all reactions submitted. We will get here even if
       // there were no reactions to submit.
       if (error) {
         // error result

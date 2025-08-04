@@ -48,7 +48,7 @@ impl From<&EventData> for EventType {
 impl FromStr for EventType {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`EventType`]
+    /// Convert this str to an [`EventType`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "ReactionTrigger" => Ok(EventType::ReactionTrigger),
@@ -86,13 +86,13 @@ pub struct EventRequest {
     pub data: EventData,
 }
 
-/// Whether an trigger is, could be, or can not be triggered
+/// Whether a trigger is, could be, or cannot be triggered
 pub enum TriggerPotential {
     /// The triggers conditions are met by an event
     Confirmed,
     /// This trigger conditions could potentially be met by an event
     Potentially,
-    /// This triggers conditions can not be met by an event
+    /// This triggers conditions cannot be met by an event
     CanNot,
 }
 
@@ -163,7 +163,7 @@ impl Event {
         true
     }
 
-    /// Check if a new tag event trigger occured
+    /// Check if a new tag event trigger occurred
     fn check_tag_trigger(
         new_type: &TagType,
         new_tags: &HashMap<String, HashSet<String>>,

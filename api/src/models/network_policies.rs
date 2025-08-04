@@ -443,7 +443,7 @@ impl NetworkPolicyRuleRaw {
         self
     }
 
-    /// Add a group (namespace) that that can communicate for this rule
+    /// Add a group (namespace) that can communicate for this rule
     ///
     /// # Arguments
     ///

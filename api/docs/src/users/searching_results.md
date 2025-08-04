@@ -5,7 +5,7 @@ files. This is currently only available in the Web UI and can be accessed on
 the home page. Thorium uses the [Lucene syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html)
  for search queries. It is also important to remember that documents are
 searched for a single group at a time. This means that for a document to be
-returned all search parametes must be met by at least one group.
+returned all search parameters must be met by at least one group.
 
 The following are some examples:
 
@@ -55,7 +55,7 @@ Querying for results where a field named `PEType` is set to `"PE32+"`
 ##### Why does it take some time for tool results to become searchable?
 
 It can take some time (usually < 10 seconds) for results to be searchable in 
-Thorium because they are indexed asynchronusly. Thorium has a component called
+Thorium because they are indexed asynchronously. Thorium has a component called
 the search-streamer that is responsible for tailing recent results and
 streaming then into Elastic Search.
 
@@ -63,7 +63,7 @@ streaming then into Elastic Search.
 
 Due to Thorium's permissioning requirements and how elastic operates each group
 has its own document with results for a specific sample or repo. This means
-that each group must meet all requirements for to be returned.
+that each group must meet all requirements to be returned.
 
 An example of this would be the following query returning only sample 1's results:
 

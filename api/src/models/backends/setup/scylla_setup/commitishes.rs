@@ -1,12 +1,12 @@
-//! Setup the commitishes tables/prepared statements in Scylla
+//! Set up the commitishes tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for commitishes
-pub struct CommitishesPreparedStatements {
+/// The prepared statement for commitishes
+pub struct commitishesPreparedStatements {
     /// Insert a commitish
     pub insert: PreparedStatement,
     /// Insert a commitish into the list table
@@ -25,7 +25,7 @@ pub struct CommitishesPreparedStatements {
     pub list_pull: PreparedStatement,
 }
 
-impl CommitishesPreparedStatements {
+impl commitishesPreparedStatements {
     /// Build a new commitishes prepared statement struct
     ///
     /// # Arguments
@@ -33,10 +33,10 @@ impl CommitishesPreparedStatements {
     /// * `sessions` - The scylla session to use
     /// * `config` - The Thorium config
     pub async fn new(session: &Session, config: &Conf) -> Self {
-        // setup the commitishes tables
+        // set up the commitishes tables
         setup_commitishes_table(session, config).await;
         setup_commitishes_list_table(session, config).await;
-        // setup the commitishes materialized view
+        // set up the commitishes materialized view
         setup_committed_repo_data_mat_view(session, config).await;
         // setup our prepared statements
         let insert = insert(session, config).await;
@@ -48,7 +48,7 @@ impl CommitishesPreparedStatements {
         let list_ties = list_ties(session, config).await;
         let list_pull = list_pull(session, config).await;
         // build our prepared statement object
-        CommitishesPreparedStatements {
+        commitishesPreparedStatements {
             insert,
             insert_list,
             get_data,
@@ -61,7 +61,7 @@ impl CommitishesPreparedStatements {
     }
 }
 
-/// Setup the commitish table for Thorium
+/// Set up the commitish table for Thorium
 ///
 /// # Arguments
 ///
@@ -87,7 +87,7 @@ async fn setup_commitishes_table(session: &Session, config: &Conf) {
         .expect("failed to add commitish table");
 }
 
-/// Setup the repo commitish list table for Thorium
+/// Set up the repo commitish list table for Thorium
 ///
 /// # Arguments
 ///
@@ -115,7 +115,7 @@ async fn setup_commitishes_list_table(session: &Session, config: &Conf) {
         .expect("failed to add commitish list table");
 }
 
-/// Setup the repo data actually tied to a commitish materialized view for Thorium
+/// Set up the repo data actually tied to a commitish materialized view for Thorium
 ///
 /// # Arguments
 ///

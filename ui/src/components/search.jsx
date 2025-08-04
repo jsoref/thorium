@@ -35,7 +35,7 @@ const getGroup = (id) => {
 const highlightResult = (result) => {
   const highlightStart = result.toString().replaceAll('@kibana-highlighted-field@', '<mark>');
   const highlightFinish = highlightStart.replaceAll('@/kibana-highlighted-field@', '</mark>');
-  // we must santize the output that will be rendered as html
+  // we must sanitize the output that will be rendered as html
   const clean = DOMPurify.sanitize(highlightFinish, { ALLOWED_TAGS: ['mark'] });
   return parse(`${clean}`);
 };
@@ -158,7 +158,7 @@ const Search = () => {
       selectedGroups = null;
     }
 
-    // must format dates for request if set, otherwise leave as null
+    // must format dates for request if set; otherwise, leave as null
     let formattedStartDate = null;
     if (startDate) {
       formattedStartDate = safeDateToStringConversion(startDate);

@@ -35,7 +35,7 @@ impl std::fmt::Display for ExportOps {
 impl FromStr for ExportOps {
     type Err = InvalidEnum;
 
-    /// Conver this str to an [`ExportOps`]
+    /// Convert this str to an [`ExportOps`]
     fn from_str(raw: &str) -> Result<Self, Self::Err> {
         match raw {
             "Results" => Ok(ExportOps::Results),
@@ -47,9 +47,9 @@ impl FromStr for ExportOps {
 /// An internal struct containing a single export row in Scylla
 #[derive(Debug)]
 pub struct ExportRow {
-    /// The Id for this export operation
+    /// The ID for this export operation
     pub id: Uuid,
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The user that owns this export operation
     pub user: String,
@@ -95,8 +95,8 @@ pub struct ExportErrorRow {
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<i32>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }

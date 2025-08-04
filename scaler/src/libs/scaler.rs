@@ -166,7 +166,7 @@ pub struct BanSets {
     pub groups: HashSet<String>,
     /// The users to ban spawning resources for
     pub users: HashSet<String>,
-    /// The requisitions to ban from spanwing
+    /// The requisitions to ban from spawning
     pub reqs: HashMap<String, HashSet<String>>,
 }
 
@@ -333,7 +333,7 @@ impl Scaler {
     async fn setup(&mut self) -> Result<(), Error> {
         // crawl over each cluster and get it setup for executing jobs
         for (name, scheduler) in &mut self.schedulers {
-            // setup the scheduler before we schedule jobs
+            // set up the scheduler before we schedule jobs
             scheduler
                 .setup(name, &self.cache, &mut self.allocatable.bans)
                 .await?;
@@ -354,11 +354,11 @@ impl Scaler {
         for mut handle in self.active.drain(..) {
             // check if this future has completed
             if let Poll::Ready(join_result) = poll!(&mut handle) {
-                // get our compelted task
+                // get our completed task
                 let completed = join_result??;
                 // log that a task was completed
                 event!(Level::INFO, task = completed.as_str());
-                // check if a join error occured
+                // check if a join error occurred
                 match completed {
                     // All zombie jobs were completed
                     TaskResult::ZombieJobs => add_task!(self, Tasks::ZombieJobs),
@@ -527,7 +527,7 @@ impl Scaler {
     async fn schedule(&mut self) -> Result<HashSet<String>, Error> {
         // clone our current resource counts so we can track changes
         let past = self.allocatable.counts.clone();
-        // track our succesful scale changes and the the correctly deleted ones
+        // track our succesful scale changes and the correctly deleted ones
         let mut changes: HashMap<DateTime<Utc>, Vec<Spawned>> =
             HashMap::with_capacity(self.allocatable.changes.spawns.len());
         let mut deleted = HashSet::with_capacity(self.allocatable.changes.scale_down.len());
@@ -667,7 +667,7 @@ impl Scaler {
         Ok(deleted)
     }
 
-    /// Error out any workers jobs that have permenantly failed
+    /// Error out any workers jobs that have permanently failed
     #[instrument(name = "Scaler::error_out", skip_all)]
     async fn error_out(&mut self, error_out: HashSet<ErrorOutKinds>, failed: &mut HashSet<String>) {
         // build a stream of our failed workers info
@@ -705,7 +705,7 @@ impl Scaler {
                     failed.insert(worker.name);
                 }
                 Err(error) => {
-                    // we faled to get this jobs worker
+                    // we failed to get this jobs worker
                     event!(Level::ERROR, error = error.msg());
                 }
             }

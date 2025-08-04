@@ -29,7 +29,7 @@ pub const EXTERNAL_CACHE_KEY: &str = "external_cache";
 #[derive(Deserialize, Serialize, Debug)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct SystemInfoParams {
-    /// Whether to reset any system info flage
+    /// Whether to reset any system info flags
     pub reset: Option<ImageScaler>,
 }
 
@@ -67,7 +67,7 @@ impl SystemInfo {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ScalerStats {
-    /// The number of jobs curerntin the deadline queue
+    /// The number of jobs currently in the deadline queue
     pub deadlines: i64,
     /// The number of jobs currently running
     pub running: i64,
@@ -87,11 +87,11 @@ pub type SpawnMap<'a> = HashMap<&'a String, BTreeMap<u64, Vec<(Requisition, u64)
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct SystemStats {
-    /// The total number of deadlines currently in the sytem across all scalers
+    /// The total number of deadlines currently in the system across all scalers
     pub deadlines: i64,
-    /// The total number of running jobs currently in the sytem across all scalers
+    /// The total number of running jobs currently in the system across all scalers
     pub running: i64,
-    /// The number of users currently in the sytem
+    /// The number of users currently in the system
     pub users: i64,
     /// The stats for jobs under the k8s scaler
     pub k8s: ScalerStats,
@@ -296,11 +296,11 @@ pub struct SystemSettingsUpdate {
     pub reserved_memory: Option<String>,
     /// The amount of ephemeral storage to reserve for things outside of Thorium
     pub reserved_storage: Option<String>,
-    /// The amount of millicpu to use in the fairshare pass if possible
+    /// The amount of millicpu to use in the fair share pass if possible
     pub fairshare_cpu: Option<String>,
-    /// The amount of memory to use in the fairshare pass if possible
+    /// The amount of memory to use in the fair share pass if possible
     pub fairshare_memory: Option<String>,
-    /// The amount of ephemeral storage to use in the fairshare pass if possible
+    /// The amount of ephemeral storage to use in the fair share pass if possible
     pub fairshare_storage: Option<String>,
     /// An update to the host path whitelist
     #[serde(default)]
@@ -434,11 +434,11 @@ pub struct SystemSettings {
     pub reserved_memory: u64,
     /// The amount of ephemeral storage to reserve for things outside of Thorium
     pub reserved_storage: u64,
-    /// The amount of millicpu to use in the fairshare pass if possible
+    /// The amount of millicpu to use in the fair share pass if possible
     pub fairshare_cpu: u64,
-    /// The amount of memory to use in the fairshare pass if possible
+    /// The amount of memory to use in the fair share pass if possible
     pub fairshare_memory: u64,
-    /// The amount of ephemeral storage to use in the fairshare pass if possible
+    /// The amount of ephemeral storage to use in the fair share pass if possible
     pub fairshare_storage: u64,
     /// A whitelist of host paths users can mount in their tools with no admin intervention
     ///
@@ -886,7 +886,7 @@ impl TryFrom<&str> for Pools {
             "FairShare" => Ok(Pools::FairShare),
             "Deadline" => Ok(Pools::Deadline),
             _ => Err(crate::client::Error::new(format!(
-                "Uknown pool kind: {value}",
+                "Unknown pool kind: {value}",
             ))),
         }
     }
@@ -1023,7 +1023,7 @@ impl TryFrom<&String> for WorkerStatus {
             "Spawning" => Ok(WorkerStatus::Spawning),
             "Running" => Ok(WorkerStatus::Running),
             "Shutdown" => Ok(WorkerStatus::Shutdown),
-            _ => Err(InvalidEnum(format!("Uknown Worker Status: {raw}",))),
+            _ => Err(InvalidEnum(format!("Unknown Worker Status: {raw}",))),
         }
     }
 }
@@ -1133,7 +1133,7 @@ impl WorkerRegistrationList {
         self
     }
 
-    /// Adds a new worker to this registraiton list
+    /// Adds a new worker to this registration list
     ///
     /// # Arguments
     ///

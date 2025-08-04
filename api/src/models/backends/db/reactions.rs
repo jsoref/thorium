@@ -51,7 +51,7 @@ macro_rules! pipe_key {
 ///
 /// # Arguments
 ///
-/// * `pipe` - The Redis [`redis::Pipeline`] to build ontop of
+/// * `pipe` - The Redis [`redis::Pipeline`] to build on top of
 /// * `cast` - The [`Reaction`] to create in Redis
 /// * `pipeline` - The [`Pipeline`] this [`Reaction`] is based on
 /// * `shared` - Shared Thorium objects
@@ -158,7 +158,7 @@ pub async fn get_parent_ephemeral(
         let parent = get(group, id, shared).await?;
         // add any of our parents ephemeral files to our map of ephemeral files
         for ephemeral in parent.ephemeral {
-            // add this id and the parent reaction thts tied to it
+            // add this id and the parent reaction that's tied to it
             map.insert(ephemeral, *id);
         }
         // continue to recursively crawl any parent reactions
@@ -233,7 +233,7 @@ pub async fn create_bulk(
                 Err(error) => {
                     // log this error
                     event!(Level::ERROR, error = error.to_string());
-                    // add this erro to our response
+                    // add this error to our response
                     response.errors.insert(index, error.to_string());
                 }
             }
@@ -575,7 +575,7 @@ async fn cost(
 /// # Arguments
 ///
 /// * `reaction` - The reaction to check for a parent reaction
-/// * `pipe` - The Redis [`redis::Pipeline`] to build ontop of
+/// * `pipe` - The Redis [`redis::Pipeline`] to build on top of
 /// * `shared` - Shared Thorium objects
 fn incr_parent<'a>(reaction: &Reaction, pipe: &'a mut redis::Pipeline, shared: &Shared) {
     // check if we have a parent reaction
@@ -621,7 +621,7 @@ macro_rules! add_expire {
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `keys` - The keys to this reactions dat
 /// * `dest` - The destination group status set this is being moved to
@@ -638,15 +638,15 @@ fn build_expire<'a>(
     let expiration =
         chrono::Utc::now() + chrono::Duration::seconds(shared.config.thorium.retention.data as i64);
     let expiration = expiration.timestamp();
-    // add comamnd to expire out of the destination set
+    // add command to expire out of the destination set
     add_expire!(pipe, expiration, "srem", dest, &reaction.id, shared);
     // build key to reaction set for this group/pipeline
     let set_key = ReactionKeys::set(&reaction.group, &reaction.pipeline, shared);
-    // add comamnd to expire out of the pipeline set
+    // add command to expire out of the pipeline set
     add_expire!(pipe, expiration, "srem", &set_key, &reaction.id, shared);
     // build key to reaction set for this group
     let group_key = ReactionKeys::group_set(&reaction.group, &reaction.status, shared);
-    // add comamnd to expire out of the group status set
+    // add command to expire out of the group status set
     add_expire!(pipe, expiration, "zrem", &group_key, &reaction.id, shared);
     // build key to sub reaction lists
     let sub_reacts = SubReactionLists::new(reaction, shared);
@@ -682,7 +682,7 @@ fn build_expire<'a>(
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `shared` - Shared Thorium objects
 #[rustfmt::skip]
@@ -746,7 +746,7 @@ pub async fn complete<'a>(
 ///
 /// # Arguments
 ///
-/// * `pipe` - The redis [`redis::Pipeline`] to build commands ontop of
+/// * `pipe` - The redis [`redis::Pipeline`] to build commands on top of
 /// * `pipeline` - The [`Pipeline`] this [`Reaction`] is built around
 /// * `reaction` - The [`Reaction`] to create jobs for
 /// * `shared` - Shared Thorium objects
@@ -858,7 +858,7 @@ pub async fn proceed(mut reaction: Reaction, shared: &Shared) -> Result<JobHandl
 
     // check if we any active generators
     if reaction.generators.is_empty() {
-        // either all generatos completed or we never had any
+        // either all generators completed or we never had any
         // so increment current stage
         reaction.current_stage += 1;
         // get pipeline data
@@ -898,7 +898,7 @@ pub async fn proceed(mut reaction: Reaction, shared: &Shared) -> Result<JobHandl
 ///
 /// # Arguments
 ///
-/// * `reaction` - The reaction to delete epemeral files from
+/// * `reaction` - The reaction to delete ephemeral files from
 /// * `shared` - Shared Thorium objects
 async fn delete_ephemeral(reaction: &Reaction, shared: &Shared) -> Result<(), ApiError> {
     // crawl over any ephemeral files and delete them
@@ -1044,9 +1044,9 @@ pub async fn stage_logs(
 ) -> Result<StageLogs, ApiError> {
     // convert our cursor to an i64
     let cursor: i64 = cursor.try_into()?;
-    // if we want to crawl more then 250,000 things then return an error
+    // if we want to crawl more than 250,000 things then return an error
     if limit > 250_000 {
-        return bad!("Limit can be no more then 250,000 lines".to_owned());
+        return bad!("Limit can be no more than 250,000 lines".to_owned());
     }
     // determine our current bucket
     let current_bucket: i32 = (cursor / 2500).try_into()?;
@@ -1235,7 +1235,7 @@ pub async fn delete(reaction: &Reaction, shared: &Shared) -> Result<(), ApiError
 ///
 /// # Arguments
 ///
-/// * `user` - Ther user that is deleting these reactions
+/// * `user` - The user that is deleting these reactions
 /// * `group` - The group to delete reactions from
 /// * `pipeline` - The pipeline to delete reactions from
 /// * `shared` - Shared Thorium objects

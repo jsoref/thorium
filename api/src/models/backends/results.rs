@@ -91,7 +91,7 @@ impl<O: OutputSupport> OutputFormBuilder<O> {
     /// # Arguments
     ///
     /// * `user` - The user that is adding new results
-    /// * `upload` - The mutlipart form containing our results
+    /// * `upload` - The multipart form containing our results
     /// * `form` - The results form to add our multipart entries too
     /// * `shared` - Shared objects in Thorium
     #[instrument(
@@ -160,7 +160,7 @@ impl<O: OutputSupport> OutputFormBuilder<O> {
     /// * `user` - The user that is adding new results
     /// * `kind` - The kind of data we are saving results for
     /// * `key` - The key for the data we are saving results for
-    /// * `upload` - The mutlipart form containing our results
+    /// * `upload` - The multipart form containing our results
     /// * `shared` - Shared objects in Thorium
     #[instrument(
         name = "OutputForm::create_results",
@@ -296,7 +296,7 @@ impl Output {
     ) -> Result<ByteStream, ApiError> {
         // make sure that this user has access to this repo or sample
         kind.authorize(user, key, shared).await?;
-        // authorize this user has access to this result id if we are not an admin
+        // authorize this user has access to this result ID if we are not an admin
         if !user.is_admin() {
             // we are not an admin so make sure we can see this result
             db::results::authorize(kind, &user.groups, key, tool, result_id, shared).await?;
@@ -325,7 +325,7 @@ impl Output {
         user.authorize_groups(&mut params.groups, shared).await?;
         // get a chunk of the results stream
         let scylla_cursor = db::results::list(kind, params, shared).await?;
-        // convert our scylla cursor to a user facing crusor
+        // convert our scylla cursor to a user facing cursor
         Ok(ApiCursor::from(scylla_cursor))
     }
 
@@ -505,7 +505,7 @@ impl CursorCore for OutputListLine {
         params: &Self::Params,
         shared: &Shared,
     ) -> Result<(DateTime<Utc>, DateTime<Utc>), ApiError> {
-        // get our end timestmap
+        // get our end timestamp
         let end = params.end(shared)?;
         Ok((params.start, end))
     }
@@ -768,7 +768,7 @@ impl ResultListParams {
             None => match Utc.timestamp_opt(shared.config.thorium.results.earliest, 0) {
                 chrono::LocalResult::Single(default_end) => Ok(default_end),
                 _ => crate::internal_err!(format!(
-                    "default earliest results timestamp is invalid or ambigous - {}",
+                    "default earliest results timestamp is invalid or ambiguous - {}",
                     shared.config.thorium.results.earliest
                 )),
             },
@@ -801,7 +801,7 @@ impl ElasticSearchParams {
             None => match Utc.timestamp_opt(shared.config.thorium.results.earliest, 0) {
                 chrono::LocalResult::Single(default_end) => Ok(default_end),
                 _ => crate::internal_err!(format!(
-                    "default earliest results timestamp is invalid or ambigous - {}",
+                    "default earliest results timestamp is invalid or ambiguous - {}",
                     shared.config.thorium.results.earliest
                 )),
             },
@@ -853,7 +853,7 @@ where
             // try to deserialize our query string
             Ok(serde_qs::Config::new(5, false).deserialize_str(query)?)
         } else {
-            bad!("result file query paramter required but was not given".to_string())
+            bad!("result file query parameter required but was not given".to_string())
         }
     }
 }

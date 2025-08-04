@@ -114,11 +114,11 @@ impl RawJob {
                 // this job is just empty
                 event!(Level::ERROR, empty = true);
             } else {
-                // this job contains data but not the requried values
+                // this job contains data but not the required values
                 // log the data that was missing required values
                 event!(Level::ERROR, malformed = true, data = format!("{raw:?}"));
             }
-            // tell this user this job counldn't be found
+            // tell this user this job couldn't be found
             return not_found!("Job not found".to_owned());
         }
         // cast our raw data to a Job
@@ -305,7 +305,7 @@ impl RawJob {
     /// # Arguments
     ///
     /// * `user` - The user that is performing this request
-    /// * `scaler` - The scaler to get running jbos for
+    /// * `scaler` - The scaler to get running jobs for
     /// * `start` - The timestamp in seconds (unix epoch) to start reading running jobs from
     /// * `end` - The timestamp in seconds (unix epoch) to stop reading running jobs at
     /// * `skip` - The number of entries in the running stream to skip

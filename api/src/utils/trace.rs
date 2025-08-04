@@ -174,7 +174,7 @@ fn setup_local(
     tracing_subscriber::fmt::layer().with_filter(conf.level.to_filter())
 }
 
-/// Setup the correct tracer
+/// Set up the correct tracer
 ///
 /// # Arguments
 ///
@@ -187,7 +187,7 @@ pub fn setup(name: &str, trace_conf: &Tracing) {
     // get out external tracing settings
     if let Some(external) = &trace_conf.external {
         match external {
-            // setup the correct external tracer
+            // set up the correct external tracer
             TracingServices::Jaeger { collector, level } => {
                 setup_jaeger(name, collector, *level, registry)
             }
@@ -202,7 +202,7 @@ pub fn setup(name: &str, trace_conf: &Tracing) {
     };
 }
 
-/// Setup the correct tracer from a stand alone config file
+/// Set up the correct tracer from a stand alone config file
 ///
 /// # Arguments
 ///

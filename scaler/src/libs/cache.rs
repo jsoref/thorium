@@ -199,7 +199,7 @@ impl Cache {
         for group in &self.groups {
             // create a cursor object for images in this group
             let mut cursor = self.thorium.images.list(group).details().exec().await?;
-            // get an mutable reference to this groups entry into the image/docker map
+            // get a mutable reference to this groups entry into the image/docker map
             let image_map = self.images.entry(group.clone()).or_default();
             let docker_map = self.docker.entry(group.clone()).or_default();
             // loop over our cursor until its exhausted
@@ -224,7 +224,7 @@ impl Cache {
                                     image.image.as_ref().unwrap(),
                                     &span,
                                 ) {
-                                    // docker image info retrieved sucessfully
+                                    // docker image info retrieved successfully
                                     Ok(docker) => Some((Some(docker), image)),
                                     Err(e) => {
                                         event!(
@@ -253,7 +253,7 @@ impl Cache {
                     }
                     image_map.insert(image.name.clone(), image);
                 }
-                // if this cursor is exhaused that break
+                // if this cursor is exhausted that break
                 if cursor.exhausted {
                     break;
                 }

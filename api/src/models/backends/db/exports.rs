@@ -97,7 +97,7 @@ pub async fn get(
     }
 }
 
-/// Updates the curernt timestamp for an ongoing export operation
+/// Updates the current timestamp for an ongoing export operation
 ///
 /// # Arguments
 ///
@@ -168,7 +168,7 @@ pub async fn create_error(
     Ok(id)
 }
 
-/// Gets info on a specfic export error
+/// Gets info on a specific export error
 ///
 /// # Arguments
 ///

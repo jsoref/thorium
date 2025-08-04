@@ -259,7 +259,7 @@ async fn ingest(
     Ok(())
 }
 
-/// Udpate some already ingested repos
+/// Update some already ingested repos
 ///
 /// # Arguments
 ///
@@ -303,7 +303,7 @@ async fn update(
         loop {
             // crawl over the repos and add them to our update queue
             for line in repos_cursor.data.drain(..) {
-                // skip any repos we aleady added
+                // skip any repos we already added
                 if added.insert(line.url.clone()) {
                     // add this repo to our jobs queue
                     if let Err(error) = controller.add_job(line.url).await {
@@ -362,7 +362,7 @@ async fn download(
         // turn this repo into a repo target
         match RepoTarget::try_from(repo) {
             Ok(target) => {
-                // check if this repo has already been addded to be downloaded
+                // check if this repo has already been added to be downloaded
                 if added.insert(target.url.clone()) {
                     // try to add this download job
                     if let Err(error) = controller.add_job(target).await {
@@ -402,7 +402,7 @@ async fn download(
         loop {
             // otherwise just print immediately
             for repo in repos_cursor.data.drain(..) {
-                // check if this repo has already been addded to be downloaded
+                // check if this repo has already been added to be downloaded
                 if added.insert(repo.url.clone()) {
                     // build the repo target for this repo
                     let target = RepoTarget::new(repo.url);
@@ -456,7 +456,7 @@ pub struct RepoBuild {
     pub commitish: Option<String>,
     /// The kind of commitish to use
     pub kind: Option<CommitishKinds>,
-    /// Any dependencies that need to be installed beforing building this repo
+    /// Any dependencies that need to be installed before building this repo
     #[serde(default)]
     pub dependencies: Vec<String>,
     /// Any flags to set when building this repo
@@ -506,7 +506,7 @@ impl RepoBuild {
         let build_args = add_option!(build_args, "--CC", self.cc);
         let build_args = add_option!(build_args, "--CXX", self.cxx);
         let build_args = add_option!(build_args, "--tags", batch);
-        // build the repo depeendency request
+        // build the repo dependency request
         let repo = RepoDependencyRequest {
             url: self.repo,
             commitish: self.commitish,

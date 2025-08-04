@@ -1,11 +1,11 @@
-//! Setup the s3 ids tables/prepared statements in Scylla
+//! Set up the s3 ids tables/prepared statements in Scylla
 
 use scylla::prepared_statement::PreparedStatement;
 use scylla::Session;
 
 use crate::Conf;
 
-/// The prepared statments for s3 ids
+/// The prepared statements for s3 ids
 pub struct S3PreparedStatements {
     /// Insert an s3 id
     pub insert: PreparedStatement,
@@ -48,7 +48,7 @@ impl S3PreparedStatements {
     }
 }
 
-/// Setup the s3 sample ids table for Thorium
+/// Set up the s3 sample ids table for Thorium
 ///
 /// This is the ground truth table for all samples
 ///

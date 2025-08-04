@@ -35,7 +35,7 @@ impl Spawned {
     /// # Arguments
     ///
     /// * `cluster` - The cluster this worker was spawned on
-    /// * `node` - The node this wokrer was spawned on
+    /// * `node` - The node this worker was spawned on
     /// * `req` - The requisition that led to this worker
     /// * `image` - The image for this worker
     /// * `pool` - The pool this worker was spawned in
@@ -116,7 +116,7 @@ impl From<&Spawned> for SpawnedUpdate {
     }
 }
 
-/// A Map of requestions along with the number of pods possible to spawn
+/// A Map of requisitions along with the number of pods possible to spawn
 #[derive(Default, Debug, Clone)]
 pub struct ReqMap {
     /// The resources to spawn

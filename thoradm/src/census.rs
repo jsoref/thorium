@@ -115,7 +115,7 @@ impl<T: Census> CensusWorker<T> {
                 let count = T::get_count(&typed_row);
                 let bucket = T::get_bucket(&typed_row);
                 let grouping = bucket / 10_000;
-                // build the key to this parititons counts/stream
+                // build the key to this partitions counts/stream
                 let count_key = T::count_key_from_row(&self.namespace, &typed_row, grouping);
                 let stream_key = T::stream_key_from_row(&self.namespace, &typed_row);
                 // add data into redis

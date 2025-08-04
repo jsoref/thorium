@@ -12,11 +12,11 @@ pub enum Error {
     Generic(String),
     /// A Thorium API error
     Thorium(thorium::Error),
-    /// A Scylla new session error occured
+    /// A Scylla new session error occurred
     ScyllaNewSession(scylla::transport::errors::NewSessionError),
-    /// A Scylla query error occured
+    /// A Scylla query error occurred
     ScyllaQuery(scylla::transport::errors::QueryError),
-    /// A Scylla next row error occured
+    /// A Scylla next row error occurred
     ScyllaNextRow(scylla::transport::iterator::NextRowError),
     /// A Redis error
     Redis(redis::RedisError),
@@ -45,10 +45,10 @@ pub enum Error {
     },
     /// An s3 bytestream error
     S3ByteStream(aws_sdk_s3::primitives::ByteStreamError),
-    /// Failed to recieve data from a kanal channel
+    /// Failed to receive data from a kanal channel
     KanalRecv(kanal::ReceiveError),
     /// An error with deserializing rkyv data
-    RkyvDesererialize(String),
+    RkyvDeserialize(String),
     /// An error from stripping a prefix from a path
     StripPrefix(std::path::StripPrefixError),
 }
@@ -92,7 +92,7 @@ impl std::fmt::Display for Error {
             }
             Error::S3ByteStream(err) => write!(f, "S3ByteStream Error: {err}"),
             Error::KanalRecv(err) => write!(f, "KanalRecv Error: {err}"),
-            Error::RkyvDesererialize(err) => write!(f, "RkyvDeserialize Error: {err}"),
+            Error::RkyvDeserialize(err) => write!(f, "RkyvDeserialize Error: {err}"),
             Error::StripPrefix(err) => write!(f, "StripPrefix Error: {err}"),
         }
     }
@@ -311,13 +311,13 @@ impl
             DefaultValidatorError,
         >,
     ) -> Self {
-        Error::RkyvDesererialize(error.to_string())
+        Error::RkyvDeserialize(error.to_string())
     }
 }
 
 impl From<CheckArchiveError<StructCheckError, DefaultValidatorError>> for Error {
     fn from(error: CheckArchiveError<StructCheckError, DefaultValidatorError>) -> Self {
-        Error::RkyvDesererialize(error.to_string())
+        Error::RkyvDeserialize(error.to_string())
     }
 }
 

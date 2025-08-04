@@ -231,7 +231,7 @@ pub struct RawJob {
     pub worker: Option<String>,
     /// The parent reaction to this jobs reaction if it exists
     pub parent: Option<Uuid>,
-    /// Whether this rawjob is a generator or not
+    /// Whether this raw-job is a generator or not
     pub generator: bool,
     /// What scaler is responsible for scaling this image
     pub scaler: ImageScaler,
@@ -289,7 +289,7 @@ impl GenericJobOpts {
     ///
     /// # Arguments
     ///
-    /// * `positionals` - Whether to override the possitional args or not
+    /// * `positionals` - Whether to override the positional args or not
     /// * `kwargs` - Whether to override the kwargs or not
     /// * `cmd` - The command to override the source docker command with
     ///
@@ -391,7 +391,7 @@ impl GenericJobArgs {
         // figure out how large our vec should be
         let size = self.positionals.len() + self.kwargs.len() + self.switches.len();
         let mut casts = Vec::with_capacity(size);
-        // start with our posiitonals and switches
+        // start with our positionals and switches
         casts.extend_from_slice(&self.positionals);
         casts.extend_from_slice(&self.switches);
         // crawl over our kwarg keys
@@ -458,7 +458,7 @@ pub struct GenericJobArgsUpdate {
     /// The switch arguments to remove from the original switches for this job
     #[serde(default)]
     pub remove_switches: Vec<String>,
-    /// The options to replace for this this generic job
+    /// The options to replace for this generic job
     pub opts: Option<GenericJobOpts>,
 }
 
@@ -467,7 +467,7 @@ impl GenericJobArgsUpdate {
     ///
     /// # Arguments
     ///
-    /// * `positonals` - The positional args for this job
+    /// * `positionals` - The positional args for this job
     ///
     /// # Examples
     ///
@@ -582,7 +582,7 @@ impl GenericJobArgsUpdate {
         self
     }
 
-    /// Sets the options for GenericJobArgs completely overwritting the original options
+    /// Sets the options for GenericJobArgs completely overwriting the original options
     ///
     /// # Arguments
     ///
@@ -677,13 +677,13 @@ impl PartialEq<Reaction> for GenericJob {
         same!(&self.args, &args);
         //make sure this jobs parent reaction is set
         matches_opt!(&self.parent, &react.parent);
-        // make sure our trigger dpeth matches
+        // make sure our trigger depth matches
         same!(&self.trigger_depth, &react.trigger_depth);
         true
     }
 }
 
-/// The infomation in a specific job claim status queue
+/// The information in a specific job claim status queue
 #[cfg(feature = "api")]
 #[derive(Debug, Serialize, Deserialize)]
 pub struct JobReactionIds {

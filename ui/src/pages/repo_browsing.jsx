@@ -82,7 +82,7 @@ const ReposList = () => {
       filters['groups'] = selectedGroups;
     }
 
-    // must format dates for request if set, otherwise leave as null
+    // must format dates for request if set; otherwise, leave as null
     // toISOString converts the date to a UTC string (thorium uses UTC)
     if (startDate) {
       filters['start'] = safeDateToStringConversion(startDate);
@@ -126,7 +126,7 @@ const ReposList = () => {
       if (res.cursor) {
         setCursor(res.cursor);
       } else {
-        // no cursor is returned when exausted
+        // no cursor is returned when exhausted
         setHasMoreRepos(false);
       }
     }
@@ -259,7 +259,7 @@ const ReposList = () => {
   const getFreshReposList = () => {
     if (!loading) {
       setLoading(true);
-      // reseting the list op requires resetting the page and has "more files" boolean
+      // resetting the list op requires resetting the page and has "more files" boolean
       setPage(0);
       setHasMoreRepos(true);
       getRepos(true);
@@ -267,7 +267,7 @@ const ReposList = () => {
   };
 
   const submitFilterForm = (event) => {
-    // apply filters when enter is clicked, otherwise ignore
+    // apply filters when enter is clicked; otherwise, ignore
     if (event.key === 'Enter') {
       setUpdateFilters(true);
     }

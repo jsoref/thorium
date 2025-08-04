@@ -7,7 +7,7 @@ use uuid::Uuid;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ExportRequest {
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The starting timestamp to stream from (earliest)
     pub start: Option<DateTime<Utc>>,
@@ -80,7 +80,7 @@ impl ExportCursorRequest {
     /// # Arguments
     ///
     /// * `id` - The id of the cursor to add
-    /// * `start` - The newwest timestamp of data this cursor will export
+    /// * `start` - The newest timestamp of data this cursor will export
     /// * `current` - The current timestamp this cursor has exported
     /// * `end` - The oldest timestamp of data this cursor will export
     pub fn new(id: Uuid, start: DateTime<Utc>, current: DateTime<Utc>, end: DateTime<Utc>) -> Self {
@@ -159,7 +159,7 @@ cfg_if::cfg_if! {
                     None => match Utc.timestamp_opt(shared.config.thorium.results.earliest, 0) {
                         chrono::LocalResult::Single(default_end) => Ok(default_end),
                         _ => crate::internal_err!(format!(
-                            "default earliest results timestamp is invalid or ambigous - {}",
+                            "default earliest results timestamp is invalid or ambiguous - {}",
                             shared.config.thorium.results.earliest
                         )),
                     },
@@ -196,7 +196,7 @@ impl ExportUpdate {
     /// # Arguments
     ///
     /// * `id` - The export cursor to update
-    /// * `current` - The oldest timestamp of data this export opeartion has exported
+    /// * `current` - The oldest timestamp of data this export operation has exported
     pub fn new(current: DateTime<Utc>) -> Self {
         ExportUpdate { current }
     }
@@ -212,7 +212,7 @@ impl ExportUpdate {
 /// Add FromRow support for scylla loading if API mode is enabled
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct Export {
-    /// The name of this export operaton
+    /// The name of this export operation
     pub name: String,
     /// The user that owns this export operation
     pub user: String,
@@ -228,15 +228,15 @@ pub struct Export {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ExportError {
-    /// The Id for this error
+    /// The ID for this error
     pub id: Uuid,
     /// The start of the chunk of data that we failed to export
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<u16>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }
 
@@ -248,9 +248,9 @@ pub struct ExportErrorRequest {
     pub start: DateTime<Utc>,
     /// The end of the chunk of data that we failed to export
     pub end: DateTime<Utc>,
-    /// The error number/code that occured
+    /// The error number/code that occurred
     pub code: Option<u16>,
-    /// A message explaining the error that occured
+    /// A message explaining the error that occurred
     pub msg: String,
 }
 
@@ -261,7 +261,7 @@ impl ExportErrorRequest {
     ///
     /// * `start` - The start of the chunk of data that we failed to export
     /// * `end` - The end of the chunk of data that we failed to export
-    /// * `msg` - A message explaining that error that occured
+    /// * `msg` - A message explaining that error that occurred
     pub fn new<M: Into<String>>(start: DateTime<Utc>, end: DateTime<Utc>, msg: M) -> Self {
         ExportErrorRequest {
             start,
@@ -271,21 +271,21 @@ impl ExportErrorRequest {
         }
     }
 
-    /// Set the code for the error that occured
+    /// Set the code for the error that occurred
     ///
     /// # Arguments
     ///
-    /// * `code` - The error code that occured
+    /// * `code` - The error code that occurred
     pub fn code(mut self, code: u16) -> Self {
         self.code = Some(code);
         self
     }
 
-    /// set the code for the error that occured with a mutable reference
+    /// set the code for the error that occurred with a mutable reference
     ///
     /// # Arguments
     ///
-    /// * `code` - The error code that occured
+    /// * `code` - The error code that occurred
     pub fn code_mut(&mut self, code: u16) {
         self.code = Some(code);
     }

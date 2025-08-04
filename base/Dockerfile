@@ -26,7 +26,7 @@ RUN wget https://s3.amazonaws.com/downloads.scylladb.com/deb/scylladb.gpg.pubkey
       apt-get update && \
       apt-get install -y scylla && \
       rm scylladb.gpg.pubkey
-# set the locales and setup sculla
+# set the locales and setup scylla
 ENV LC_ALL="en_US.UTF-8"
 RUN apt install locales && \
       locale-gen en_US.UTF-8 && \

@@ -50,7 +50,7 @@ impl Reactions {
     }
 }
 
-// only inlcude blocking structs if the sync feature is enabled
+// only include blocking structs if the sync feature is enabled
 cfg_if::cfg_if! {
     if #[cfg(feature = "sync")] {
         /// A blocking Reactions handler for the Thorium client
@@ -855,7 +855,7 @@ impl Reactions {
     /// # Arguments
     ///
     /// * `group` - The group this reaction is from
-    /// * `id` - The reaction to downlad an ephemeral file for
+    /// * `id` - The reaction to download an ephemeral file for
     /// * `name` - The name of the ephemeral file to download
     ///
     /// # Examples
@@ -868,7 +868,7 @@ impl Reactions {
     /// # async fn exec() -> Result<(), Error> {
     /// // create Thorium client
     /// let thorium = Thorium::build("http://127.0.0.1").token("<token>").build().await?;
-    /// // download an ephermal file from this reaction
+    /// // download an ephemeral file from this reaction
     /// let reaction = Uuid::parse_str("e0ca2720-50e0-4103-a412-344bbb714240")?;
     /// let file = thorium.reactions.download_ephemeral("Corn", &reaction, "file.txt").await?;
     /// # // allow test code to be compiled but don't unwrap as no API instance would be up

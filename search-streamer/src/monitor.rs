@@ -147,7 +147,7 @@ impl Monitor {
                 }
                 // increment our counter
                 since_check += 1;
-                // if there has been more then 5000 iterations since our check then break out
+                // if there has been more than 5000 iterations since our check then break out
                 if since_check > 5000 {
                     break;
                 }
