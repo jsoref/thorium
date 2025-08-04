@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for commitishes
+/// The prepared statement for commitishes
 pub struct CommitishesPreparedStatements {
     /// Insert a commitish
     pub insert: PreparedStatement,

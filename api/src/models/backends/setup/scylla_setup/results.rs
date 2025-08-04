@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for results
+/// The prepared statements for results
 pub struct ResultsPreparedStatements {
     /// Insert a result
     pub insert: PreparedStatement,

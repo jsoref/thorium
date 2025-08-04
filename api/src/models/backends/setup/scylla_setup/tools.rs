@@ -7,7 +7,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for tools
+/// The prepared statements for tools
 #[allow(dead_code)]
 pub struct ToolsPreparedStatements {
     /// Insert a tool

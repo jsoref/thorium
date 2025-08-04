@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for network policies
+/// The prepared statements for network policies
 pub struct NetworkPoliciesPreparedStatements {
     /// Insert a network policy
     pub insert: PreparedStatement,

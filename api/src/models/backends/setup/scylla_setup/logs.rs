@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for tags
+/// The prepared statements for tags
 pub struct LogsPreparedStatements {
     /// Insert a log line
     pub insert: PreparedStatement,

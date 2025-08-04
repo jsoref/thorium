@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for notifications
+/// The prepared statements for notifications
 pub struct NotificationsPreparedStatements {
     /// Insert a new notification
     pub insert: PreparedStatement,

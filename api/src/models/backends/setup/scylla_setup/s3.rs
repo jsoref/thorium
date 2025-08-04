@@ -5,7 +5,7 @@ use scylla::statement::prepared::PreparedStatement;
 
 use crate::Conf;
 
-/// The prepared statments for s3 IDs
+/// The prepared statements for s3 IDs
 pub struct S3PreparedStatements {
     /// Insert an s3 id
     pub insert: PreparedStatement,
