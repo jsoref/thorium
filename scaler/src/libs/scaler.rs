@@ -167,7 +167,7 @@ pub struct BanSets {
     pub groups: HashSet<String>,
     /// The users to ban spawning resources for
     pub users: HashSet<String>,
-    /// The requisitions to ban from spanwing
+    /// The requisitions to ban from spawning
     pub reqs: HashMap<String, HashSet<String>>,
 }
 
