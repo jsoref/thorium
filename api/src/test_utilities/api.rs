@@ -1,4 +1,4 @@
-//! The utlities for integration tests involving the API
+//! The utilities for integration tests involving the API
 use async_once::AsyncOnce;
 use bb8_redis::{bb8::Pool, RedisConnectionManager};
 use once_cell::sync::Lazy;
