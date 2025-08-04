@@ -103,7 +103,7 @@ impl Users {
     /// * `host` - The host (starting with http:// or https://) to reach Thorium at
     /// * `blueprint` - User creation blueprint
     /// * `key` - The secret key to use in order to add an admin
-    /// * `settings` - The setttings for this client
+    /// * `settings` - The settings for this client
     ///
     /// # Examples
     ///

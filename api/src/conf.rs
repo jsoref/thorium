@@ -1009,7 +1009,7 @@ pub struct Scaler {
     /// The global scaler specific tasks
     #[serde(default)]
     pub tasks: ScalerTaskDelays,
-    /// The crane specific setttings
+    /// The crane specific settings
     #[serde(default)]
     pub crane: Crane,
 }
