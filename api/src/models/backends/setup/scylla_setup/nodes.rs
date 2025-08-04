@@ -64,7 +64,7 @@ impl NodesPreparedStatements {
 
 /// Set up the nodes table
 ///
-/// This table trackes nodes and their health
+/// This table tracks nodes and their health
 ///
 /// # Arguments
 ///
