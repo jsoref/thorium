@@ -238,7 +238,7 @@ impl ZombieChecker {
     #[instrument(name = "ZombieChecker::scan_workers", skip_all, err(Debug))]
     async fn scan_workers(&mut self, spawned: &HashSet<&String>) -> Result<WorkerDeleteMap, Error> {
         // build our params info
-        // scan our nodes 500 at at ime
+        // scan our nodes 500 at a time
         let params = NodeListParams::default().scaler(self.scaler).limit(500);
         // get info on the current Thorium nodes
         let mut cursor = self.thorium.system.list_node_details(&params).await?;
