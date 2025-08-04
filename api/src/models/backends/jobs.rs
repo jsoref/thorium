@@ -305,7 +305,7 @@ impl RawJob {
     /// # Arguments
     ///
     /// * `user` - The user that is performing this request
-    /// * `scaler` - The scaler to get running jbos for
+    /// * `scaler` - The scaler to get running jobs for
     /// * `start` - The timestamp in seconds (unix epoch) to start reading running jobs from
     /// * `end` - The timestamp in seconds (unix epoch) to stop reading running jobs at
     /// * `skip` - The number of entries in the running stream to skip
