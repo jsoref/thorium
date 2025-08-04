@@ -103,7 +103,7 @@ impl Containers {
         }
     }
 
-    /// Builds a container soecific security context
+    /// Builds a container specific security context
     ///
     /// # Arguments
     ///

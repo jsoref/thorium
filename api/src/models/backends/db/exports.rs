@@ -168,7 +168,7 @@ pub async fn create_error(
     Ok(id)
 }
 
-/// Gets info on a specfic export error
+/// Gets info on a specific export error
 ///
 /// # Arguments
 ///

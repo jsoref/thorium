@@ -134,7 +134,7 @@ impl Allocatable {
         }
     }
 
-    /// Remove and return the cpu group and cluster info for a specfic cluster
+    /// Remove and return the cpu group and cluster info for a specific cluster
     ///
     /// # Arguments
     ///
