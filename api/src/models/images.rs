@@ -4059,7 +4059,7 @@ impl ImageRequest {
     /// };
     ///
     /// // create an image request for an image in the Corn group called harvester
-    /// // This image is built ontop of the Thorium:CornHarvester docker image
+    /// // This image is built on top of the Thorium:CornHarvester docker image
     /// // It has a lifetime of 1 job
     /// // A timeout of 300 seconds
     /// // The pod consumes 2 cores and 1 gibibyte of memory
