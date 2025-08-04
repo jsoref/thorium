@@ -189,7 +189,7 @@ pub struct UserUpdate {
     pub settings: Option<UserSettingsUpdate>,
 }
 
-/// The info to inject about this user on a Unix/Linx system
+/// The info to inject about this user on a Unix/Linux system
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, JsonSchema)]
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct UnixInfo {
