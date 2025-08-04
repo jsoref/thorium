@@ -6,7 +6,7 @@ use scylla::Session;
 use crate::Conf;
 
 /// The prepared statments for commitishes
-pub struct CommitishesPreparedStatements {
+pub struct commitishesPreparedStatements {
     /// Insert a commitish
     pub insert: PreparedStatement,
     /// Insert a commitish into the list table
@@ -25,7 +25,7 @@ pub struct CommitishesPreparedStatements {
     pub list_pull: PreparedStatement,
 }
 
-impl CommitishesPreparedStatements {
+impl commitishesPreparedStatements {
     /// Build a new commitishes prepared statement struct
     ///
     /// # Arguments
@@ -48,7 +48,7 @@ impl CommitishesPreparedStatements {
         let list_ties = list_ties(session, config).await;
         let list_pull = list_pull(session, config).await;
         // build our prepared statement object
-        CommitishesPreparedStatements {
+        commitishesPreparedStatements {
             insert,
             insert_list,
             get_data,
