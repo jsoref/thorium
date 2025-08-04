@@ -32,7 +32,7 @@ use crate::utils::{ApiError, AppState};
    handled as Vec<String> into a single String argument that can be
    split on '/' later.
 
-   The affected function is marked with 'TODO_UTOIPA: WIDLCARD'
+   The affected function is marked with 'TODO_UTOIPA: WILDCARD'
    and the utoipa annotation is commented out. The annotation
    should be at least somewhat functional if it were able to be used
    but has not been tested due to the aforementioned compilation
