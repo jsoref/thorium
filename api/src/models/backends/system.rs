@@ -1013,7 +1013,7 @@ impl WorkerDeleteMap {
     ) -> Result<(), ApiError> {
         // if this user isn't an admin then make sure they are only deleting their own workers
         db::system::can_delete_workers(user, &self, shared).await?;
-        // delete the specified worekrs
+        // delete the specified workers
         db::system::delete_workers(scaler, self, shared).await?;
         Ok(())
     }
