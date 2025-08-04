@@ -286,7 +286,7 @@ const buildNetworkData = async (
   });
   sample.children.push(...(await Promise.all(childrenPromises)));
 
-  // build related cousin nodes (aka similiar samples)
+  // build related cousin nodes (aka similar samples)
   const cousinPromises = [];
   cousins.map((cousin) => {
     if (cousin.sha256 != sha256) {

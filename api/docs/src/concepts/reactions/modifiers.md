@@ -31,7 +31,7 @@ Explanations for the root fields are:
 | add_tags | The tags to add to this reaction |
 | remove_tags | The tags to remove from this reaction |
 
-The argument update structure is similiar to the normal arguments structure but has
+The argument update structure is similar to the normal arguments structure but has
 slightly different fields.
 
 | key | definition |

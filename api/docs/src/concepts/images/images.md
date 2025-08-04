@@ -97,7 +97,7 @@ Lifetime and limits are still optional.
 
 #### Requests & Limits
 ---
-Requests and limits are very similiar, but represent the minimum and maximum
+Requests and limits are very similar, but represent the minimum and maximum
 bounds on the amount of resources a image may consume. This means that if you
 set your requested resources to be 16 cpu cores your image will only be spawned
 if the cluster has at minimum 16 cores.
@@ -132,14 +132,14 @@ Both of these lifetime handlers are not strongly enforced. This means that it
 is not guaranteed that pods will not outlive their lifetime. This is because
 lifetime is checked in between every loop when claiming jobs. So if we have an
 image that attempts to claim and execute N jobs then it is possible to execute
-at most N - 1 extra jobs before the lifetime handler catches it. A similiar
+at most N - 1 extra jobs before the lifetime handler catches it. A similar
 situation exists with the time handler but it is less defined as it depends on
 the time it takes to run a job and when that job is claimed in relation to the
 lifetime expiration.
 
 #### Timeout 
 ---
-Timeout is similiar to lifetime but it only constrains how long an individual job
+Timeout is similar to lifetime but it only constrains how long an individual job
 can run for. This means that if a timeout of 60 is set any job for that image will
 error out if it runs for longer then 60 seconds. This is enforced with a max
 resolution of 100ms. So a job may execute for 60.1 seconds and still complete.
